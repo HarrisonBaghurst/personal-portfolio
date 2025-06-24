@@ -1,12 +1,11 @@
 import Hero from "@/components/Hero";
+import Technologies from "@/components/Technologies";
 
 export default function Home() {
   return (
     <section>
       <Hero />
-      <div className="h-screen border-1 border-white">
-
-      </div>
+      <Technologies />
     </section>
   );
 }
