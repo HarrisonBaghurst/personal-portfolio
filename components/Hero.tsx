@@ -20,9 +20,9 @@ const Hero = () => {
                     priority
                     />
                 </div>
-                <div className='absolute left-[10%] top-[55%]'>
+                <div className='absolute left-[6%] top-[60%]'>
                     <h1 className='font-ostrich text-4xl text-white'>
-                        Hi, I'm Harrison 🖐️   
+                        Hi, I'm Harrison
                     </h1>
                     <p className='text-xs pt-1 text-grey'>
                         Freelance web developer &
