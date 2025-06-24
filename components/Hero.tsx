@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
+import Technologies from './Technologies'
 
 const Hero = () => {
 
@@ -30,6 +31,7 @@ const Hero = () => {
                     <p className='responsive-p text-grey'>
                         Durham University Undergraduate 
                     </p>
+                    <Technologies />
                 </div>
             </div>
         </section>
