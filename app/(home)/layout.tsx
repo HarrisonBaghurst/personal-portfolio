@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <main>
+    <main className='relative'>
         {children}
     </main>
   )
