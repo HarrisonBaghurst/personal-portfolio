@@ -25,7 +25,7 @@ const Hero = () => {
                         Hi, I'm Harrison
                     </h1>
                     <p className='pt-1 responsive-p text-grey'>
-                        Freelance web developer &
+                        Freelance Software Developer &
                     </p>
                     <p className='responsive-p text-grey'>
                         Durham University Undergraduate 
