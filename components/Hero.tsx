@@ -7,7 +7,7 @@ const Hero = () => {
 
     return (
         <section>
-            <div className='w-full h-[70dvw] relative'>
+            <div className='w-full h-[70dvw] relative lg:h-[55dvw]'>
                 <div className='overflow-hidden'>
                     <Image 
                     src={'/heroImage.svg'}
@@ -21,13 +21,13 @@ const Hero = () => {
                     />
                 </div>
                 <div className='absolute left-[6%] top-[60%]'>
-                    <h1 className='font-ostrich text-4xl text-white'>
+                    <h1 className='font-ostrich responsive-h1 text-white'>
                         Hi, I'm Harrison
                     </h1>
-                    <p className='text-xs pt-1 text-grey'>
+                    <p className='pt-1 responsive-p text-grey'>
                         Freelance web developer &
                     </p>
-                    <p className='text-xs text-grey'>
+                    <p className='responsive-p text-grey'>
                         Durham University Undergraduate 
                     </p>
                 </div>
