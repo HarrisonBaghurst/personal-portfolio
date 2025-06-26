@@ -1,18 +1,34 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState } from 'react'
 import {TechnolgiesList} from '@/constants/technologies'
 import Image from 'next/image'
 
 const Technologies = () => {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <section className='pt-2 md:pt-3 lg:pt-4 xl:pt-5 flex gap-1 md:gap-2 lg:gap-3 xl:gap-4 2xl:gap-5'>
+        <section className='py-50 flex justify-evenly w-full px-[5%]'>
             {TechnolgiesList.map((technology: any, index: number) => (
-                <div key={index} className='w-4 md:w-6 lg:w-8 xl:w-10 2xl:w-12 h-4 md:h-6 lg:h-8 xl:h-10 2xl:h-12'>
+                <div key={index} 
+                className='w-15 h-15
+                '>
                     <Image 
                     src={`/icons/${technology.file}`}
                     width={500}
                     height={500}
                     alt={`${technology.name} icon`}
+                    style={{
+                    transform: `translateY(${20 * Math.sin((index*50 + scrollY) * 0.015)}px) rotate(0deg)`,
+                    }}
                     />
                 </div>
             ))}
