@@ -36,7 +36,7 @@ const TypedText = ({text, minTime, maxTime, className, startTimeout, onEnd}: Typ
     return (
         <div className={className}>
             {displayedText}
-            {displayedText !== text && <span className="text-grey animate-pulse">_</span>}
+            {displayedText !== text && displayedText !== '' && <span className="text-grey animate-pulse">_</span>}
         </div>
     )
 }

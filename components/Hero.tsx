@@ -1,14 +1,13 @@
 'use client'
 
 import HeroBackground from './HeroBackground'
-import Technologies from './Technologies'
 import TypedText from './TypedText'
 
 const Hero = () => {
 
     return (
         <section>
-            <div className='w-full h-[100dvh] relative'>
+            <div className='w-full h-screen relative'>
                 <HeroBackground />
                 <div className='absolute left-[5%] bottom-[10%]'>
                     <TypedText 
@@ -24,7 +23,7 @@ const Hero = () => {
                     minTime={20}
                     maxTime={30}
                     className='pt-1 responsive-p text-grey'
-                    startTimeout={1250}
+                    startTimeout={1000}
                     onEnd={() => {}}
                     />
                     <TypedText 
@@ -32,7 +31,7 @@ const Hero = () => {
                     minTime={20}
                     maxTime={30}
                     className='pt-1 responsive-p text-grey'
-                    startTimeout={2000}
+                    startTimeout={1750}
                     onEnd={() => {}}
                     />
                 </div>
