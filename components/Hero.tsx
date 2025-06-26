@@ -33,7 +33,7 @@ const Hero = () => {
                 setTimeout(type, Math.floor(Math.random() * (100 - 30 + 1)) + 30);
             }
         }
-        type();
+        setTimeout(type, 250);
         return () => {
             currentIndex = headingText.length;
         }
@@ -41,7 +41,7 @@ const Hero = () => {
 
     return (
         <section>
-            <div className='w-full h-screen relative'>
+            <div className='w-full h-[100dvh] relative'>
                 <div className='overflow-hidden'>
                     <Image 
                     src={'/heroImage.svg'}
@@ -57,7 +57,7 @@ const Hero = () => {
                 <div className='absolute left-[5%] bottom-[10%]'>
                     <h1 className='font-ostrich responsive-h1 text-white'>
                         {displayedText}
-                        <span className="text-grey animate-pulse">_</span>
+                        {displayedText !== headingText && <span className="text-grey animate-pulse">_</span>}
                     </h1>
                     <p className='pt-1 responsive-p text-grey'>
                         Freelance Software Developer &
