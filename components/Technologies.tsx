@@ -37,7 +37,7 @@ const Technologies = () => {
         <section className='py-50 flex justify-evenly w-full px-[5%]'>
             {TechnolgiesList.map((technology: any, i: number) => (
                 <div key={i} 
-                className='w-15 h-15
+                className='w-15 h-15 relative
                 '>
                     <Image 
                     src={`/icons/${technology.file}`}
@@ -48,6 +48,18 @@ const Technologies = () => {
                     transform: `translateY(${positions[i]}px) rotate(0deg)`,
                     transition: `${transition}`
                     }}
+                    className=''
+                    />
+                    <Image 
+                    src={`/icons/${technology.color}`}
+                    width={500}
+                    height={500}
+                    alt={`${technology.name} icon`}
+                    style={{
+                    transform: `translateY(${positions[i]}px) rotate(0deg)`,
+                    transition: `${transition}`
+                    }}
+                    className='absolute top-0 left-0 hover-icons'
                     />
                 </div>
             ))}

@@ -42,5 +42,10 @@ body {
   .responsive-p {
     @apply text-xs md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl;
   }
-  
+  .hover-icons {
+    opacity: 0;
+  }
+  .hover-icons:hover {
+    opacity: 1;
+  }
 }
