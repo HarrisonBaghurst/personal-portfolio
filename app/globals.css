@@ -27,6 +27,7 @@
 
   --color-blue: #19507d;
   --color-grey: #7e7e7e;
+  --color-dark-grey: #1b1b1b;
 }
 
 body {
@@ -39,13 +40,10 @@ body {
   .responsive-h1 {
     @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
   }
+  .responsive-h2 {
+    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
   .responsive-p {
     @apply text-xs md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl;
-  }
-  .hover-icons {
-    opacity: 0;
-  }
-  .hover-icons:hover {
-    opacity: 1;
   }
 }

@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <section>
       <Hero />
       <Technologies />
-      <div className="h-[200dvh]"></div>
+      <Projects />
     </section>
   );
 }

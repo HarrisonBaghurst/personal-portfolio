@@ -50,17 +50,6 @@ const Technologies = () => {
                     }}
                     className=''
                     />
-                    <Image 
-                    src={`/icons/${technology.color}`}
-                    width={500}
-                    height={500}
-                    alt={`${technology.name} icon`}
-                    style={{
-                    transform: `translateY(${positions[i]}px) rotate(0deg)`,
-                    transition: `${transition}`
-                    }}
-                    className='absolute top-0 left-0 hover-icons'
-                    />
                 </div>
             ))}
         </section>
