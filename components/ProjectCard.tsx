@@ -15,7 +15,7 @@ const ProjectCard = ({title, tagline, technologies}: ProjectCardProps) => {
         <p className='responsive-p pt-3 text-grey'>
             {tagline}
         </p>
-        <div className='flex gap-5 pt-5 responsive-p text-grey'>
+        <div className='flex gap-5 pt-5 responsive-p text-white'>
             {technologies.map((technology, i) => (
                 <p key={i}>{technology}</p>
             ))}
