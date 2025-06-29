@@ -12,7 +12,7 @@ const ProjectCard = ({title, tagline, technologies}: ProjectCardProps) => {
         <h2 className='font-ostrich responsive-h2'>
             {title}
         </h2>
-        <p className='responsive-p pt-2 text-grey'>
+        <p className='responsive-p pt-3 text-grey'>
             {tagline}
         </p>
         <div className='flex gap-5 pt-5 responsive-p text-grey'>
