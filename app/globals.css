@@ -46,4 +46,17 @@ body {
   .responsive-p {
     @apply text-xs md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl;
   }
+  .hover-card {
+    transform: perspective(400px) rotate3d(1, -1, 0, 0deg);
+    transition: 0.5s;
+    mask:
+    linear-gradient(135deg,#000a 40%,#fff,#000a 60%)
+    100% 100%/240% 240%;
+
+  }
+  .hover-card:hover {
+    transform: perspective(400px) rotate3d(1, -1, 0, -2deg) scale(1.025);
+    cursor: pointer;
+    mask-position: 0 0;
+  }
 }

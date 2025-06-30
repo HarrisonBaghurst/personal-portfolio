@@ -9,12 +9,12 @@ const Projects = () => {
         <ProjectCard 
         title='CarCuts.co.uk'
         tagline='Portfolio and sales website for CarCuts'
-        technologies={['Next JS', 'Tailwind']}
+        technologies={['Next JS', 'Tailwind', 'Vercel']}
         />
         <ProjectCard 
         title='Nurture Connect'
         tagline='Video conferencing app for Nurture Durham'
-        technologies={['Next JS', 'Tailwind']}
+        technologies={['Next JS', 'Tailwind', 'Vercel']}
         />
         <ProjectCard 
         title='SoftBlocked'
