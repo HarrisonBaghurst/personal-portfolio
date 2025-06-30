@@ -13,8 +13,8 @@ const HeroBackgroud = () => {
                 window.requestAnimationFrame(() => {
                     const scrollY = window.scrollY;
                     const translateY = 0.15 * scrollY; 
-                    const rotate = -0.015 * scrollY; 
-                    const zoom = 1.4 + 0.0005 * scrollY;
+                    const rotate = -0.02 * scrollY; 
+                    const zoom = 1.6 + 0.0005 * scrollY;
                     if(imageRef.current) {
                         imageRef.current.style.transform = `scale(${zoom}) translateY(${translateY}px) rotate(${rotate}deg)`
                     }   
