@@ -1,0 +1,101 @@
+'use client' 
+
+import React, { useState } from 'react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
+import { Input } from './ui/input'
+import { Textarea } from './ui/textarea'
+import { Button } from './ui/button'
+import { toast, Toaster } from 'sonner'
+
+interface ContactFormProps {
+    formOpen: boolean;
+    setFormOpen: () => void;
+}
+
+const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const sendMessage = async () => {
+        if(email === '' || message === '') {
+            closeForm();
+            toast.error('Please complete form before sending')
+        }
+        else {
+            closeForm();    
+
+            const data = {
+                email: email,
+                message: message,
+            }
+
+            const res = await fetch('api/contact', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data),
+            });
+
+            if(res.ok) {
+                toast.success('Message sent successfully');
+            }
+            else {
+                toast.error('Message failed to send - Please try again');
+            }
+        }
+    }
+
+    const closeForm = () => {
+        setEmail('');
+        setMessage('');
+        setFormOpen()
+    }
+
+    return (
+        <Dialog
+        open={formOpen} 
+        onOpenChange={closeForm}
+        >
+            <Toaster richColors position='bottom-right'/>
+            <DialogContent
+            className='border-[5px] border-dark-grey rounded-3xl p-5'
+            aria-describedby={undefined}
+            >   
+                <DialogHeader>
+                    <DialogTitle
+                    className='font-ostrich responsive-h2'
+                    >
+                        Contact Form
+                    </DialogTitle>
+                </DialogHeader>
+                <p className='text-xl text-grey'>
+                    Fill in the contact form and I will respond with an email as soon as possible (I do not respond to sales messages).
+                </p>
+                <div className='pt-5'>
+                    <p className='text-xl pb-3'>Email</p>
+                    <Input 
+                    className='border-[5px] border-none bg-dark-grey rounded-xl p-5'
+                    placeholder='Type your email address here'
+                    type='email'
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div className='pt-2'>
+                    <p className='text-xl pb-3'>Message</p>
+                    <Textarea 
+                    className='border-[5px] border-none bg-dark-grey rounded-xl px-5'
+                    placeholder='Type your message here'
+                    onChange={(e) => setMessage(e.target.value)}
+                    />
+                </div>
+                <Button 
+                className='mt-5 bg-dark-grey hover:bg-grey'
+                onClick={sendMessage}
+                >
+                    <p className='text-white text-lg'>Send message</p>
+                </Button>
+            </DialogContent>
+        </Dialog>
+    )
+}
+
+export default ContactForm

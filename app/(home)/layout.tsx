@@ -1,9 +1,11 @@
+import Navbar from '@/components/Navbar'
 import React, { ReactNode } from 'react'
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <main className='relative'>
-        {children}
+      <Navbar />
+      {children}
     </main>
   )
 }
