@@ -59,4 +59,10 @@ body {
     cursor: pointer;
     mask-position: 0 0;
   }
+  .technology-container {
+    transition: 0.25s
+  }
+  .technology-container:hover {
+    transform: scale(1.4);
+  }
 }
