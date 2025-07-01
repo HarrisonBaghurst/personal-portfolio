@@ -39,7 +39,7 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
                 toast.success('Message sent successfully');
             }
             else {
-                toast.error('Message failed to send - Please try again');
+                toast.error('Message failed to send - Please try again later');
             }
         }
     }
