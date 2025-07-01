@@ -24,7 +24,7 @@ export async function POST(request: Request) {
         await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
             to: '070806harrison@gmail.com',
-            subject: `Email address: ${email}`,
+            subject: `Email: ${email}`,
             text: `${message}`,
         });
         return NextResponse.json({ success: true }, { status: 200 });
