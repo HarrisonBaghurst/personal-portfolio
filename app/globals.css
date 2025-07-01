@@ -75,14 +75,16 @@ body {
     @apply text-xs md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl;
   }
   .hover-card {
-    transform: perspective(400px) rotate3d(1, -1, 0, 0deg);
+    will-change: transform;
+    transform-origin: center center;
+    transform: perspective(1000px) rotate3d(1, 1, 1, 0deg);
     transition: 0.5s;
     mask:
     linear-gradient(135deg,#000a 40%,#fff,#000a 60%)
     100% 100%/240% 240%;
   }
   .hover-card:hover {
-    transform: perspective(400px) rotate3d(1, -1, 0, -2deg) scale(1.025);
+    transform: perspective(1000px) rotate3d(1, 1, 0.5, 3deg) scale(1.025) translateX(0.75%);
     cursor: pointer;
     mask-position: 0 0;
   }

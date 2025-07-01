@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 const Projects = () => {
   return (
     <section
-    className='px-[5%] py-15 grid grid-cols-2 gap-x-20 gap-y-15'
+    className='px-[5%] py-15 grid grid-cols-2 gap-x-20 gap-y-15 justify-center'
     >
         <ProjectCard 
         title='CarCuts.co.uk'
