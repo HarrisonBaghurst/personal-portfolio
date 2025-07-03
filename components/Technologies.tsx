@@ -14,7 +14,7 @@ const Technologies = () => {
         const handleScroll = () => {
             setTransition('linear 0.04s');
             const currentScroll = window.scrollY;
-            setPositions(Array.from({ length: TechnolgiesList.length }, (_, i) => -30 + 30 * Math.sin((i * 100 + currentScroll) * 0.0125)));
+            setPositions(Array.from({ length: TechnolgiesList.length }, (_, i) => -0.028 * window.innerWidth + (30/1080) * window.innerWidth * Math.sin((i * 100 + (currentScroll / window.innerWidth) * 800) * 0.0125)));
             if(timeoutRef.current) {
                 clearTimeout(timeoutRef.current);
             }
@@ -34,7 +34,7 @@ const Technologies = () => {
     }, []);
 
     return (
-        <section className='py-50 flex justify-between w-full px-[5%] duration-300'>
+        <section className='py-10 xl:py-50 flex justify-between w-full px-[5%] duration-300'>
             {TechnolgiesList.map((technology: any, i: number) => (
                 <div
                 key={i}
@@ -51,7 +51,7 @@ const Technologies = () => {
                         }}
                     />
                     <p
-                    className="absolute opacity-0 overflow-hidden group-hover:opacity-100 duration-300 text-center top-22 text-xl text-grey"
+                    className="absolute opacity-0 overflow-hidden group-hover:opacity-100 duration-300 text-center top-8 text-xs xl:top-30 xl:text-3xl text-grey"
                     style={{
                     transform: `translateY(${positions[i]}px)`,
                     transition: `${transition}`,
