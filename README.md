@@ -8,7 +8,7 @@
 
 <h2>Contact Me 📫</h2>
 
-<p>My contact form can be found in the top right corner of my portfolio</p>
+<p>My contact form can be found in the top right corner of the portfolio</p>
 <p>Please feel free to make any enquiries, I will respond as soon as possible</p>
 
 <br/>
