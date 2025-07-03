@@ -7,7 +7,7 @@ const Hero = () => {
 
     return (
         <section>
-            <div className='w-full h-screen relative'>
+            <div className='w-full h-[75vh] xl:h-screen relative'>
                 <HeroBackground />
                 <div className='absolute left-[5%] bottom-[10%]'>
                     <TypedText 

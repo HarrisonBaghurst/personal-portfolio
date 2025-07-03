@@ -10,10 +10,10 @@ const Navbar = () => {
 
     return (
         <section 
-        className='fixed z-50 w-full flex justify-end p-5'
+        className='fixed z-50 w-full flex justify-end p-2 xl:p-5'
         >
             <Button 
-            className='p-6 rounded-[1000px] hover-card'
+            className='p-3 xl:p-8 rounded-[1000px] hover-card'
             style={{
                 position: 'fixed',
                 background: 'rgba(50, 50, 50,0.5)',
@@ -24,7 +24,7 @@ const Navbar = () => {
             }}
             onClick={() => setContactFormOpen(!contactFormOpen)}
             >
-                <p className='text-2xl text-white'>Contact Form</p>
+                <p className='xl:text-4xl text-white'>Contact Form</p>
             </Button>
             <ContactForm 
             formOpen={contactFormOpen}
