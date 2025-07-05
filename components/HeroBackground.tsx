@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import Image from 'next/image'
+import Aurora from './blocks/Backgrounds/Aurora/Aurora';
 
 const HeroBackgroud = () => {
-    const imageRef = useRef<HTMLImageElement | null>(null);
+    const imageRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         let ticking = false; 
@@ -12,11 +12,9 @@ const HeroBackgroud = () => {
             if(!ticking) {
                 window.requestAnimationFrame(() => {
                     const scrollY = window.scrollY;
-                    const translateY = 0.15 * scrollY; 
-                    const rotate = -0.02 * scrollY; 
-                    const zoom = 1.6 + 0.0005 * scrollY;
+                    const translateY = 0.75 * scrollY; 
                     if(imageRef.current) {
-                        imageRef.current.style.transform = `scale(${zoom}) translateY(${translateY}px) rotate(${rotate}deg)`
+                        imageRef.current.style.transform = `translateY(${translateY}px)`
                     }   
                     ticking = false;
                 });
@@ -29,17 +27,18 @@ const HeroBackgroud = () => {
     }, []);
 
     return (
-        <div className='overflow-hidden h-screen'>
-            <Image 
-            ref={imageRef}
-            src={'/heroImage.svg'}
-            alt='hero image'
-            width={10000}
-            height={10000}
-            style={{
-                willChange: 'transform',
-            }}
-            priority
+        <div 
+        className='overflow-hidden h-screen z-0'
+        style={{
+            willChange: 'transform',
+        }}
+        ref={imageRef}
+        >
+            <Aurora
+            colorStops={["#8b60b5", "#5cc9ed", "#ba6193"]}
+            blend={0.5}
+            amplitude={0.25}
+            speed={0.25}
             />
         </div>
     )

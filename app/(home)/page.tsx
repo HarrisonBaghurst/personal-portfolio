@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <section>
       <Hero />
-      <Technologies />
       <Projects />
     </section>
   );
