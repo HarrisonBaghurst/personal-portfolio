@@ -46,7 +46,7 @@ const Projects = () => {
           </Card>
         </CardSwap>
       </div>
-      <div className='absolute top-[15%] left-[5%]'>
+      <div className='absolute top-[10%] left-[5%] w-[35%]'>
         <ScrollFloat
         animationDuration={0.5}
         ease='back.inOut(2)'
@@ -57,6 +57,7 @@ const Projects = () => {
         >
           My Projects
         </ScrollFloat>
+        <p className='text-2xl'>Here are a few hand-picked projects that reflect my skills and creative approach. View more details by clicking on a card or view all of my projects with the button below.</p>
       </div>
     </section>
   )

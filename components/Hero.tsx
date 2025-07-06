@@ -1,16 +1,46 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import RotatingText from './blocks/TextAnimations/RotatingText/RotatingText'
 import HeroBackground from './HeroBackground'
 import TypedText from './TypedText'
 
 const Hero = () => {
+    const heroTextRef = useRef<HTMLDivElement | null>(null);
+    const subTextRef = useRef<HTMLDivElement | null>(null);
+    
+    useEffect(() => {
+        let ticking = false; 
+        const handleScroll = () => {
+            if(!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    const translateY = -0.25 * scrollY; 
+                    if(heroTextRef.current) {
+                        heroTextRef.current.style.transform = `translateY(${translateY}px)`
+                    }   
+                    if(subTextRef.current) {
+                        subTextRef.current.style.transform = `translateY(${translateY}px)`
+                    }   
+                    ticking = false;
+                });
+                ticking = true; 
+            }
+        }
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <section>
-            <div className='w-full h-120 xl:h-screen relative'>
+            <div 
+            className='w-full h-full relative'
+            >
                 <HeroBackground />
-                <div className='absolute top-[55%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
+                <div 
+                ref={heroTextRef}
+                className='absolute top-[60%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
                     <h1 className='font-ostrich text-9xl'>Harrison Baghurst</h1>
                     <RotatingText
                     texts={['Developer', 'Tutor', 'Student']}
@@ -25,13 +55,15 @@ const Hero = () => {
                     rotationInterval={2500}
                     />
                 </div>
-                <div className='absolute top-[70%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
+                <div 
+                ref={subTextRef}
+                className='absolute top-[75%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
                     <TypedText
-                    text='Explore my portfolio - A selection of my projects'
-                    minTime={10}
-                    maxTime={30}
+                    text='Explore my portfolio - A showcase of my projects'
+                    minTime={20}
+                    maxTime={40}
                     className='text-white text-4xl'
-                    startTimeout={1000}
+                    startTimeout={500}
                     onEnd={() => {}}
                     />
                 </div>
