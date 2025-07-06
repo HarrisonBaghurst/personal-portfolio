@@ -34,7 +34,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       {...rest}
-      className={`overflow-hidden absolute top-1/2 left-1/2 rounded-xl border-4 border-grey bg-background [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ""} ${rest.className ?? ""}`.trim()}
+      className={`overflow-hidden absolute top-1/2 left-1/2 rounded-xl bg-background [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? ""} ${rest.className ?? ""}`.trim()}
     />
   )
 );
@@ -93,7 +93,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
           durMove: 2,
           durReturn: 2,
           promoteOverlap: 0.9,
-          returnDelay: 0.05,
+          returnDelay: 0.5,
         }
       : {
           ease: "power1.inOut",
@@ -140,7 +140,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
       tlRef.current = tl;
 
       tl.to(elFront, {
-        y: "+=500",
+        y: "+=800",
         duration: config.durDrop,
         ease: config.ease,
       });
@@ -242,7 +242,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   return (
     <div
       ref={container}
-      className="absolute bottom-0 right-0 transform translate-x-[5%] translate-y-[25%] origin-bottom-right perspective-[900px]"
+      className="absolute bottom-0 right-0 transform translate-x-[20%] translate-y-[-10%] origin-bottom-right perspective-[900px]"
       style={{ width, height }}
     >
       {rendered}
