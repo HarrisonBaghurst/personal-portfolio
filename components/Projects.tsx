@@ -69,7 +69,7 @@ const Projects = () => {
           </Card>
         </CardSwap>
       </div>
-      <div className='absolute top-[10%] left-[5%] w-[35%]'>
+      <div className='absolute top-[25%] left-[5%] w-[35%]'>
         <ScrollFloat
         animationDuration={0.5}
         ease='back.inOut(2)'
@@ -80,10 +80,10 @@ const Projects = () => {
         >
           My Projects
         </ScrollFloat>
-        <p className='text-2xl'>These are a few hand-picked projects that reflect my skills and creative approach. View more details by clicking on a card or view all of my projects with the button below.</p>
-        <div className='pt-15'>
+        <p className='text-4xl'>These are a few hand-picked projects that reflect my skills and creative approach.</p>
+        <p className='text-4xl'>View more details by clicking on a card or view all of my projects with the button below.</p>
+        <div className='pt-25'>
           <InteractButton 
-          className=''
           text='View more projects'
           />
         </div>
