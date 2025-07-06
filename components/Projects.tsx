@@ -4,6 +4,7 @@ import React from 'react'
 import CardSwap, { Card } from './blocks/Components/CardSwap/CardSwap'
 import SpotlightCard from './blocks/Components/SpotlightCard/SpotlightCard'
 import ScrollFloat from './blocks/TextAnimations/ScrollFloat/ScrollFloat'
+import Image from 'next/image'
 
 const Projects = () => {
   return (
@@ -25,6 +26,13 @@ const Projects = () => {
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>Nurture Connect</h3>
                 <p className='text-2xl'>Nurture Durham's video conferencing website</p>
+                <div className='mt-10 h-100 w-160 relative rounded-lg overflow-hidden'>
+                  <Image 
+                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
+                  alt='SoftBlocked game image'
+                  fill
+                  />
+                </div>
               </div>
             </SpotlightCard>
           </Card>
@@ -33,6 +41,13 @@ const Projects = () => {
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>CarCuts.co.uk</h3>
                 <p className='text-2xl'>Car Cuts' sales and portfolio website</p>
+                <div className='mt-10 h-100 w-160 relative rounded-lg overflow-hidden'>
+                  <Image 
+                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Car%20Cuts-4rniXGCzWB7QAMxQgvvxbPNbEWrIZB.png'}
+                  alt='SoftBlocked game image'
+                  fill
+                  />
+                </div>
               </div>
             </SpotlightCard>
           </Card>
@@ -41,6 +56,13 @@ const Projects = () => {
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>SoftBlocked</h3>
                 <p className='text-2xl'>Personal 2D puzzle game project</p>
+                <div className='mt-10 h-90 w-160 relative rounded-lg overflow-hidden'>
+                  <Image 
+                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/SoftBlocked-vCLaoIC8zE6GaMt5eHZZ8E6OsJwOaZ.png'}
+                  alt='SoftBlocked game image'
+                  fill
+                  />
+                </div>
               </div>
             </SpotlightCard>
           </Card>

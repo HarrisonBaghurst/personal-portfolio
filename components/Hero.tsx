@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import RotatingText from './blocks/TextAnimations/RotatingText/RotatingText'
-import HeroBackground from './HeroBackground'
 import TypedText from './TypedText'
 
 const Hero = () => {
@@ -15,7 +14,7 @@ const Hero = () => {
             if(!ticking) {
                 window.requestAnimationFrame(() => {
                     const scrollY = window.scrollY;
-                    const translateY = -0.25 * scrollY; 
+                    const translateY = -0.5 * scrollY; 
                     if(heroTextRef.current) {
                         heroTextRef.current.style.transform = `translateY(${translateY}px)`
                     }   
@@ -35,9 +34,8 @@ const Hero = () => {
     return (
         <section>
             <div 
-            className='w-full h-full relative'
+            className='w-full h-screen relative overflow-x-hidden'
             >
-                <HeroBackground />
                 <div 
                 ref={heroTextRef}
                 className='absolute top-[60%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
