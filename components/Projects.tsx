@@ -85,6 +85,7 @@ const Projects = () => {
         <div className='pt-25'>
           <InteractButton 
           text='View more projects'
+          onClick={() => {}}
           />
         </div>
       </div>

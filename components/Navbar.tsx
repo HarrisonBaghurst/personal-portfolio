@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <section 
-        className='fixed z-50 w-full flex justify-end p-2 xl:p-5'
+        className='fixed z-50 w-full flex justify-end p-[3%]'
         >   
             <InteractButton
             text='Contact Form'
