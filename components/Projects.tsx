@@ -15,14 +15,14 @@ const Projects = () => {
       >
         <CardSwap
           cardDistance={100}
-          verticalDistance={250}
+          verticalDistance={200}
           delay={6000}
           skewAmount={3}
           pauseOnHover={false}
           width={1000}
           height={575}
         >
-          <Card>
+          <Card className='border-[3px] border-cyan-200'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>Nurture Connect</h3>
@@ -37,7 +37,7 @@ const Projects = () => {
               </div>
             </SpotlightCard>
           </Card>
-          <Card>
+          <Card className='border-[3px] border-pink-200'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>CarCuts.co.uk</h3>
@@ -52,7 +52,7 @@ const Projects = () => {
               </div>
             </SpotlightCard>
           </Card>
-          <Card>
+          <Card className='border-[3px] border-blue-300'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>SoftBlocked</h3>
@@ -81,10 +81,10 @@ const Projects = () => {
           My Projects
         </ScrollFloat>
         <p className='text-4xl'>These are a few hand-picked projects that reflect my skills and creative approach.</p>
-        <p className='text-4xl'>View more details by clicking on a card or view all of my projects with the button below.</p>
+        <p className='text-4xl pt-8'>View more details by clicking on a card or view all of my projects with the button below.</p>
         <div className='pt-25'>
           <InteractButton 
-          text='View more projects'
+          text='View More Projects'
           onClick={() => {}}
           />
         </div>

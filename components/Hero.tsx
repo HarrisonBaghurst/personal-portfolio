@@ -38,7 +38,7 @@ const Hero = () => {
             >
                 <div 
                 ref={heroTextRef}
-                className='absolute top-[60%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
+                className='absolute top-[50%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
                     <h1 className='font-ostrich text-9xl'>Harrison Baghurst</h1>
                     <RotatingText
                     texts={['Developer', 'Tutor', 'Student']}
@@ -55,7 +55,7 @@ const Hero = () => {
                 </div>
                 <div 
                 ref={subTextRef}
-                className='absolute top-[75%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
+                className='absolute top-[62%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
                     <TypedText
                     text='Explore my portfolio - A showcase of my projects'
                     minTime={20}
