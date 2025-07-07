@@ -15,14 +15,14 @@ const Projects = () => {
       >
         <CardSwap
           cardDistance={100}
-          verticalDistance={200}
+          verticalDistance={150}
           delay={6000}
           skewAmount={3}
           pauseOnHover={false}
           width={1000}
           height={575}
         >
-          <Card className='border-[3px] border-cyan-200'>
+          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>Nurture Connect</h3>
@@ -37,7 +37,7 @@ const Projects = () => {
               </div>
             </SpotlightCard>
           </Card>
-          <Card className='border-[3px] border-pink-200'>
+          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>CarCuts.co.uk</h3>
@@ -52,7 +52,7 @@ const Projects = () => {
               </div>
             </SpotlightCard>
           </Card>
-          <Card className='border-[3px] border-blue-300'>
+          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
             <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
               <div className='p-8'>
                 <h3 className='font-ostrich text-6xl'>SoftBlocked</h3>

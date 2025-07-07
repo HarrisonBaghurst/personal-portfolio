@@ -2,23 +2,21 @@
 @import "tw-animate-css";
 
 @font-face {
-  font-family: "Ostrich";
-  src: url("/fonts/OstrichSans-Heavy.otf") format("opentype");
-  font-weight: 200;
-  font-size:larger;
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-VariableFont_wght.otf") format("opentype");
+  font-weight: 300;
 }
 
 @font-face {
   font-family: "OfficeCode";
   src: url("/fonts/OfficeCodePro-Light.otf") format("opentype");
   font-weight: 400;
-  font-size:smaller;
 }
 
 @theme inline {
-  --font-ostrich: "Ostrich";
+  --font-poppins: "Poppins";
 
-  --color-background: #0e0e0e;
+  --color-background: #11121c;
   --color-foreground: #ffffff;
 
   --color-blue: #19507d;
@@ -62,7 +60,7 @@
 }
 
 body {
-  font-family: 'OfficeCode';
+  font-family: 'Poppins';
 }
 
 @layer utilities {

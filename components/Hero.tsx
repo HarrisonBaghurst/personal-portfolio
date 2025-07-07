@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import RotatingText from './blocks/TextAnimations/RotatingText/RotatingText'
-import TypedText from './TypedText'
+import Image from 'next/image'
+import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 
 const Hero = () => {
     const heroTextRef = useRef<HTMLDivElement | null>(null);
@@ -35,35 +35,46 @@ const Hero = () => {
         <section>
             <div 
             className='w-full h-screen relative overflow-x-hidden'
-            >
+            >   
                 <div 
                 ref={heroTextRef}
-                className='absolute top-[50%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
-                    <h1 className='font-ostrich text-9xl'>Harrison Baghurst</h1>
-                    <RotatingText
-                    texts={['Developer', 'Tutor', 'Student']}
-                    mainClassName="p-5 bg-cyan-300 text-black font-bold text-5xl overflow-hidden justify-center items-center rounded-lg w-90"
-                    staggerFrom={"last"}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-120%" }}
-                    staggerDuration={0.025}
-                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                    rotationInterval={2500}
-                    />
-                </div>
-                <div 
-                ref={subTextRef}
-                className='absolute top-[62%] left-[50%] justify-center flex gap-10 translate-x-[-50%]'>
-                    <TypedText
-                    text='Explore my portfolio - A showcase of my projects'
-                    minTime={20}
-                    maxTime={40}
-                    className='text-white text-4xl'
-                    startTimeout={500}
-                    onEnd={() => {}}
-                    />
+                className='mt-[35dvh] flex justify-evenly'
+                >   
+                    <div className='flex flex-col w-fit-content'>
+                        <h1 className='font-poppins font-bold text-[11rem] text-center'>Harrison Baghurst</h1>
+                        <div className='relative flex justify-evenly text-4xl pt-8'>
+                            <p>
+                                Web Developer
+                            </p>
+                            <p>
+                                •
+                            </p>
+                            <p>
+                                GCSE & A-Level Tutor
+                            </p>
+                            <p>
+                                •
+                            </p>
+                            <p>
+                                Durham Uni Undergrad
+                            </p>
+                        </div>
+                    </div>
+                    <div className=''>
+                        <TiltedCard
+                        imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29-PrTy2YBMtfARp5lEq2nLMsYc3Sk54b.jpg"
+                        altText="Photo of me"
+                        containerHeight="300px"
+                        containerWidth="300px"
+                        imageHeight="300px"
+                        imageWidth="300px"
+                        rotateAmplitude={10}
+                        scaleOnHover={1.1}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={false}
+                        />
+                    </div>
                 </div>
             </div>
         </section>
