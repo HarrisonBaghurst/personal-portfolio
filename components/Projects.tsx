@@ -22,50 +22,32 @@ const Projects = () => {
           width={1000}
           height={575}
         >
-          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
-            <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <div className='p-8'>
-                <h3 className='font-ostrich text-6xl'>Nurture Connect</h3>
-                <p className='text-2xl'>Nurture Durham's video conferencing website</p>
-                <div className='mt-10 h-125 w-200 relative rounded-lg overflow-hidden'>
-                  <Image 
-                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
-                  alt='SoftBlocked game image'
-                  fill
-                  />
-                </div>
-              </div>
-            </SpotlightCard>
+          <Card className='border-3 border-white'>
+            <div className='h-full w-full relative rounded-lg overflow-hidden'>
+              <Image 
+              src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
+              alt='Site image'
+              fill
+              />
+            </div>
           </Card>
-          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
-            <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <div className='p-8'>
-                <h3 className='font-ostrich text-6xl'>CarCuts.co.uk</h3>
-                <p className='text-2xl'>Car Cuts' sales and portfolio website</p>
-                <div className='mt-10 h-125 w-200 relative rounded-lg overflow-hidden'>
-                  <Image 
-                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Car%20Cuts-4rniXGCzWB7QAMxQgvvxbPNbEWrIZB.png'}
-                  alt='SoftBlocked game image'
-                  fill
-                  />
-                </div>
-              </div>
-            </SpotlightCard>
+          <Card className='border-3 border-white'>
+            <div className='h-full w-full relative rounded-lg overflow-hidden'>
+              <Image 
+              src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Car%20Cuts-4rniXGCzWB7QAMxQgvvxbPNbEWrIZB.png'}
+              alt='Site image'
+              fill
+              />
+            </div>  
           </Card>
-          <Card className='shadow shadow-[rgba(151,223,252,0.5)]'>
-            <SpotlightCard className="h-full w-full" spotlightColor="rgba(0, 229, 255, 0.2)">
-              <div className='p-8'>
-                <h3 className='font-ostrich text-6xl'>SoftBlocked</h3>
-                <p className='text-2xl'>Personal 2D puzzle game project</p>
-                <div className='mt-10 h-112.5 w-200 relative rounded-lg overflow-hidden'>
-                  <Image 
-                  src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/SoftBlocked-vCLaoIC8zE6GaMt5eHZZ8E6OsJwOaZ.png'}
-                  alt='SoftBlocked game image'
-                  fill
-                  />
-                </div>
-              </div>
-            </SpotlightCard>
+          <Card className='border-3 border-white'>
+            <div className='h-full w-full relative rounded-lg overflow-hidden'>
+              <Image 
+              src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/SoftBlocked-vCLaoIC8zE6GaMt5eHZZ8E6OsJwOaZ.png'}
+              alt='Site image'
+              fill
+              />
+            </div>
           </Card>
         </CardSwap>
       </div>
