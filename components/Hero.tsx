@@ -1,10 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 import InteractButton from './InteractButton';
+import ContactForm from './ContactForm';
 
 const Hero = () => {
+    const [formOpen, setFormOpen] = useState(false);
     const heroTextRef = useRef<HTMLDivElement | null>(null);
     
     useEffect(() => {
@@ -76,11 +78,15 @@ const Hero = () => {
                     <div className='flex justify-center mt-20'>
                         <InteractButton
                         text='Open Contact Form'
-                        onClick={() => {}}
+                        onClick={() => setFormOpen(!formOpen)}
                         />
                     </div>
                 </div>
             </div>
+            <ContactForm 
+            formOpen={formOpen}
+            setFormOpen={() => setFormOpen(!formOpen)}
+            />
         </section>
     )
 }

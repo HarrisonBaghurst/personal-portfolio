@@ -2,7 +2,6 @@
 
 import React from 'react'
 import CardSwap, { Card } from './blocks/Components/CardSwap/CardSwap'
-import SpotlightCard from './blocks/Components/SpotlightCard/SpotlightCard'
 import ScrollFloat from './blocks/TextAnimations/ScrollFloat/ScrollFloat'
 import Image from 'next/image'
 import InteractButton from './InteractButton'

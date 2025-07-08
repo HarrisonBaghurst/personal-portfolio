@@ -6,6 +6,9 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
 import { toast, Toaster } from 'sonner'
+import HeroBackgroud from './HeroBackground'
+import InteractButton from './InteractButton'
+import SpotlightCard from './blocks/Components/SpotlightCard/SpotlightCard'
 
 interface ContactFormProps {
     formOpen: boolean;
@@ -57,42 +60,44 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
         >
             <Toaster richColors position='bottom-right'/>
             <DialogContent
-            className='border-[5px] border-dark-grey rounded-3xl p-5 xl:p-10 overflow-y-auto max-h-screen'
+            className='border-3 border-white rounded-3xl overflow-y-auto max-h-screen'
             aria-describedby={undefined}
             >   
-                <DialogHeader>
-                    <DialogTitle
-                    className='font-ostrich text-3xl text-left xl:text-7xl font-light'
-                    >
-                        Contact Form
-                    </DialogTitle>
-                </DialogHeader>
-                <p className='text-sm xl:text-2xl text-grey'>
-                    Fill in the contact form and I will respond with an email as soon as possible (I do not respond to sales messages).
-                </p>
-                <div className='pt-5'>
-                    <p className='text-lg xl:text-3xl pb-3 xl:pb-5'>Email</p>
-                    <Input 
-                    className='border-[5px] border-none bg-dark-grey rounded-xl p-5'
-                    placeholder='Type your email address here'
-                    type='email'
-                    onChange={(e) => setEmail(e.target.value)}
-                    />
-                </div>
-                <div className='pt-2'>
-                    <p className='text-lg xl:text-3xl pb-3 xl:pb-5'>Message</p>
-                    <Textarea 
-                    className='border-[5px] border-none bg-dark-grey rounded-xl px-5'
-                    placeholder='Type your message here'
-                    onChange={(e) => setMessage(e.target.value)}
-                    />
-                </div>
-                <Button 
-                className='mt-5 bg-dark-grey hover:bg-grey'
-                onClick={sendMessage}
-                >
-                    <p className='text-white text-lg'>Send message</p>
-                </Button>
+                <SpotlightCard className="p-10" spotlightColor="rgba(151, 223, 252, 0.2)">
+                    <DialogHeader>
+                        <DialogTitle
+                        className='text-left text-7xl font-bold'
+                        >
+                            Contact Form
+                        </DialogTitle>
+                    </DialogHeader>
+                    <p className='text-2xl'>
+                        Fill in the contact form and I will respond with an email as soon as possible (I do not respond to sales messages).
+                    </p>
+                    <div className='pt-10'>
+                        <p className='text-4xl pb-5'>Email</p>
+                        <Input 
+                        className='bg-white rounded-xl p-5'
+                        placeholder='Type your email address here'
+                        type='email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className='pt-10'>
+                        <p className='text-4xl pb-3 xl:pb-5'>Message</p>
+                        <Textarea 
+                        className='bg-white rounded-xl px-5'
+                        placeholder='Type your message here'
+                        onChange={(e) => setMessage(e.target.value)}
+                        />
+                    </div>
+                    <div className='flex justify-end pt-10'>
+                        `<InteractButton 
+                        text='Send Message'
+                        onClick={sendMessage}
+                        />
+                    </div>
+                </SpotlightCard>
             </DialogContent>
         </Dialog>
     )
