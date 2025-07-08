@@ -1,12 +1,10 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
 import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 
 const Hero = () => {
     const heroTextRef = useRef<HTMLDivElement | null>(null);
-    const subTextRef = useRef<HTMLDivElement | null>(null);
     
     useEffect(() => {
         let ticking = false; 
@@ -17,9 +15,6 @@ const Hero = () => {
                     const translateY = -0.5 * scrollY; 
                     if(heroTextRef.current) {
                         heroTextRef.current.style.transform = `translateY(${translateY}px)`
-                    }   
-                    if(subTextRef.current) {
-                        subTextRef.current.style.transform = `translateY(${translateY}px)`
                     }   
                     ticking = false;
                 });
@@ -68,7 +63,7 @@ const Hero = () => {
                         containerWidth="300px"
                         imageHeight="300px"
                         imageWidth="300px"
-                        rotateAmplitude={10}
+                        rotateAmplitude={15}
                         scaleOnHover={1.1}
                         showMobileWarning={false}
                         showTooltip={false}

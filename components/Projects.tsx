@@ -76,13 +76,13 @@ const Projects = () => {
         scrollStart='center bottom+=50%'
         scrollEnd='bottom bottom-=40%'
         stagger={0.03}
-        containerClassName='font-ostrich'
+        containerClassName='font-bold'
         >
-          My Projects
+          Web Design
         </ScrollFloat>
         <p className='text-4xl'>These are a few hand-picked projects that reflect my skills and creative approach.</p>
         <p className='text-4xl pt-8'>View more details by clicking on a card or view all of my projects with the button below.</p>
-        <div className='pt-25'>
+        <div className='pt-15'>
           <InteractButton 
           text='View More Projects'
           onClick={() => {}}
