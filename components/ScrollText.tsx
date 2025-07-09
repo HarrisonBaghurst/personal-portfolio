@@ -12,7 +12,7 @@ const ScrollText = () => {
             if(!ticking) {
                 window.requestAnimationFrame(() => {
                     const scrollY = window.scrollY;
-                    const translateY = -0.25 * scrollY; 
+                    const translateY = -0.15 * scrollY; 
                     if(scrollTextRef.current) {
                         scrollTextRef.current.style.transform = `translateY(${translateY}px)`
                     }   

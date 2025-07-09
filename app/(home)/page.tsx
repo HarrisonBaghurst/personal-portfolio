@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <ScrollText />
       <Projects />
+      <div className="h-[20dvh] w-full"></div>
     </section>
   );
 }
