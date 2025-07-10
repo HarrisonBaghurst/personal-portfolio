@@ -18,8 +18,8 @@ const Projects = () => {
       gsap.set(boxRef.current, {xPercent: -50, yPercent: -50})
       gsap.set('#float-text', {left: '50%', xPercent: -50})
       gsap.set('#float-button', {left: '50%', xPercent: -50})
-      gsap.set('#project-container-1', {top: '0', translateY: '-100%'})
-      gsap.set('#project-container-2', {top: '0', translateY: '-100%'})
+      gsap.set('#project-container-1', {bottom: '0', translateY: '100%'})
+      gsap.set('#project-container-2', {bottom: '0', translateY: '100%'})
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
@@ -59,14 +59,14 @@ const Projects = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=4000',
+          end: '+=3000',
           scrub: true,
           pin: true,  
         }
       });
 
       timeline.to(boxRef.current, {
-        left: '25%',
+        left: '20%',
         ease: 'power2.inOut',
         duration: 1,
       })
@@ -79,8 +79,8 @@ const Projects = () => {
       })
 
       timeline.to('#project-container-1', {
-        bottom: '100%',
-        translateY: '100%',
+        top: 0,
+        translateY: '-100%',
         ease: 'power2.inOut',
         duration: 1,
       }, 'syncTransition')
@@ -103,7 +103,7 @@ const Projects = () => {
     className='relative h-screen overflow-hidden'>
       <div 
       ref={boxRef}
-      className='absolute left-[50%] top-[50%] w-[35%] py-50'
+      className='absolute left-[50%] top-[50%] w-[30%] py-50'
       >
         <div className='flex flex-col justify-center relative'>
           <div           
@@ -136,24 +136,44 @@ const Projects = () => {
         </div>
       </div>
       <div 
-      className='absolute right-[5%] w-320 h-200 rounded-xl overflow-hidden'
+      className='absolute right-[5%] w-320 h-220 overflow-hidden rounded-lg'
       id='project-container-1'
       >
-        <Image
-        src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
-        alt='nurture connect image'
-        fill
-        />
+        <div className='flex py-5 flex-col'>
+          <h2 className='text-4xl font-bold'>
+            Nurture Connect
+          </h2>
+          <p className='text-2xl'>
+            Nurture Durham's scheduling and video conferencing app
+          </p>
+        </div>
+        <div className='relative w-320 h-200 rounded-lg overflow-hidden'>
+          <Image
+          src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
+          alt='nurture connect image'
+          fill
+          />
+        </div>
       </div>
       <div 
-      className='absolute right-[5%] w-320 h-200 rounded-xl overflow-hidden'
+      className='absolute right-[5%] w-320 h-220 overflow-hidden rounded-lg'
       id='project-container-2'
       >
-        <Image
-        src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
-        alt='nurture connect image'
-        fill
-        />
+        <div className='flex py-5 flex-col'>
+          <h2 className='text-4xl font-bold'>
+            CarCuts.co.uk
+          </h2>
+          <p className='text-2xl'>
+            Car Cuts' portflio and sales website
+          </p>
+        </div>
+        <div className='relative w-320 h-200 rounded-lg overflow-hidden'>
+          <Image
+          src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Car%20Cuts-4rniXGCzWB7QAMxQgvvxbPNbEWrIZB.png'}
+          alt='nurture connect image'
+          fill
+          />
+        </div>
       </div>
     </section>
   )

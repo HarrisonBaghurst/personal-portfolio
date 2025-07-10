@@ -1,16 +1,19 @@
 import Hero from "@/components/Hero";
 import HeroBackground from "@/components/HeroBackground";
 import Projects from "@/components/Projects";
-import ScrollText from "@/components/ScrollText";
+import WebDesignScrollText from "@/components/WebDesignScrollText";
+import Tutoring from "@/components/Tutoring";
+import TutoringScrollText from "@/components/TutoringScrollText";
 
 export default function Home() {
   return (
     <section>
       <HeroBackground />
       <Hero />
-      <ScrollText />
+      <WebDesignScrollText />
       <Projects />
-      <div className="h-[20dvh] w-full"></div>
+      <TutoringScrollText />
+      <Tutoring />
     </section>
   );
 }
