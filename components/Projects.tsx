@@ -5,6 +5,7 @@ import ScrollFloat from './blocks/TextAnimations/ScrollFloat/ScrollFloat'
 import InteractButton from './InteractButton'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -21,7 +22,7 @@ const Projects = () => {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top+=100 top',
-        end: '+=1000',
+        end: '+=3000',
         onEnter: () => {
           gsap.to('#float-text', {
             xPercent: 0,
@@ -43,7 +44,7 @@ const Projects = () => {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: 'top+=100 top',
-        end: '+=1000',
+        end: '+=3000',
         onEnter: () => {
           gsap.to('#float-button', {
             xPercent: 0,
@@ -62,17 +63,28 @@ const Projects = () => {
         }
       });
 
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: '+=1000',
-        scrub: true,
-        pin: true,
-        animation: gsap.to(boxRef.current, {
-          left: '25%',
-          ease: 'power2.inOut',
-        })
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '+=3000',
+          scrub: true,
+          pin: true,  
+        }
+      });
+
+      timeline.to(boxRef.current, {
+        left: '25%',
+        ease: 'power2.inOut',
+        duration: 1,
       })
+
+      timeline.to('#card-container', {
+        y: 1000,
+        ease: 'linear',
+        duration: 2,
+      })
+
     }, sectionRef)
 
     return () => ctx.revert();
@@ -115,6 +127,16 @@ const Projects = () => {
             />
           </div>
         </div>
+      </div>
+      <div 
+      className='absolute top-0 translate-y-[-100%] right-[5%] w-320 h-200 rounded-xl overflow-hidden'
+      id='card-container'
+      >
+        <Image
+        src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
+        alt='nurture connect image'
+        fill
+        />
       </div>
     </section>
   )
