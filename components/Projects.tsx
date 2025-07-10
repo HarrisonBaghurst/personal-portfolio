@@ -18,6 +18,8 @@ const Projects = () => {
       gsap.set(boxRef.current, {xPercent: -50, yPercent: -50})
       gsap.set('#float-text', {left: '50%', xPercent: -50})
       gsap.set('#float-button', {left: '50%', xPercent: -50})
+      gsap.set('#project-container-1', {top: '0', translateY: '-100%'})
+      gsap.set('#project-container-2', {top: '0', translateY: '-100%'})
 
       ScrollTrigger.create({
         trigger: sectionRef.current,
@@ -25,6 +27,12 @@ const Projects = () => {
         end: '+=3000',
         onEnter: () => {
           gsap.to('#float-text', {
+            xPercent: 0,
+            left: 0,
+            duration: 0.6,
+            ease: 'power2.inOut'
+          });
+          gsap.to('#float-button', {
             xPercent: 0,
             left: 0,
             duration: 0.6,
@@ -38,22 +46,6 @@ const Projects = () => {
             duration: 0.6,
             ease: 'power2.inOut'
           });
-        }
-      });
-
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top+=100 top',
-        end: '+=3000',
-        onEnter: () => {
-          gsap.to('#float-button', {
-            xPercent: 0,
-            left: 0,
-            duration: 0.6,
-            ease: 'power2.inOut'
-          });
-        },
-        onLeaveBack: () => {
           gsap.to('#float-button', {
             xPercent: -50,
             left: '50%',
@@ -67,7 +59,7 @@ const Projects = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: '+=3000',
+          end: '+=4000',
           scrub: true,
           pin: true,  
         }
@@ -79,11 +71,26 @@ const Projects = () => {
         duration: 1,
       })
 
-      timeline.to('#card-container', {
-        y: 1000,
-        ease: 'linear',
-        duration: 2,
+      timeline.to('#project-container-1', {
+        top: '50%',
+        translateY: '-50%',
+        ease: 'power2.inOut',
+        duration: 1,
       })
+
+      timeline.to('#project-container-1', {
+        bottom: '100%',
+        translateY: '100%',
+        ease: 'power2.inOut',
+        duration: 1,
+      }, 'syncTransition')
+
+      timeline.to('#project-container-2', {
+        top: '50%',
+        translateY: '-50%',
+        ease: 'power2.inOut',
+        duration: 1,
+      }, 'syncTransition')
 
     }, sectionRef)
 
@@ -129,8 +136,18 @@ const Projects = () => {
         </div>
       </div>
       <div 
-      className='absolute top-0 translate-y-[-100%] right-[5%] w-320 h-200 rounded-xl overflow-hidden'
-      id='card-container'
+      className='absolute right-[5%] w-320 h-200 rounded-xl overflow-hidden'
+      id='project-container-1'
+      >
+        <Image
+        src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
+        alt='nurture connect image'
+        fill
+        />
+      </div>
+      <div 
+      className='absolute right-[5%] w-320 h-200 rounded-xl overflow-hidden'
+      id='project-container-2'
       >
         <Image
         src={'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png'}
