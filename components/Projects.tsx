@@ -119,17 +119,17 @@ const Projects = () => {
             stagger={0.03}
             containerClassName='font-bold'
             >
-              Web Design
+              Web Projects
             </ScrollFloat>
           </div>
-          <p className='text-4xl'>Scroll through a few hand-picked projects that reflect my skills and creative approach. View more details by clicking on a card or view all of my projects with the button below.</p>
+          <p className='text-4xl'>Scroll through a few hand-picked projects that reflect my skills and creative approach. Click on a card to view that project or more information about web projects with the button below.</p>
           <div 
           ref={scrollFloatButtonRef}
           className='absolute top-[140%]'
           id='float-button'
           >
             <InteractButton 
-            text='View More Projects'
+            text='View Projects'
             onClick={() => {}}
             />
           </div>

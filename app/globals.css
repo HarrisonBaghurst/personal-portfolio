@@ -13,6 +13,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Alpha";
+  src: url("/fonts/Alpha-Outline.otf") format("opentype");
+  font-weight: 400;
+}
+
 @theme inline {
   --font-poppins: "Poppins";
 

@@ -6,7 +6,7 @@ const ScrollText = () => {
     
     return (
         <div
-        className='relative w-full border-y-1 py-2 border-[rgba(255,255,255,0.2)] my-75'
+        className='relative w-full border-y-1 py-2 border-[rgba(255,255,255,0.2)] mt-75'
         >
             <ScrollVelocity
             texts={[

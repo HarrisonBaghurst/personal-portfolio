@@ -10,10 +10,6 @@ export default function Home() {
     <section>
       <HeroBackground />
       <Hero />
-      <WebDesignScrollText />
-      <Projects />
-      <TutoringScrollText />
-      <Tutoring />
     </section>
   );
 }
