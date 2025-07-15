@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 import InteractButton from './InteractButton';
 import ContactForm from './ContactForm';
+import Technologies from './Technologies';
 
 const Hero = () => {
     const [formOpen, setFormOpen] = useState(false);
@@ -35,7 +36,7 @@ const Hero = () => {
                 <h1 className='text-9xl font-bold'>
                     Hi, I'm Harrison.
                 </h1>
-                <div className='text-3xl pt-8 flex flex-col gap-2'>
+                <div className='text-3xl pt-8'>
                     <p>
                         I'm a full time Durham university computer science undergraduate. 
                     </p>
@@ -70,10 +71,24 @@ const Hero = () => {
                         />
                     </div>
                 </div>
-                <div className='border-1 w-[70%] h-150 mt-25 rounded-3xl p-8 border-[rgba(255,255,255,0.2)]'>
-                    <h2 className='text-4xl font-bold'>
+                <div className='border-1 w-[65%] mt-25 rounded-3xl p-8 border-[rgba(255,255,255,0.2)] relative'>
+                    <h2 className='text-5xl font-bold'>
                         Web Development
                     </h2>
+                    <div className='text-3xl pt-8 flex flex-col gap-8'>
+                        <p>
+                            Bring your ideas to life with clean, responsive websites designed to match your vision. 
+                            Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development sevices using modern technologies. 
+                        </p>
+                        <p>
+                            All projects are built from the ground up to your specifications. 
+                            This results in pricing and development time varying largely from one project to the next. 
+                            If you would like more information or a free quote for your project, feel free to contact me to arrange a meeting. 
+                        </p>
+                    </div>
+                    <div className='mt-10 border-1 border-[rgba(255,255,255,0.2)] bottom-8 py-4 rounded-lg w-full'>
+                        <Technologies />
+                    </div>
                 </div>
             </div>
             <ContactForm 

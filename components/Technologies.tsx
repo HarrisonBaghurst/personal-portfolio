@@ -1,80 +1,28 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
-import {TechnolgiesList} from '@/constants/technologies'
+import { TechnolgiesList } from '@/constants/technologies'
 import Image from 'next/image'
+import React from 'react'
 
-const Technologies = () => {
-    const [positions, setPositions] = useState<number[]>([]);
-    const [transition, setTransition] = useState<string>('linear 0.04s');
-
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setTransition('linear 0.04s');
-            const currentScroll = window.scrollY;
-            setPositions(Array.from({ length: TechnolgiesList.length }, (_, i) => -0.028 * window.innerWidth + (30/1080) * window.innerWidth * Math.sin((i * 100 + (currentScroll / window.innerWidth) * 800) * 0.0125)));
-            if(timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-            timeoutRef.current = setTimeout(() => {
-                setTransition('ease-in 0.25s');
-                setPositions(Array.from({ length: TechnolgiesList.length }, () => 0));
-            }, 150);
-        
-        }
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            if(timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        }
-    }, []);
-
+const Technologies = () => {    
     return (
-        <section className='py-10 xl:py-50 flex justify-between w-full px-[5%] duration-300'>
-            {TechnolgiesList.map((technology: any, i: number) => (
+        <section className='flex gap-16 overflow-hidden'>
+            {TechnolgiesList.map((technology) => (
                 <div
-                key={i}
-                className="relative technology-container group flex flex-col items-center transition-all"
+                key={technology.name}
+                className='flex items-center gap-2'
                 >   
-                    <div className='block xl:hidden'>
-                        <Image
-                            src={`/icons/${technology.file}`}
-                            width={24}
-                            height={24}
-                            alt={`${technology.name} icon`}
-                            style={{
-                            transform: `translateY(${positions[i]}px)`,
-                            transition: `${transition}`,
-                            }}
+                    <div className='relative w-10 h-10'>
+                        <Image 
+                        src={`icons/${technology.file}`}
+                        alt={technology.name}
+                        fill
                         />
                     </div>
-                    <div className='hidden xl:block'>
-                        <Image
-                            src={`/icons/${technology.file}`}
-                            width={75}
-                            height={75}
-                            alt={`${technology.name} icon`}
-                            style={{
-                            transform: `translateY(${positions[i]}px)`,
-                            transition: `${transition}`,
-                            }}
-                        />
-                    </div>
-                    <p
-                    className="absolute opacity-0 overflow-hidden group-hover:opacity-100 duration-300 text-center top-8 text-xs xl:top-30 xl:text-3xl text-grey"
-                    style={{
-                    transform: `translateY(${positions[i]}px)`,
-                    transition: `${transition}`,
-                    }}
-                    >
+                    <p className='text-3xl'>
                         {technology.name}
                     </p>
                 </div>
-
             ))}
         </section>
     )
