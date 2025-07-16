@@ -13,14 +13,14 @@ const Technologies = () => {
                     key={`${technology.name}-${index}`}
                     className='flex items-center gap-2'
                     >   
-                        <div className='relative w-10 h-10'>
+                        <div className='relative w-6 h-6 2xl:w-10 2xl:h-10'>
                             <Image 
                             src={`icons/${technology.file}`}
                             alt={technology.name}
                             fill
                             />
                         </div>
-                        <p className='text-3xl whitespace-nowrap'>
+                        <p className='text-md whitespace-nowrap 2xl:text-3xl'>
                             {technology.name}
                         </p>
                     </div>

@@ -39,11 +39,14 @@ const Hero = () => {
             pageType={pageType}
             onChange={(newPageType) => setPageType(newPageType)}
             />
-            <div className='px-30 pt-45'>
-                <h1 className='text-9xl font-bold'>
+            <div className='px-4 pt-25
+            2xl:px-30 2xl:pt-45'>
+                <h1 className='text-4xl font-bold
+                2xl:text-9xl'>
                     Hi, I'm Harrison.
                 </h1>
-                <div className='text-2xl pt-8'>
+                <div className='text-sm pt-4
+                2xl:text-2xl 2xl:pt-8'>
                     <p>
                         I'm a full time Durham university computer science undergraduate. 
                     </p>
@@ -51,37 +54,66 @@ const Hero = () => {
                         I offer web development services and GCSE and A-Level tutoring.
                     </p>
                 </div>
-                <div className='absolute top-50 right-30'>
-                    <TiltedCard
-                    imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29-PrTy2YBMtfARp5lEq2nLMsYc3Sk54b.jpg"
-                    altText="Photo of me"
-                    containerHeight="400px"
-                    containerWidth="400px"
-                    imageHeight="400px"
-                    imageWidth="400px"
-                    rotateAmplitude={8}
-                    scaleOnHover={1.05}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                    />
-                    <p className='text-3xl text-center pt-15'>
+                <div className='relative pt-5
+                2xl:block 2xl:absolute 2xl:top-50 2xl:right-30 2xl:pt-0'>
+                    <div className='hidden 2xl:block'>
+                        <TiltedCard
+                        imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29-PrTy2YBMtfARp5lEq2nLMsYc3Sk54b.jpg"
+                        altText="Photo of me"
+                        containerHeight="400px"
+                        containerWidth="400px"
+                        imageHeight="400px"
+                        imageWidth="400px"
+                        rotateAmplitude={8}
+                        scaleOnHover={1.05}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={false}
+                        />
+                        <p className='text-3xl text-center pt-15'>
                         Harrison Baghurst
-                    </p>
-                    <div className='flex justify-center pt-15'>
-                        <InteractButton
-                        text='Contact Me'
-                        onClick={() => setFormOpen(!formOpen)}
+                        </p>
+                        <div className='flex justify-center pt-15'>
+                            <InteractButton
+                            text='Contact Me'
+                            onClick={() => setFormOpen(!formOpen)}
+                            />
+                        </div>
+                    </div>
+                    <div className='flex 2xl:hidden justify-evenly gap-5 items-center'>
+                        <div className='flex flex-col '>
+                            <p className='text-sm text-center pb-4'>Github Link</p>
+                            <InteractButton
+                            text='Contact Me'
+                            onClick={() => setFormOpen(!formOpen)}
+                            />
+                        </div>
+                        <TiltedCard
+                        imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29-PrTy2YBMtfARp5lEq2nLMsYc3Sk54b.jpg"
+                        altText="Photo of me"
+                        containerHeight="150px"
+                        containerWidth="150px"
+                        imageHeight="150px"
+                        imageWidth="150px"
+                        rotateAmplitude={8}
+                        scaleOnHover={1.05}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={false}
                         />
                     </div>
+                    
                 </div>
-                <div className='border-1 w-[70%] mt-15 rounded-3xl p-8 border-[rgba(255,255,255,0.2)] relative'>
+                <div className='border-1 w-[100%] mt-10 rounded-3xl p-5 border-[rgba(255,255,255,0.2)] relative
+                2xl:w-[70%] 2xl:mt-15 2xl:p-8'>
                     {pageType === 'webDev' && (
                         <div>
-                            <h2 className='text-5xl font-bold'>
+                            <h2 className='text-3xl font-bold
+                            2xl:text-5xl'>
                                 Web Development
                             </h2>
-                            <div className='text-2xl pt-8 flex flex-col gap-8'>
+                            <div className='text-sm pt-8 flex flex-col gap-8
+                            2xl:text-2xl'>
                                 <p>
                                     Bring your ideas to life with clean, responsive websites designed to match your vision. 
                                     Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development sevices using modern technologies. 
@@ -99,20 +131,25 @@ const Hero = () => {
                     )}
                     {pageType === 'tutoring' && (
                         <div>
-                            <h2 className='text-5xl font-bold'>
+                            <h2 className='text-3xl font-bold
+                            2xl:text-5xl'>
                                 Tutoring
                             </h2>
-                            <div className='text-2xl pt-8 flex flex-col gap-8'>
+                            <div className='text-sm pt-8 flex flex-col gap-8
+                            2xl:text-2xl'>
                                 <p>
                                     Build confidence, master skills and achieve goals with 1-to-1 tuition, tailored for your child's prefered learning style.
                                     Your child's safety is my top priority, for this reason I hold an up-to-date standard DBS check, verifying that I am fully cleared to work with children.
                                     All lessons are conducted in an online video call and are usually an hour long. 
                                 </p>
-                                <div className='grid grid-cols-2 gap-16 pt-5'>  
+                                <div className='flex flex-col gap-8 pt-0
+                                2xl:grid 2xl:grid-cols-2 2xl:pt-5 2xl:gap-16'>  
                                     <div className='flex flex-col gap-8'>
                                         <div>
-                                            <p className='text-4xl font-bold pb-5'>Mathematics</p>
-                                            <div className='flex gap-4 pb-5'>
+                                            <p className='text-2xl font-bold pb-2
+                                            2xl:text-4xl 2xl:pb-5'>Mathematics</p>
+                                            <div className='flex gap-2 pb-2
+                                            2xl:gap-4 2xl:pb-5'>
                                                 <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>GCSE</p>
                                                 <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>A-Level</p>
                                             </div>
@@ -121,8 +158,10 @@ const Hero = () => {
                                             </p>
                                         </div>
                                         <div>
-                                            <p className='text-4xl font-bold pb-5'>Python Programming</p>
-                                            <div className='flex gap-4 pb-5'>
+                                            <p className='text-2xl font-bold pb-2
+                                            2xl:text-4xl 2xl:pb-5'>Python Programming</p>
+                                            <div className='flex gap-2 pb-2
+                                            2xl:gap-4 2xl:pb-5'>
                                                 <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>GCSE</p>
                                                 <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>A-Level</p>
                                                 <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>Independent</p>
@@ -132,8 +171,10 @@ const Hero = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className='flex flex-col gap-5'>
-                                        <p className='text-4xl font-bold'>Pricing</p>
+                                    <div className='flex flex-col gap-3
+                                    2xl:gap-5'>
+                                        <p className='text-2xl font-bold
+                                        2xl:text-4xl'>Pricing</p>
                                         <p>
                                             I offer your first lesson free to give you the opportunity to experience my teaching style with no commitments.
                                         </p>
