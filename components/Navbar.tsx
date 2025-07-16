@@ -20,7 +20,7 @@ const Navbar = ({pageType, onChange}: pageTypeProps) => {
     return (
         <section>
             <div 
-            className='mt-4 fixed text-2xl items-center mx-30 rounded-[100px] overflow-hidden px-[1%] h-20 z-100 w-[calc(100dvw-var(--spacing)*60)] flex justify-between border-1 border-[rgba(255,255,255,0.2)] backdrop-filter backdrop-blur-xl'
+            className='mt-4 fixed text-2xl items-center mx-30 rounded-[100px] overflow-hidden px-[1%] h-20 z-50 w-[calc(100dvw-var(--spacing)*60)] flex justify-between border-1 border-[rgba(255,255,255,0.2)] backdrop-filter backdrop-blur-xl'
             >   
                 <div>
                     <Image
