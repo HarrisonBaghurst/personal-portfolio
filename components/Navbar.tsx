@@ -1,15 +1,21 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContactForm from './ContactForm';
+import { motion } from 'framer-motion';
 
 interface pageTypeProps {
+    pageType: 'webDev' | 'tutoring';
     onChange: (type: 'webDev' | 'tutoring') => void;
 }
 
-const Navbar = ({onChange}: pageTypeProps) => {
+const Navbar = ({pageType, onChange}: pageTypeProps) => {
     const [formOpen, setFormOpen] = useState(false);
+
+    useEffect(() => {
+
+    }, [pageType])
     
     return (
         <section>
@@ -37,31 +43,31 @@ const Navbar = ({onChange}: pageTypeProps) => {
                     <p>Contact Me</p>
                 </div>
                 <div className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2'>
-                    <div className='flex justify-center gap-16'>
-                        <div 
-                        className='cursor-pointer flex items-center gap-2'
-                        onClick={() => onChange('webDev')}
-                        >
-                            <Image 
-                            src={'icons/device-desktop.svg'}
-                            alt='monitor image'
-                            width={32}
-                            height={32}
-                            />
-                            <p>Web Development</p>
-                        </div>
-                        <div 
-                        className='cursor-pointer flex items-center gap-2'
-                        onClick={() => onChange('tutoring')}
-                        >
-                            <Image 
-                            src={'icons/book-2.svg'}
-                            alt='monitor image'
-                            width={32}
-                            height={32}
-                            />
-                            <p>Tutoring</p>
-                        </div>
+                    <div className='flex justify-center gap-16 relative'>
+                        {['webDev', 'tutoring'].map((type) => (
+                            <div
+                            key={type}
+                            className='relative cursor-pointer px-2 py-1 flex items-center gap-2'
+                            onClick={() => onChange(type as 'webDev' | 'tutoring')}
+                            >
+                                {pageType === type && (
+                                <motion.div
+                                layoutId='activeTab'
+                                className='absolute inset-0 rounded-lg border-2 border-[rgba(255,255,255,0.2)] bg-linear-to-b from-blue to-blue-grey'
+                                transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+                                />
+                                )}
+                                <div className='relative z-10 flex items-center gap-2'>
+                                    <Image
+                                        src={type === 'webDev' ? 'icons/device-desktop.svg' : 'icons/book-2.svg'}
+                                        alt='icon'
+                                        width={32}
+                                        height={32}
+                                    />
+                                    <p>{type === 'webDev' ? 'Web Development' : 'Tutoring'}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

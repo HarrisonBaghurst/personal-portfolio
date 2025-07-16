@@ -36,6 +36,7 @@ const Hero = () => {
     return (
         <section className='relative w-full'>
             <Navbar 
+            pageType={pageType}
             onChange={(newPageType) => setPageType(newPageType)}
             />
             <div className='px-30 pt-45'>
