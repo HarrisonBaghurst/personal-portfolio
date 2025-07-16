@@ -12,11 +12,7 @@ interface pageTypeProps {
 
 const Navbar = ({pageType, onChange}: pageTypeProps) => {
     const [formOpen, setFormOpen] = useState(false);
-
-    useEffect(() => {
-
-    }, [pageType])
-    
+        
     return (
         <section>
             <div 
