@@ -8,7 +8,7 @@ import Technologies from './Technologies';
 import Navbar from './Navbar';
 
 const Hero = () => {
-    const [pageType, setPageType] = useState<'webDev' | 'tutoring'>('tutoring')
+    const [pageType, setPageType] = useState<'webDev' | 'tutoring'>('webDev')
 
     const [formOpen, setFormOpen] = useState(false);
     const heroTextRef = useRef<HTMLDivElement | null>(null);
