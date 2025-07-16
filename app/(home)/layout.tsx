@@ -1,6 +1,5 @@
 'use client'
 
-import Navbar from '@/components/Navbar'
 import React, { ReactNode, useEffect } from 'react'
 import Lenis from 'lenis'
 
@@ -25,7 +24,6 @@ const layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <main className='relative'>
-      <Navbar />
       {children}
     </main>
   )
