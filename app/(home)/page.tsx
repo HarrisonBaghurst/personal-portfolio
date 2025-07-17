@@ -1,14 +1,27 @@
+'use client'
+
 import Hero from "@/components/Hero";
 import HeroBackground from "@/components/HeroBackground";
+import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <section>
-      <HeroBackground />
-      <Hero />
-      <div className="w-full h-4 block 2xl:h-8">
+  	const [pageType, setPageType] = useState<'webDev' | 'tutoring'>('webDev')
 
-      </div>
-    </section>
-  );
+	return (
+		<section>
+			<Navbar 
+			pageType={pageType}
+			onChange={(newPageType) => setPageType(newPageType)}
+			/>
+			<HeroBackground />
+			<Hero 
+			pageType={pageType}
+			/>
+            {pageType === 'webDev' && (
+			    <Projects />
+            )}
+		</section>
+	);
 }

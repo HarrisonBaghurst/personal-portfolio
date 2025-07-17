@@ -5,11 +5,12 @@ import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 import InteractButton from './InteractButton';
 import ContactForm from './ContactForm';
 import Technologies from './Technologies';
-import Navbar from './Navbar';
 
-const Hero = () => {
-    const [pageType, setPageType] = useState<'webDev' | 'tutoring'>('webDev')
+interface HeroProps {
+    pageType: 'webDev' | 'tutoring';
+}
 
+const Hero = ({ pageType }: HeroProps) => {
     const [formOpen, setFormOpen] = useState(false);
     const heroTextRef = useRef<HTMLDivElement | null>(null);
     
@@ -34,11 +35,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className='relative w-full'>
-            <Navbar 
-            pageType={pageType}
-            onChange={(newPageType) => setPageType(newPageType)}
-            />
+        <section className='relative w-full pb-4 2xl:pb-8'>
             <div className='px-4 pt-25
             2xl:px-30 2xl:pt-45'>
                 <h1 className='text-4xl font-bold
