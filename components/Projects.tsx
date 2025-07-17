@@ -5,10 +5,10 @@ import CircularGallery from './blocks/Components/CircularGallery/CircularGallery
 
 const Projects = () => {
 	const images = [
-		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png',
-		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png',
-		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png',
-		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Nurture%20Connect-cPpI8LzGqLghSlYwFKmcJX2ldXVymb.png',
+		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20213821.png',
+		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214027.png',
+		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214123.png',
+		'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214245.png',
 	]
 
     return (
@@ -45,10 +45,10 @@ const Projects = () => {
 			</div>
 			<div className='px-4 text-sm
             2xl:px-30 2xl:text-2xl'>
-				<div className='flex flex-col gap-4
+				<div className='flex flex-col gap-8
 				2xl:grid 2xl:grid-cols-2 2xl:gap-16'>
 					<div>
-						<p className='text-3xl pb-2 2xl:text-5xl 2xl:pb-5'>
+						<p className='text-2xl pb-2 2xl:text-4xl 2xl:pb-5 font-bold'>
 							Overview
 						</p>
 						<p>
@@ -58,7 +58,7 @@ const Projects = () => {
 						</p>
 					</div>
 					<div>
-						<p className='text-3xl pb-2 2xl:text-5xl 2xl:pb-5'>
+						<p className='text-2xl pb-2 2xl:text-4xl 2xl:pb-5 font-bold'>
 							Testimonial
 						</p>
 						<p>
