@@ -118,6 +118,18 @@ const Hero = () => {
                                     Bring your ideas to life with clean, responsive websites designed to match your vision. 
                                     Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development sevices using modern technologies. 
                                 </p>
+                                <div className='flex gap-2 flex-wrap
+                                2xl:gap-4'>
+                                    {['Custom web design & development', 'Responsive design for all devices', 'E-commerce solutions', 'Web apps & dashboards']
+                                    .map((text, index) => (
+                                        <p 
+                                        className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'
+                                        key={index}
+                                        >
+                                            {text}
+                                        </p>
+                                    ))}
+                                </div>
                                 <p>
                                     All projects are built from the ground up to your specifications. 
                                     This results in pricing and development time varying largely from one project to the next. 
