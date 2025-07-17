@@ -6,7 +6,7 @@ export default function Home() {
     <section>
       <HeroBackground />
       <Hero />
-      <div className="w-full h-4 block 2xl:hidden">
+      <div className="w-full h-4 block 2xl:h-8">
 
       </div>
     </section>

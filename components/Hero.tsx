@@ -118,23 +118,50 @@ const Hero = () => {
                                     Bring your ideas to life with clean, responsive websites designed to match your vision. 
                                     Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development sevices using modern technologies. 
                                 </p>
-                                <div className='flex gap-2 flex-wrap
-                                2xl:gap-4'>
-                                    {['Custom web design & development', 'Responsive design for all devices', 'E-commerce solutions', 'Web apps & dashboards']
-                                    .map((text, index) => (
-                                        <p 
-                                        className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'
-                                        key={index}
-                                        >
-                                            {text}
-                                        </p>
-                                    ))}
+                                <div className='flex flex-col'>
+                                    <p className='text-2xl pb-2 font-bold
+                                    2xl:text-4xl 2xl:pb-4'>
+                                        Services
+                                    </p>
+                                    <div className='flex gap-2 flex-wrap
+                                    2xl:gap-4'>
+                                        {['Custom web design & development', 'Responsive design for all devices', 'E-commerce solutions', 'Web apps & dashboards']
+                                        .map((text, index) => (
+                                            <p 
+                                            className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'
+                                            key={index}
+                                            >
+                                                {text}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
-                                <p>
-                                    All projects are built from the ground up to your specifications. 
-                                    This results in pricing and development time varying largely from one project to the next. 
-                                    If you would like more information or a free quote for your project, feel free to contact me to arrange a meeting. 
-                                </p>
+                                <div className='flex flex-col'>
+                                    <p className='text-2xl pb-2 font-bold
+                                    2xl:text-4xl 2xl:pb-4'>
+                                        My Process
+                                    </p>
+                                    <p>
+                                        Start with a free consultation and get a quote for your project. 
+                                        The project may be split into stages depending on the scale.
+                                        I will give you ways to monitor the projects development as I work and I am happy to recieve ongoing suggestions as I progress. 
+                                        At the end of the project or each stage I will factor in time to make any changes you might require.
+                                        I will also have a contracted time after the projects completion to fix any issues that might arise.
+                                        I will guide you through the launch of your project or host the project for you if you wish.
+                                    </p>
+                                </div>
+                                <div className='flex flex-col'>
+                                    <p className='text-2xl pb-2 font-bold
+                                    2xl:text-4xl 2xl:pb-4'>
+                                        Pricing
+                                    </p>
+                                    <p>
+                                        All projects are built from the ground up to your specifications. 
+                                        This results in pricing and development time varying largely from one project to the next. 
+                                        If you would like more information or a free quote for your project, feel free to contact me to arrange a meeting. 
+                                        Payments are made at the begining of your project or at the start of each stage if the poject is split into stages.
+                                    </p>
+                                </div>
                             </div>
                             <div className='mt-10 border-2 border-[rgba(255,255,255,0.2)] bottom-8 py-4 rounded-lg w-full'>
                                 <Technologies />
