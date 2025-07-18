@@ -13,6 +13,10 @@ interface HeroProps {
 const Hero = ({ pageType }: HeroProps) => {
     const [formOpen, setFormOpen] = useState(false);
     const heroTextRef = useRef<HTMLDivElement | null>(null);
+
+    const sendToGithub = () => {
+        window.open('https://github.com/harrisonbaghurst');
+    }
     
     useEffect(() => {
         let ticking = false; 
@@ -72,8 +76,11 @@ const Hero = ({ pageType }: HeroProps) => {
                         showTooltip={false}
                         displayOverlayContent={false}
                         />
-                        <p className='text-3xl text-center pt-15'>
-                        Harrison Baghurst
+                        <p 
+                        className='text-2xl text-center pt-15 cursor-pointer'
+                        onClick={sendToGithub}
+                        >
+                            View my Github
                         </p>
                         <div className='flex justify-center pt-15'>
                             <InteractButton
@@ -84,7 +91,12 @@ const Hero = ({ pageType }: HeroProps) => {
                     </div>
                     <div className='flex 2xl:hidden justify-evenly gap-5 items-center'>
                         <div className='flex flex-col '>
-                            <p className='text-sm text-center pb-4'>Github Link</p>
+                            <p 
+                            className='text-sm text-center pb-4 cursor-pointer'
+                            onClick={sendToGithub}
+                            >
+                                View my Github
+                            </p>
                             <InteractButton
                             text='Contact Me'
                             onClick={() => setFormOpen(!formOpen)}
