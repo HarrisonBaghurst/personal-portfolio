@@ -38,6 +38,11 @@ const Hero = ({ pageType }: HeroProps) => {
         <section className='relative w-full pb-4 2xl:pb-8'>
             <div className='px-4 pt-25
             2xl:px-30 2xl:pt-45'>
+                <div className='flex justify-center pb-5 font-bold 2xl:pb-10'>
+                    <p className='text-sm 2xl:text-2xl border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px] w-fit'>
+                        Website under construction
+                    </p>
+                </div>
                 <h1 className='text-4xl font-bold
                 2xl:text-9xl'>
                     Hi, I'm Harrison.
