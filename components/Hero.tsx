@@ -86,7 +86,7 @@ const Hero = ({ pageType }: HeroProps) => {
                             />
                         </div>
                         <TiltedCard
-                        imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29-PrTy2YBMtfARp5lEq2nLMsYc3Sk54b.jpg"
+                        imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29.jpg"
                         altText="Photo of me"
                         containerHeight="150px"
                         containerWidth="150px"
