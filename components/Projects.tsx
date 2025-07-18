@@ -2,6 +2,7 @@
 
 import React from 'react'
 import CircularGallery from './blocks/Components/CircularGallery/CircularGallery'
+import Image from 'next/image';
 
 const Projects = () => {
 	const images = [
@@ -13,11 +14,20 @@ const Projects = () => {
 
     return (
 		<section className='w-full relative mt-10 2xl:mt-25 pb-4 2xl:pb-16'>
-			<div className='absolute w-full text-center'>
-				<p className='text-3xl font-bold
-				2xl:text-5xl'>
-					Nurture Connect
-				</p>
+			<div className='absolute w-full -translate-y-[20%]'>
+				<div className='flex gap-4 items-center justify-center'>
+					<div className='relative w-10 h-10 2xl:w-15 2xl:h-15'>
+						<Image 
+						src={'/img/nurtureDurhamLogo.png'}
+						alt='nurture durham logo'
+						fill
+						/>
+					</div>
+					<p className='text-3xl font-bold
+					2xl:text-5xl'>
+						Nurture Connect
+					</p>
+				</div>
 			</div>
 			<div className='hidden 2xl:block'>
 				<div className='relative h-[500px]'>

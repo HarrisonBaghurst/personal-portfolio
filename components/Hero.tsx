@@ -5,6 +5,7 @@ import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
 import InteractButton from './InteractButton';
 import ContactForm from './ContactForm';
 import Technologies from './Technologies';
+import Image from 'next/image';
 
 interface HeroProps {
     pageType: 'webDev' | 'tutoring';
@@ -43,9 +44,17 @@ const Hero = ({ pageType }: HeroProps) => {
             <div className='px-4 pt-25
             2xl:px-30 2xl:pt-45'>
                 <div className='flex justify-center pb-5 font-bold 2xl:pb-10'>
-                    <p className='text-sm 2xl:text-2xl border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px] w-fit'>
-                        Website under construction
-                    </p>
+                    <div className='flex gap-2 border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px] w-fit items-center'>
+                        <Image 
+                        src={'icons/backhoe.svg'}
+                        alt='construction image'
+                        width={32}
+                        height={32}
+                        />
+                        <p className='text-sm 2xl:text-2xl'>
+                            Website under construction
+                        </p>
+                    </div>
                 </div>
                 <h1 className='text-4xl font-bold
                 2xl:text-9xl'>
@@ -76,12 +85,24 @@ const Hero = ({ pageType }: HeroProps) => {
                         showTooltip={false}
                         displayOverlayContent={false}
                         />
-                        <p 
-                        className='text-2xl text-center pt-15 cursor-pointer'
+                        <div 
+                        className='flex justify-center cursor-pointer mt-15'
                         onClick={sendToGithub}
                         >
-                            View my Github
-                        </p>
+                            <div className='flex gap-2 items-center'>
+                                <Image 
+                                src={'icons/brand-github.svg'}
+                                alt='construction image'
+                                width={32}
+                                height={32}
+                                />
+                                <p 
+                                className='text-2xl'
+                                >
+                                    View my Github
+                                </p>
+                            </div>
+                        </div>
                         <div className='flex justify-center pt-15'>
                             <InteractButton
                             text='Contact Me'
