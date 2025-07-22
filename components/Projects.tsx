@@ -153,7 +153,7 @@ const Projects = () => {
 								If you need a web developer who takes the stress out of it, choose Harrison Baghurst! 
 								I had no design concepts, but he stepped right in, helping with colors, web page styles, and all the design ideas. 
 								The website is still under construction, but it's already looking incredible, thanks to their helpful and knowledgeable guidance. 
-								The whole journey has been seamless!
+								The whole journey has been seamless!
 								" - Jason (Car Cuts Owner)
 							</p>
 						</div>
