@@ -6,7 +6,7 @@ const HeroBackgroud = () => {
 
     return (
         <div 
-        className='overflow-hidden h-screen z- fixed w-full'
+        className='overflow-hidden h-screen fixed w-full'
         >
             <Aurora
             colorStops={["#97DFFC", "#B3CDDE", "#858AE3"]}

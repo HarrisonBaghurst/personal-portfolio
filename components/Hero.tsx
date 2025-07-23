@@ -1,76 +1,77 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import TiltedCard from './blocks/Components/TiltedCard/TiltedCard';
-import InteractButton from './InteractButton';
-import ContactForm from './ContactForm';
-import Technologies from './Technologies';
-import Image from 'next/image';
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
 
-interface HeroProps {
-    pageType: 'webDev' | 'tutoring';
-}
 
-const Hero = ({ pageType }: HeroProps) => {
-    const [formOpen, setFormOpen] = useState(false);
-    const heroTextRef = useRef<HTMLDivElement | null>(null);
-
-    const sendToGithub = () => {
-        window.open('https://github.com/harrisonbaghurst');
-    }
+const Hero = () => {
+    const headingTextRef = useRef<HTMLHeadingElement>(null);
+    const paragraphTextRef = useRef<HTMLParagraphElement>(null);
     
     useEffect(() => {
-        let ticking = false; 
-        const handleScroll = () => {
-            if(!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    const translateY = -0.5 * scrollY; 
-                    if(heroTextRef.current) {
-                        heroTextRef.current.style.transform = `translateY(${translateY}px)`
-                    }   
-                    ticking = false;
-                });
-                ticking = true; 
-            }
+        const headingWords = headingTextRef.current?.querySelectorAll('.heading-word');
+        const paragraphWords = paragraphTextRef.current?.querySelectorAll('.paragraph-word');
+
+        const tl = gsap.timeline();
+
+        if (headingWords) {
+            headingWords.forEach((word, i) => {
+                const direction = i % 2 === 0 ? 15 : -15;
+
+                tl.fromTo(
+                    word,
+                    { x: 200, opacity: 0, rotate: direction },
+                    { x: 0, opacity: 1, rotate: 0, duration: 1, ease: "power2.out" },
+                    i * 0.5
+                );
+            })
         }
-        handleScroll();
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        if (paragraphWords) {
+            tl.fromTo(
+                paragraphWords,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, ease: "power2.out", stagger: 0.1 }
+            );
+        }
     }, []);
 
+    const headingText = "Hi, I'm Harrison."
+    const paragraphText = "I'm a Durham university computer science undergraduate. I offer GCSE and A-Level tutoring and web development services."
+
     return (
-        <section className='relative w-full pb-4 2xl:pb-8'>
-            <div className='px-4 pt-25
-            2xl:px-30 2xl:pt-45'>
-                <div className='flex justify-center pb-5 font-bold 2xl:pb-10'>
-                    <div className='flex gap-2 border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px] w-fit items-center'>
-                        <Image 
-                        src={'icons/backhoe.svg'}
-                        alt='construction image'
-                        width={32}
-                        height={32}
-                        />
-                        <p className='text-sm 2xl:text-2xl'>
-                            Website under construction
+        <section className='relative w-screen h-screen flex justify-center items-center'>
+            <div className='flex flex-col w-fit'>
+                <h1 
+                ref={headingTextRef}
+                className='text-9xl font-bold mb-8 glow-text flex gap-8'
+                >
+                    {headingText.split(' ').map((word, i) => (
+                        <span key={i} className="inline-block heading-word">
+                            {word}
+                        </span>
+                    ))}
+                </h1>
+                <div className='text-2xl flex justify-center text-grey'>
+                    <div className="w-200">
+                        <p 
+                        ref={paragraphTextRef}
+                        className="flex gap-x-2 flex-wrap"
+                        >
+                            {paragraphText.split(' ').map((word, i) => (
+                                <span key={i} className="inline-block paragraph-word">
+                                    {word}
+                                </span>
+                            ))}
                         </p>
                     </div>
                 </div>
-                <h1 className='text-4xl font-bold
-                2xl:text-9xl'>
-                    Hi, I'm Harrison.
-                </h1>
-                <div className='text-sm pt-4
-                2xl:text-2xl 2xl:pt-8'>
-                    <p>
-                        I'm a full time Durham university computer science undergraduate. 
-                    </p>
-                    <p>
-                        I offer web development services and GCSE and A-Level tutoring.
-                    </p>
-                </div>
+            </div>
+        </section>
+    )
+}
+                {/*
                 <div className='relative pt-5
-                2xl:block 2xl:absolute 2xl:top-50 2xl:right-30 2xl:pt-0'>
+                2xl:block 2xl:absolute 2xl:top-50 2xl:right-16 2xl:pt-0'>
                     <div className='hidden 2xl:block'>
                         <TiltedCard
                         imageSrc="https://vvz9axceq1op6mal.public.blob.vercel-storage.com/IMG-20250706-WA0005%281%29%20%281%29.jpg"
@@ -99,7 +100,7 @@ const Hero = ({ pageType }: HeroProps) => {
                                 <p 
                                 className='text-2xl'
                                 >
-                                    View my Github
+                                    GitHub.com/HarrisonBaghurst
                                 </p>
                             </div>
                         </div>
@@ -137,8 +138,9 @@ const Hero = ({ pageType }: HeroProps) => {
                         displayOverlayContent={false}
                         />
                     </div>
-                    
                 </div>
+                */}
+                {/*
                 <div className='border-1 w-[100%] mt-10 rounded-3xl p-5 border-[rgba(255,255,255,0.2)] relative
                 2xl:w-[70%] 2xl:mt-15 2xl:p-8'>
                     {pageType === 'webDev' && (
@@ -272,13 +274,6 @@ const Hero = ({ pageType }: HeroProps) => {
                         </div>
                     )}
                 </div>
-            </div>
-            <ContactForm 
-            formOpen={formOpen}
-            setFormOpen={() => setFormOpen(!formOpen)}
-            />
-        </section>
-    )
-}
+                */}
 
 export default Hero
