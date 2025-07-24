@@ -26,9 +26,10 @@
   --color-foreground: #ffffff;
 
   --color-blue: #19507d;
-  --color-grey: #bdbdbd;
+  --color-grey: #d4d4d4;
   --color-dark-grey: #1b1b1b;
   --color-blue-grey: #2d3233;
+  --color-green: #13d446;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -135,3 +136,9 @@ body {
       0 0 50px #fff;
   }
 }
+
+/*
+* {
+  border: solid 1px white;
+}
+*/

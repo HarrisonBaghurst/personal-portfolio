@@ -89,7 +89,15 @@ const WebDev = () => {
         
     }, [])
 
-    const headingText = 'Tutoring'
+    const services = [
+        'Custom web design & development', 
+        'Responsive design for all devices', 
+        'Full e-commerce solutions', 
+        'Full stack web apps & dashboards', 
+        'Website redesign & modernisation',
+        'Web hosting setup'
+    ]
+    const headingText = 'Web Development'
 
     return (
         <section
@@ -109,7 +117,7 @@ const WebDev = () => {
                                 height={20}
                             />
                             <p className="text-2xl">
-                                Taking new Tutees
+                                Taking new Web development projects
                             </p>
                         </div>
                         <h2 
@@ -136,56 +144,57 @@ const WebDev = () => {
                 >
                     <div className='flex flex-col gap-16'>
                         <p>
-                            Build confidence, master skills and achieve goals with 1-to-1 tuition, tailored for your child's prefered learning style. 
-                            Your child's safety is my top priority, for this reason I hold an up-to-date standard DBS check, verifying that I am fully cleared to work with children. 
-                            All lessons are conducted in an online video call and are usually an hour long.
+                            Bring your ideas to life with clean, responsive websites designed to match your vision. 
+                            Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development services using modern technologies.
                         </p>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-4xl text-white font-bold'>
-                                Mathematics
+                                From Consultation to Launch
                             </h3>
-                            <div className='flex gap-4'>
-                                <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>GCSE</p>
-                                <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>A-Level</p>
-                            </div>
                             <p>
-                                Stay on top of your studies by going over topics of your choice, get a head start on upcoming lessons, and get exam-ready with past papers and revision.
-                                I teach all major exam boards.
+                                Start with a free consultation and get a personalised quote.
+                                Depending on the project's scale, work may be divided into stages. 
+                                You'll be able to monitor progress throughout, and I welcome your feedback at any point. 
+                                At the end of each stage (or the full project), I'll include time for any revisions you need. 
+                                After completion, I provide support to fix any issues that arise. 
+                                I'll also guide you through the launch or offer hosting if needed.
                             </p>
                         </div>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-4xl text-white font-bold'>
-                                Python Programming
+                                Project Scope & Pricing
                             </h3>
-                            <div className='flex gap-4'>
-                                <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>GCSE</p>
-                                <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>A-Level</p>
-                                <p className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'>Independent</p>
-                            </div>
                             <p>
-                                Develop your skills while continuing your education, or start from scratch and add programming to your toolkit at your own pace.
+                                Every project is built from the ground up to match your specific needs.
+                                As a result, pricing and timelines can vary. 
+                                For more details or a free quote, feel free to get in touch to schedule a meeting. 
+                                Payments are made at the start of the project - or at the beginning of each stage if the work is divided.
                             </p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-16'>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-4xl text-white font-bold'>
-                                Lesson Pricing
+                                What I Offer
                             </h3>
                             <p>
-                                I offer your first lesson free to give you the opportunity to experience my teaching style with no commitments.
+                                I provide a range of development services to support your project from the ground up. 
+                                Whether you're launching something new or refining an existing product, I deliver flexible, purpose-built solutions tailored to your goals. 
+                                Below is an overview of the services available, which can be combined or customised to suit your needs.
                             </p>
-                            <p>
-                                All lessons after the first: £20/hr
-                            </p>
-                            <p>
-                                Save money by purchasing multiple lessons at once:
-                            </p>
-                            <ul>
-                                <li>• 5 hours - £95 (£19/hr)</li>
-                                <li>• 10 hours - £180 (£18/hr)</li>
-                            </ul>
                         </div>
+                        <div className='flex gap-2 flex-wrap
+                        2xl:gap-4'>
+                            {services.map((text, index) => (
+                                <p 
+                                className='border-2 border-[rgba(255,255,255,0.2)] px-3 py-1 rounded-[100px]'
+                                key={index}
+                                >
+                                    {text}
+                                </p>
+                            ))}
+                        </div>
+                        <Technologies />
                     </div>
                     
                 </div>
