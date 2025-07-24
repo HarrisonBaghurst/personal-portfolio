@@ -68,7 +68,10 @@ const Hero = () => {
     const paragraphText = "I'm a Durham university computer science undergraduate. I offer GCSE and A-Level tutoring and web development services."
 
     return (
-        <section className='relative w-full h-screen flex justify-center items-center overflow-hidden'>
+        <section 
+        id="hero"
+        className='relative w-full h-screen flex justify-center items-center overflow-hidden'
+        >
             <div className='flex flex-col w-fit text-2xl'>
                 <div 
                 ref={aboveTextRef}

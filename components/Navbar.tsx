@@ -1,11 +1,37 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { cn } from '@/lib/utils';
 
 
 const Navbar = () => {
     const [time, setTime] = useState('');
     const navbarRef = useRef<HTMLDivElement>(null);
+    const [open, setOpen] = useState(false);
+
+    const scrollToHero = () => {
+        const element = document.getElementById('hero');
+        if (element) {
+            setOpen(false);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
+
+    const scrollToWebDev = () => {
+        const element = document.getElementById('webDev');
+        if (element) {
+            setOpen(false);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
+
+    const scrollToTutoring = () => {
+        const element = document.getElementById('tutoring');
+        if (element) {
+            setOpen(false);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
 
     useEffect(() => {
         // gsap setup 
@@ -36,27 +62,53 @@ const Navbar = () => {
         <section className=''>
             <div 
             ref={navbarRef}
-            className='my-4 fixed text-sm items-center mx-4 rounded-2xl overflow-hidden px-[1%] h-12 z-50 w-[calc(100%-var(--spacing)*8)] flex justify-between border-1 border-[rgba(255,255,255,0.3)] backdrop-filter backdrop-blur-xl bg-[rgba(200,200,200,0.1)]
-            2xl:mx-4 2xl:text-2xl 2xl:w-[calc(100%-var(--spacing)*8)] 2xl:h-16 2xl:my-4'
+            className={cn('my-4 fixed text-sm items-center mx-4 rounded-2xl overflow-hidden px-[1%] h-12 z-50 w-[calc(100%-var(--spacing)*8)] flex justify-between border-1 border-[rgba(255,255,255,0.3)] backdrop-filter backdrop-blur-xl bg-[rgba(200,200,200,0.1)] 2xl:mx-4 2xl:text-2xl 2xl:w-[calc(100%-var(--spacing)*8)] 2xl:my-4 duration-300 ease-in-out', open? '2xl:h-38': '2xl:h-16')}
             >   
-                <div className='flex justify-between w-full items-center'>
-                    <div className='flex gap-4 items-center'>
-                        <Image 
-                            src={'/img/logoImage.png'}
-                            alt='logo image'
-                            width={24}
-                            height={24}
-                        />
-                        <p>
-                            HarrisonBaghurst.com
-                        </p>
+                <div className='absolute left-0 top-0 w-full h-16 px-8 flex items-center'>
+                    <div className='flex justify-between items-center w-full'>
+                        <div className='flex gap-4 items-center'>
+                            <Image 
+                                src={'/img/logoImage.png'}
+                                alt='logo image'
+                                width={24}
+                                height={24}
+                            />
+                            <p>
+                                HarrisonBaghurst.com
+                            </p>
+                        </div>
+                        <button 
+                        className='cursor-pointer'
+                        onClick={() => setOpen(!open)}
+                        >
+                            Menu
+                        </button>
                     </div>
-                    <div>
-                        Menu
+                    <div className='absolute font-bold left-[50%] -translate-x-[50%]'>
+                        {time}
                     </div>
                 </div>
-                <div className='absolute font-bold left-[50%] -translate-x-[50%]'>
-                    {time}
+                <div className='absolute left-0 top-20 w-full h-16 px-8 flex items-center'>
+                    <div className='flex justify-center gap-16 items-center w-full'>
+                        <button 
+                        className='cursor-pointer'
+                        onClick={() => scrollToHero()}
+                        >
+                            Home
+                        </button>
+                        <button 
+                        className='cursor-pointer'
+                        onClick={() => scrollToWebDev()}
+                        >
+                            Web Development
+                        </button>
+                        <button 
+                        className='cursor-pointer'
+                        onClick={() => scrollToTutoring()}
+                        >
+                            Tutoring
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

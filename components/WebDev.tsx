@@ -101,6 +101,7 @@ const WebDev = () => {
 
     return (
         <section
+            id='webDev'
             className='relative w-full overflow-hidden flex justify-center pb-50'
         >
             <div className='w-[80%] pt-[8%] text-2xl text-grey'>
