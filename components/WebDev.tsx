@@ -6,6 +6,7 @@ import InteractButton from './InteractButton';
 import Technologies from './Technologies';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Project from './Project';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -196,9 +197,46 @@ const WebDev = () => {
                             ))}
                         </div>
                         <Technologies />
-                    </div>
-                    
+                    </div>   
                 </div>
+                <Project 
+                title={'Nurture Connect'}
+                icon={'/img/nurtureDurhamLogo.png'}
+                imgs={[
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20213821.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214027.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214123.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-17%20214245.png'
+                ]}
+                overview={"Nurture Connect is a video conferencing and scheduling web app built with Next.js and Tailwind CSS. It integrates GetStream's video and audio SDK for real-time communication and uses Clerk for user authentication and account management."}
+                testimonial={`
+                    "
+                    Harrison was a joy to work with. 
+                    He showed great aptitude, curiosity and, most importantly to me, dedication, resulting in an outstanding tutoring platform. 
+                    He responded to queries and comments swiftly, worked hard consistently to learn new ideas, and was incredibly empathetic to my wants and needs. 
+                    He is skilful, practical and reliable - I couldn't recommend him enough!
+                    " - Ashwin Bhat (Nurture Durham Founder)`
+                }
+                />
+                <Project 
+                title={'CarCuts.co.uk'}
+                icon={'/img/carCutsLogo.ico'}
+                imgs={[
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-20%20145100.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-20%20145117.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-20%20145133.png',
+                    'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-20%20145146.png'
+                ]}
+                overview={"CarCuts.co.uk is a sales and portfolio website built with Next.js and Tailwind CSS. It uses Resend for email delivery and Upstash Redis for rate limiting."}
+                testimonial={`
+                    "
+                    If you need a web developer who takes the stress out of it, choose Harrison Baghurst! 
+                    I had no design concepts, but he stepped right in, helping with colors, web page styles, and all the design ideas. 
+                    The website is still under construction, but it's already looking incredible, thanks to their helpful and knowledgeable guidance. 
+                    The whole journey has been seamless! 
+                    " - Jason (Car Cuts Owner)`
+                }
+                />
             </div>
         </section>
     )

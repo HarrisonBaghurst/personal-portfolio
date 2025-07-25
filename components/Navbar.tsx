@@ -39,7 +39,7 @@ const Navbar = () => {
             gsap.fromTo(
                 navbarRef.current,
                 { y: -200 },
-                { y: 0, duration: 0.5, ease: "power2.out", delay: 3 }
+                { y: 0, duration: 0.5, ease: "power2.out", delay: 2.5 }
             )
         }
 
