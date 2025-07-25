@@ -6,6 +6,7 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { toast, Toaster } from 'sonner'
 import InteractButton from './InteractButton'
+import Image from 'next/image'
 
 interface ContactFormProps {
     formOpen: boolean;
@@ -69,6 +70,20 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
                         Contact Form
                     </DialogTitle>
                 </DialogHeader>
+                <div 
+                className=" text-xs flex justify-center items-center gap-2 text-grey
+                2xl:text-2xl 2xl:gap-4"
+                >
+                    <Image 
+                        src={'/icons/inner-shadow-bottom-left.svg'}
+                        alt="dot"
+                        width={20}
+                        height={20}
+                    />
+                    <p className="">
+                        Taking new Tutees and Web projects
+                    </p>
+                </div>
                 <p className='text-xs pt-2 justify-center text-grey
                 2xl:pt-5 2xl:text-2xl'>
                     Fill in the contact form and I will respond with an email as soon as possible (I do not respond to sales messages).
