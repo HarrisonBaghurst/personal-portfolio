@@ -1,11 +1,12 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import InteractButton from './InteractButton';
 import Technologies from './Technologies';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ContactForm from './ContactForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,8 @@ const WebDev = () => {
     const aboveTextRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
     const contentsRef = useRef<HTMLDivElement>(null);
+
+    const [formOpen, setFormOpen] = useState(false);
 
     useEffect(() => {
         const headingWords = headingTextRef.current?.querySelectorAll('.heading-word');
@@ -127,7 +130,7 @@ const WebDev = () => {
                     <div ref={buttonRef}>
                         <InteractButton 
                             text="Contact Me"
-                            onClick={() => {}}
+                            onClick={() => setFormOpen(!formOpen)}
                         />
                     </div>
                 </div>
@@ -191,6 +194,10 @@ const WebDev = () => {
                     
                 </div>
             </div>
+            <ContactForm 
+            formOpen={formOpen}
+            setFormOpen={() => setFormOpen(!formOpen)}
+            />
         </section>
     )
 }

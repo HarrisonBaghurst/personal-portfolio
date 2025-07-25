@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import Image from "next/image";
 import InteractButton from "./InteractButton";
+import ContactForm from "./ContactForm";
 
 const Hero = () => {
     const headingTextRef = useRef<HTMLHeadingElement>(null);
@@ -11,6 +12,8 @@ const Hero = () => {
     const aboveTextRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
+
+    const [formOpen, setFormOpen] = useState(false);
     
     useEffect(() => {
         const headingWords = headingTextRef.current?.querySelectorAll('.heading-word');
@@ -118,10 +121,14 @@ const Hero = () => {
                 >
                     <InteractButton 
                         text="Contact Me"
-                        onClick={() => {}}
+                        onClick={() => setFormOpen(!formOpen)}
                     />
                 </div>
             </div>
+            <ContactForm 
+            formOpen={formOpen}
+            setFormOpen={() => setFormOpen(!formOpen)}
+            />
         </section>
     )
 }
