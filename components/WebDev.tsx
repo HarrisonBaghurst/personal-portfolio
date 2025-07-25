@@ -219,7 +219,7 @@ const WebDev = () => {
                 }
                 />
                 <Project 
-                title={'CarCuts.co.uk'}
+                title={'Car Cuts'}
                 icon={'/img/carCutsLogo.ico'}
                 imgs={[
                     'https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-07-20%20145100.png',
