@@ -90,22 +90,25 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
     }, [])
 
     return (
-        <div className='w-full flex flex-col gap-16  mt-48'>
-            <div className='flex justify-center gap-4 items-center'>
+        <div className='w-full flex flex-col gap-8 mt-32
+        2xl:gap-16 2xl:mt-48'>
+            <div className='flex justify-center gap-4 items-center
+            2xl:gap-8'>
                 <div 
                 ref={logoRef}
-                className='overflow-hidden rounded-lg'
-                >
+                className='overflow-hidden rounded-lg relative w-8 h-8
+                2xl:w-20 2xl:h-20'
+                >   
                     <Image 
                     src={icon}
                     alt='logo'
-                    width={48}
-                    height={48}
+                    fill
                     />
                 </div>
                 <h2 
                 ref={headingTextRef}
-                className='text-7xl glow-text text-white font-bold heading-word flex gap-4'
+                className='text-3xl glow-text text-white font-bold heading-word flex gap-2
+                2xl:text-7xl 2xl:gap-4'
                 >
                     {title.split(' ').map((word, i) => (
                         <span key={i} className="inline-block heading-word">
@@ -124,12 +127,13 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
                 ref={imgsRef}
                 >
                     <CarouselContent 
-                    className='-ml-8'
+                    className='-ml-16'
                     >
                         {imgs.map((img, index) => (
                             <CarouselItem 
                             key={index}
-                            className='basis-1/3 pl-8'
+                            className='basis-1/1 pl-16
+                            2xl:basis-1/3'
                             >
                                 <div className='relative aspect-16/9 rounded-lg overflow-hidden animate-image'>
                                     <Image 
@@ -149,10 +153,12 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
             </Carousel>
             <div 
             ref={contentsRef}
-            className='grid grid-cols-2 gap-[10%]'
+            className='grid grid-cols-1 gap-8
+            2xl:grid-cols-2 2xl:gap-[10%]'
             >
                 <div>
-                    <h3 className='text-4xl text-white font-bold pb-4'>
+                    <h3 className='text-2xl text-white font-bold pb-4
+                    2xl:text-4xl'>
                         Project Overview
                     </h3>
                     <p>
@@ -160,7 +166,8 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
                     </p>
                 </div>
                 <div>
-                    <h3 className='text-4xl text-white font-bold pb-4'>
+                    <h3 className='text-2xl text-white font-bold pb-4
+                    2xl:text-4xl'>
                         Testimonial
                     </h3>
                     <p> 

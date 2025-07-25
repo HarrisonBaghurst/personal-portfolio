@@ -106,14 +106,17 @@ const WebDev = () => {
     return (
         <section
             id='webDev'
-            className='relative w-full overflow-hidden flex justify-center pb-50'
+            className='relative w-full overflow-hidden flex justify-center pb-32
+            2xl:pb-50'
         >
-            <div className='w-[80%] pt-[8%] text-2xl text-grey'>
-                <div className='flex justify-between items-center'>
+            <div className='w-[80%] pt-[8%] text-xs text-grey
+            2xl:text-2xl'>
+                <div className='flex flex-col items-center pb-8
+                2xl:justify-between 2xl:flex-row 2xl:pb-10'>
                     <div className='w-fit'>
                         <div 
                         ref={aboveTextRef}
-                        className="flex justify-center gap-4 mb-8"
+                        className="flex justify-center items-center gap-4 mb-8"
                         >
                             <Image 
                                 src={'/icons/inner-shadow-bottom-left.svg'}
@@ -121,13 +124,14 @@ const WebDev = () => {
                                 width={20}
                                 height={20}
                             />
-                            <p className="text-2xl">
+                            <p className="">
                                 Taking new Web development projects
                             </p>
                         </div>
                         <h2 
                         ref={headingTextRef}
-                        className='text-8xl font-bold mb-8 glow-text flex gap-8 text-white'
+                        className='text-3xl font-bold mb-8 glow-text flex gap-2 text-white
+                        2xl:text-8xl 2xl:gap-8'
                         >
                             {headingText.split(' ').map((word, i) => (
                                 <span key={i} className="inline-block heading-word">
@@ -145,15 +149,18 @@ const WebDev = () => {
                 </div>
                 <div 
                 ref={contentsRef}
-                className='grid grid-cols-2 mt-8 gap-[10%]'
+                className='grid grid-cols-1 mt-8 gap-8
+                2xl:grid-cols-2 2xl:gap-[10%]'
                 >
-                    <div className='flex flex-col gap-16'>
+                    <div className='flex flex-col gap-8
+                    2xl:gap-16'>
                         <p>
                             Bring your ideas to life with clean, responsive websites designed to match your vision. 
                             Whether you need a simple portfolio, a full ecommerce website or a custom web app, I offer complete development services using modern technologies.
                         </p>
                         <div className='flex flex-col gap-4'>
-                            <h3 className='text-4xl text-white font-bold'>
+                            <h3 className='text-2xl text-white font-bold
+                            2xl:text-4xl'>
                                 From Consultation to Launch
                             </h3>
                             <p>
@@ -166,7 +173,8 @@ const WebDev = () => {
                             </p>
                         </div>
                         <div className='flex flex-col gap-4'>
-                            <h3 className='text-4xl text-white font-bold'>
+                            <h3 className='text-2xl text-white font-bold
+                            2xl:text-4xl'>
                                 Project Scope & Pricing
                             </h3>
                             <p>
@@ -179,7 +187,8 @@ const WebDev = () => {
                     </div>
                     <div className='flex flex-col gap-16'>
                         <div className='flex flex-col gap-4'>
-                            <h3 className='text-4xl text-white font-bold'>
+                            <h3 className='text-2xl text-white font-bold
+                            2xl:text-4xl'>
                                 What I Offer
                             </h3>
                             <p>

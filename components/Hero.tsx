@@ -75,10 +75,11 @@ const Hero = () => {
         id="hero"
         className='relative w-full h-screen flex justify-center items-center overflow-hidden'
         >
-            <div className='flex flex-col w-fit text-2xl'>
+            <div className='flex flex-col w-fit text-xs max-w-[calc(100dvw-4*var(--spacing))]
+            2xl:text-2xl'>
                 <div 
                 ref={aboveTextRef}
-                className="flex justify-center gap-4 under-text mb-8 text-grey"
+                className="flex justify-center items-center gap-4 under-text mb-8 text-grey"
                 >
                     <Image 
                         ref={imageRef}
@@ -87,13 +88,14 @@ const Hero = () => {
                         width={20}
                         height={20}
                     />
-                    <p className="text-2xl">
+                    <p className="">
                         Taking new Tutees and Web projects
                     </p>
                 </div>
                 <h1 
                 ref={headingTextRef}
-                className='text-9xl font-bold mb-8 glow-text flex gap-8'
+                className='text-4xl font-bold mb-8 glow-text flex gap-3 justify-center
+                2xl:text-9xl 2xl:gap-8'
                 >
                     {headingText.split(' ').map((word, i) => (
                         <span key={i} className="inline-block heading-word">
@@ -102,10 +104,11 @@ const Hero = () => {
                     ))}
                 </h1>
                 <div className='flex justify-center text-grey'>
-                    <div className="w-200">
+                    <div className="w-200 max-w-[calc(100dvw-20*var(--spacing))]">
                         <p 
                         ref={paragraphTextRef}
-                        className="flex gap-x-2 flex-wrap mb-8"
+                        className="flex gap-x-1 flex-wrap mb-8 justify-center
+                        2xl:gap-x-2"
                         >
                             {paragraphText.split(' ').map((word, i) => (
                                 <span key={i} className="inline-block paragraph-word">
