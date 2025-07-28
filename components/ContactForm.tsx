@@ -58,21 +58,23 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
         >
             <Toaster richColors position='bottom-right'/>
             <DialogContent
-            className='rounded-lg overflow-y-auto max-h-[100dvh] p-4
-            2xl:p-8'
+            className='rounded-lg overflow-y-auto max-h-[100dvh] p-4 text-xs
+            md:p-6 md:text-base
+            2xl:p-8 2xl:text-2xl'
             aria-describedby={undefined}
             >   
                 <DialogHeader>
                     <DialogTitle
                     className='text-center text-4xl font-bold
+                    md:text-5xl
                     2xl:text-6xl'
                     >
                         Contact Form
                     </DialogTitle>
                 </DialogHeader>
                 <div 
-                className=" text-xs flex justify-center items-center gap-2 text-grey
-                2xl:text-2xl 2xl:gap-4"
+                className="flex justify-center items-center gap-2 text-grey
+                2xl:gap-4"
                 >
                     <Image 
                         src={'/icons/inner-shadow-bottom-left.svg'}
@@ -84,12 +86,12 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
                         Taking new Tutees and Web projects
                     </p>
                 </div>
-                <p className='text-xs pt-2 justify-center text-grey
-                2xl:pt-5 2xl:text-2xl'>
+                <p className='pt-2 justify-center text-grey
+                2xl:pt-5'>
                     Fill in the contact form and I will respond with an email as soon as possible (I do not respond to sales messages).
                 </p>
                 <div className='pt-4 2xl:pt-10'>
-                    <p className='text-2xl pb-2 2xl:text-4xl 2xl:pb-5'>Email</p>
+                    <p className='text-2xl pb-2 md:text-3xl 2xl:text-4xl 2xl:pb-5 md:pb-3'>Email</p>
                     <Input 
                     className='bg-white rounded-xl p-5'
                     placeholder='Type your email address here'
@@ -98,7 +100,7 @@ const ContactForm = ({formOpen, setFormOpen}: ContactFormProps) => {
                     />
                 </div>
                 <div className='pt-5 2xl:pt-10'>
-                    <p className='text-2xl pb-2 2xl:text-4xl 2xl:pb-5'>Message</p>
+                    <p className='text-2xl pb-2 md:text-3xl 2xl:text-4xl 2xl:pb-5 md:pb-3'>Message</p>
                     <Textarea 
                     className='bg-white rounded-xl px-5'
                     placeholder='Type your message here'

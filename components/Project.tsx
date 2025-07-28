@@ -161,6 +161,7 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
             >
                 <div>
                     <h3 className='text-2xl text-white font-bold pb-4
+                    md:text-3xl
                     2xl:text-4xl'>
                         Project Overview
                     </h3>
@@ -170,6 +171,7 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
                 </div>
                 <div>
                     <h3 className='text-2xl text-white font-bold pb-4
+                    md:text-3xl
                     2xl:text-4xl'>
                         Testimonial
                     </h3>
