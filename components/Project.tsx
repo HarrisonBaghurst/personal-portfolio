@@ -90,7 +90,7 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
     }, [])
 
     return (
-        <div className='w-full flex flex-col gap-8 mt-32 border-1
+        <div className='w-full flex flex-col gap-8 mt-32
         2xl:gap-16 2xl:mt-48'>
             <div className='flex justify-center gap-4 items-center
             2xl:gap-8'>
