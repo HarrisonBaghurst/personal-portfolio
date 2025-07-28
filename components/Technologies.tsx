@@ -20,7 +20,7 @@ const Technologies = () => {
                             fill
                             />
                         </div>
-                        <p className='text-md whitespace-nowrap 2xl:text-3xl'>
+                        <p className='text-xs whitespace-nowrap md:text-base 2xl:text-2xl'>
                             {technology.name}
                         </p>
                     </div>

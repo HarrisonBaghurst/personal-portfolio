@@ -90,24 +90,27 @@ const Project = ({ title, icon, imgs, overview, testimonial}: ProjectProps) => {
     }, [])
 
     return (
-        <div className='w-full flex flex-col gap-8 mt-32
+        <div className='w-full flex flex-col gap-8 mt-32 border-1
         2xl:gap-16 2xl:mt-48'>
             <div className='flex justify-center gap-4 items-center
             2xl:gap-8'>
                 <div 
                 ref={logoRef}
                 className='overflow-hidden rounded-lg relative w-8 h-8
+                md:w-12 md:h-12
                 2xl:w-20 2xl:h-20'
                 >   
                     <Image 
                     src={icon}
                     alt='logo'
                     fill
+                    className='object-contain'
                     />
                 </div>
                 <h2 
                 ref={headingTextRef}
                 className='text-3xl glow-text text-white font-bold heading-word flex gap-2
+                md:text-5xl
                 2xl:text-7xl 2xl:gap-4'
                 >
                     {title.split(' ').map((word, i) => (

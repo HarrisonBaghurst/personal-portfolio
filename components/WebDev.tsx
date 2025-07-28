@@ -110,6 +110,7 @@ const WebDev = () => {
             2xl:pb-50'
         >
             <div className='w-[80%] pt-[8%] text-xs text-grey
+            md:text-base
             2xl:text-2xl'>
                 <div className='flex flex-col items-center pb-8
                 2xl:justify-between 2xl:flex-row 2xl:pb-10'>
@@ -130,7 +131,8 @@ const WebDev = () => {
                         </div>
                         <h2 
                         ref={headingTextRef}
-                        className='text-3xl font-bold mb-8 glow-text flex gap-2 text-white
+                        className='text-3xl font-bold mb-8 glow-text flex gap-2 text-white justify-center
+                        md:text-5xl
                         2xl:text-8xl 2xl:gap-8'
                         >
                             {headingText.split(' ').map((word, i) => (
@@ -160,6 +162,7 @@ const WebDev = () => {
                         </p>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-2xl text-white font-bold
+                            md:text-3xl
                             2xl:text-4xl'>
                                 From Consultation to Launch
                             </h3>
@@ -174,6 +177,7 @@ const WebDev = () => {
                         </div>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-2xl text-white font-bold
+                            md:text-3xl
                             2xl:text-4xl'>
                                 Project Scope & Pricing
                             </h3>
@@ -188,6 +192,7 @@ const WebDev = () => {
                     <div className='flex flex-col gap-16'>
                         <div className='flex flex-col gap-4'>
                             <h3 className='text-2xl text-white font-bold
+                            md:text-3xl
                             2xl:text-4xl'>
                                 What I Offer
                             </h3>

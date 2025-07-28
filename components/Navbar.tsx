@@ -63,8 +63,10 @@ const Navbar = () => {
             <div 
             ref={navbarRef}
             className={cn(`
-                my-4 fixed text-xs items-center mx-4 rounded-2xl overflow-hidden px-[1%] z-50 w-[calc(100%-var(--spacing)*8)] flex justify-between border-1 border-[rgba(255,255,255,0.3)] backdrop-filter backdrop-blur-xl bg-[rgba(200,200,200,0.1)] 
-                2xl:mx-4 2xl:text-2xl 2xl:w-[calc(100%-var(--spacing)*8)] 2xl:my-4 duration-300 ease-in-out`, open? 'h-30 2xl:h-38': 'h-16')}
+                my-4 fixed text-xs items-center mx-4 rounded-2xl overflow-hidden px-[1%] z-50 w-[calc(100%-var(--spacing)*8)] flex justify-between border-1 border-[rgba(255,255,255,0.3)] backdrop-filter backdrop-blur-xl bg-[rgba(200,200,200,0.1)] duration-300 ease-in-out
+                md:text-base
+                2xl:mx-4 2xl:text-2xl 2xl:w-[calc(100%-var(--spacing)*8)] 2xl:my-4
+                `, open? 'h-30 2xl:h-38': 'h-16')}
             >   
                 <div className='absolute left-0 top-0 w-full h-16 px-8 flex items-center'>
                     <div className='flex justify-between items-center w-full'>

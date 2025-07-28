@@ -76,6 +76,7 @@ const Hero = () => {
         className='relative w-full h-screen flex justify-center items-center overflow-hidden'
         >
             <div className='flex flex-col w-fit text-xs max-w-[calc(100dvw-4*var(--spacing))]
+            md:text-base md:max-w-[65dvw]
             2xl:text-2xl'>
                 <div 
                 ref={aboveTextRef}
@@ -95,6 +96,7 @@ const Hero = () => {
                 <h1 
                 ref={headingTextRef}
                 className='text-4xl font-bold mb-8 glow-text flex gap-3 justify-center
+                md:text-6xl
                 2xl:text-9xl 2xl:gap-8'
                 >
                     {headingText.split(' ').map((word, i) => (
