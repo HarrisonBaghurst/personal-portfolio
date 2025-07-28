@@ -68,7 +68,7 @@ const Hero = () => {
     }, []);
 
     const headingText = "Hi, I'm Harrison"
-    const paragraphText = "I'm a Durham university computer science undergraduate. I offer GCSE and A-Level tutoring and web development services."
+    const paragraphText = "I'm a Durham University Computer Science Undergraduate. I offer GCSE and A-Level tutoring and web development services."
 
     return (
         <section 

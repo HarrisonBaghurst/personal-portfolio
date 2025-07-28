@@ -125,7 +125,7 @@ const WebDev = () => {
                                 height={20}
                             />
                             <p className="">
-                                Taking new Web development projects
+                                Taking new Web Development projects
                             </p>
                         </div>
                         <h2 
