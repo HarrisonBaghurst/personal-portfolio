@@ -36,7 +36,7 @@ const Pricing = () => {
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-250'>
+      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-225'>
         <div className='flex items-center'>
           <div className='flex flex-col gap-12'>  
             <div>

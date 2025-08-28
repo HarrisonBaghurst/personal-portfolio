@@ -4,6 +4,7 @@ import ProjectJourney from './ProjectJourney'
 import Services from './Services'
 import Pricing from './Pricing'
 import Portfolio from './Portfolio'
+import FAQ from './FAQ'
 
 const WebDev = () => {
 
@@ -22,6 +23,7 @@ const WebDev = () => {
             <ProjectJourney />
             <Pricing />
             <Portfolio />
+            <FAQ />
         </section>
     )
 }
