@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import Transition from './Transition'
 
@@ -22,7 +22,15 @@ const Pricing = () => {
       text: "These are fully custom websites with advanced functionality tailored to your business processes. Examples include booking systems, dashboards, interactive platforms and other software-style web applications. They are built using modern technologies for scalability, performance and security. Complex web applications are ideal for businesses with unique requirements that go beyond a standard website."
     }
   ]
+
   const [activeCard, setActiveCard] = useState<number>(0)
+  const [heights, setHeights] = useState<number[]>([])
+  const contentRefs = useRef<HTMLDivElement[]>([])
+
+  useEffect(() => {
+    const newHeights = contentRefs.current.map((el) => el?.scrollHeight || 0)
+    setHeights(newHeights)
+  }, [])
 
   return (
     <div className='bg-light-blue'>
@@ -50,30 +58,33 @@ const Pricing = () => {
           </div>
         </div>
         <div className='flex items-center'>
-            <div className='flex flex-col gap-12 text-background'>
+          <div className='flex flex-col gap-12 text-background'>
             {pricingOptions.map((option, i) => (
-                <div
+              <div
                 key={i}
                 onMouseEnter={() => setActiveCard(i)}
                 className={cn(
-                    "bg-foreground p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden"
+                  "bg-foreground p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden"
                 )}
-                >
+              >
                 <div className="flex justify-between items-center">
-                    <h3 className="text-4xl font-enorm">{option.title}</h3>
-                    <h3 className="text-3xl">{option.price}</h3>
+                  <h3 className="text-4xl font-enorm">{option.title}</h3>
+                  <h3 className="text-3xl">{option.price}</h3>
                 </div>
                 <div
-                    className={cn(
-                    "transition-all duration-500 ease-in-out overflow-hidden",
-                    activeCard === i ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"
-                    )}
+                  ref={(el) => { contentRefs.current[i] = el! }}
+                  style={{
+                    height: activeCard === i ? heights[i] || 0 : 0,
+                    opacity: activeCard === i ? 1 : 0,
+                    marginTop: activeCard === i ? '1rem' : '0',
+                    transition: 'height 0.5s ease, opacity 0.5s ease, margin 0.5s ease'
+                  }}
                 >
-                    <p className="text-2xl">{option.text}</p>
+                  <p className="text-2xl">{option.text}</p>
                 </div>
-                </div>
+              </div>
             ))}
-            </div>
+          </div>
         </div>
       </div>
 

@@ -26,7 +26,10 @@ const Services = () => {
     return (
         <div className='grid grid-cols-3 gap-16 text-2xl text-background px-16'>
             {servicesInfo.map((service, i) => (
-                <div className='bg-foreground rounded-2xl h-fit flex flex-col gap-12'>
+                <div 
+                key={i}
+                className='bg-foreground rounded-2xl h-fit flex flex-col gap-12'
+                >
                     <div className='flex flex-col gap-2 px-8 pt-8'>
                         <h3 className='font-enorm text-center text-4xl'>
                             {service.title}
