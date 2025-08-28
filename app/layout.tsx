@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Harrison Baghurst - Project Portfolio",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`antialiased scroll-smooth`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

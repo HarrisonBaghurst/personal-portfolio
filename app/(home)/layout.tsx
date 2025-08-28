@@ -2,8 +2,6 @@
 
 import React, { ReactNode, useEffect } from 'react'
 import Lenis from 'lenis'
-import Navbar from '@/components/Navbar';
-import Sidebar from '@/components/Sidebar';
 
 const layout = ({ children }: { children: ReactNode }) => {
   useEffect(() => {

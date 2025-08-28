@@ -2,22 +2,32 @@
 @import "tw-animate-css";
 
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-VariableFont_wght.otf") format("opentype");
-  font-weight: 300;
+  font-family: "Enorm";
+  src: url("/fonts/enorm-bold.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 400;
 }
 
 @theme inline {
-  --font-poppins: "Poppins";
+  --font-enorm: "Enorm";
+  --font-opensans: "OpenSans";
 
-  --color-background: #11121c;
-  --color-foreground: #ffffff;
+  --color-background: #FAF9F6;
+  --color-foreground: #282427;
 
-  --color-blue: #19507d;
-  --color-grey: #d4d4d4;
-  --color-dark-grey: #1b1b1b;
-  --color-blue-grey: #2d3233;
-  --color-green: #13d446;
+  --color-button-blue: #2772A0;
+  --color-button-blue-dark: #144766;
+  --color-light-blue: #d2dfe5;
+  --color-off-white: #e5ebed;
+
+  --color-red: #d4574e;
+  --color-green: #48d94f;
+  --color-yellow: #d9d943;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -55,23 +65,7 @@
 }
 
 body {
-  font-family: 'Poppins';
-}
-
-@layer utilities {
-  .responsive-h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
-  }
-  .responsive-h2 {
-    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
-  }
-  .responsive-p {
-    @apply text-xs md:text-base lg:text-lg xl:text-2xl 2xl:text-3xl;
-  }
-  .button-shadow {
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-    cursor: pointer;
-  }
+  font-family: 'OpenSans';
 }
 
 :root {
