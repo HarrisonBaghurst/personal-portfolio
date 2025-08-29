@@ -1,27 +1,21 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
-import { cn } from '@/lib/utils'
+import React, { useEffect, useRef, useState } from 'react'
 import Transition from './Transition'
+import { cn } from '@/lib/utils'
 
-const FAQ = () => {
-  const questions = [
+const TutoringPricing = () => {
+const pricingOptions = [
     {
-      question: "How long does it take?",
-      answer: "Project timelines very based on size and complexity. Simple portfolio sites usually take 2-4 weeks, e-commerce sites 8-12 weeks and complex web applications may take longer. A detailed timeline is provided after we discuss your project."
+      title: "Book individual lessons",
+      price: "£20 / hr",
+      text: "Perfect if you'd like felxibility without commitment. Individulal lessons are priced at £20 per hour, allowing you to book sessions as and when you need them. This option is idea if you want to try out tutoring before committing to a block or if you're looking for occasional support to target specific topics."
     },
     {
-      question: "Can I update my website myself?",
-      answer: "Depending on the project, you may be able to make changes yourself. E-commerce sites include admin tools for updating listings and web applications may feature dashboards for managing content. These requirements are discussed during planning. The source code is availiable throughout and after the project but I recommend requesting changes through me to ensure everything functions correctly."
+      title: "Save with block payments",
+      price: "£18 / hr",
+      text: "If you are looking for regular support, block bookings are a more cost-effective option. You can purchase a block of 5 lessons at £19 per hour or a block of 10 lessons at £18 per hour. Blocks give you consistency in your learning while saving on the hourly rate, making them a great choice for long-term exam preparation or steady progress in maths and programming."
     },
-    {
-      question: "Can you redesign my existing website?",
-      answer: "Yes. I can revamp your existing site to improve design, performance and functionality using modern tools and techniques."
-    },
-    {
-      question: "How do I get started?",
-      answer: "Simply reach out via the contact form and we will arrange a free consultation. We'll discuss your goals, review options and create a plan tailored to your needs.",
-    }
   ]
 
   const [activeCard, setActiveCard] = useState<number>(0)
@@ -37,10 +31,10 @@ const FAQ = () => {
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-250'>
+      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-200'>
         <div className='flex items-center'>
           <div className='flex flex-col gap-12 text-background'>
-            {questions.map((question, i) => (
+            {pricingOptions.map((option, i) => (
               <div
                 key={i}
                 onMouseEnter={() => setActiveCard(i)}
@@ -48,7 +42,10 @@ const FAQ = () => {
                   "bg-foreground p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden"
                 )}
               >
-                <h3 className="text-4xl font-enorm">{question.question}</h3>
+                <div className="flex justify-between items-center">
+                  <h3 className="text-4xl font-enorm">{option.title}</h3>
+                  <h3 className="text-3xl">{option.price}</h3>
+                </div>
                 <div
                   ref={(el) => { contentRefs.current[i] = el! }}
                   style={{
@@ -58,7 +55,7 @@ const FAQ = () => {
                     transition: 'height 0.5s ease, opacity 0.5s ease, margin 0.5s ease'
                   }}
                 >
-                  <p className="text-2xl">{question.answer}</p>
+                  <p className="text-2xl">{option.text}</p>
                 </div>
               </div>
             ))}
@@ -68,16 +65,16 @@ const FAQ = () => {
           <div className='flex flex-col gap-12'>  
             <div>
               <h2 className='text-8xl h-30 flex items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                Common Questions
+                Lesson Pricing
               </h2>
               <p className='font-bold'>
-                Everything you need to know before starting your project
+                Invest in your learning with straightforward pricing
               </p>
             </div>
             <p className='text-2xl'>
-              This section addresses the most common questions clients have about my web development and online services.
-              These answers are designed to help you understand the process, make informed decisions and feel confident moving forward with your project.
-              If you have any further queries feel free to contact me for an answer.
+              I believe quality tutoring should be clear and accessible. 
+              My pricing is straightforward, with flexible options to suit different learning needs -
+              Whether you're preparing for exams, building confidence in a subject or developing new skills.
             </p>
             <div className='w-fit py-4 px-8 rounded-full font-bold border-[5px] border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105'>
               Contact Me
@@ -91,4 +88,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default TutoringPricing

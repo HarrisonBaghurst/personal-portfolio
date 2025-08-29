@@ -12,15 +12,11 @@ const Hero = () => {
                         </h1>
                         <div className='flex justify-center'>
                             <div className='flex gap-4 font-bold'>
-                                {['Web Developer', '•', 'Tutor', '•', 'Student'].map((text, i) => (
-                                    <p key={i}>
-                                        {text}
-                                    </p>
-                                ))}
+                                Your next Web Developer & Tutor
                             </div>
                         </div>
                         <div className='flex justify-center pt-12 gap-12'>
-                            {['Web Projects', 'Tutoring Services'].map((text, i) => (
+                            {['Web Development', 'Tutoring Services'].map((text, i) => (
                                 <div
                                 key={i}
                                 className='py-4 px-8 rounded-full font-bold border-[5px] border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105'
