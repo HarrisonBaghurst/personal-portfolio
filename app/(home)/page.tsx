@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Tutoring from '@/components/Tutoring'
 import WebDev from '@/components/WebDev'
@@ -9,6 +10,7 @@ const Page = () => {
             <Hero />
             <WebDev />
             <Tutoring />
+            <Footer />
         </div>
     )
 }

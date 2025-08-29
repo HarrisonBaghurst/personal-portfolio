@@ -7,7 +7,7 @@ import AboutMe from './AboutMe'
 
 const Tutoring = () => {
     return (
-        <section className='w-full relative bg-background py-32 flex flex-col gap-24 pb-300'>
+        <section className='w-full relative bg-background py-32 flex flex-col gap-24'>
             <div className='flex flex-col gap-8'>
                 <h2 className='h-40 text-9xl font-enorm text-center bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
                     Tutoring Services
