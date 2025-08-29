@@ -3,7 +3,7 @@ import React from 'react'
 
 const AboutMe = () => {
     return (
-        <div className='p-32 flex gap-32 text-2xl'>
+        <div className='px-32 flex gap-32 text-2xl'>
             <div className='flex items-center flex-[3]'>
                 <div className='flex flex-col gap-12'>  
                     <div>
