@@ -113,14 +113,11 @@ body {
 }
 
 @layer utilities {
-  .glow-text {
-    text-shadow: 
-      0 0 50px #fff;
+  .text-gradient {
+    background: linear-gradient(to top, var(--color-button-blue), var(--color-button-blue-dark)); 
+    background-clip: text;              
+    -webkit-background-clip: text;      
+    color: transparent;                 
+    -webkit-text-fill-color: transparent;
   }
 }
-
-/*
-* {
-  border: solid 1px white;
-}
-*/
