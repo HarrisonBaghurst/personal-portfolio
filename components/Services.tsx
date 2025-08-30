@@ -7,7 +7,7 @@ const Services = () => {
             "title": "Website Creation",
             "subtitle": "Custom built for you",
             "image": "/img/macbook-mockup.png",
-            "text": "I create modern, responsive websites that look great on any device. Every site is designed to be fast, secure and optimised for search engines so your business stands out online. Whether you need a simple portfolio or a fully featured business site, I'll tailor it to your goals."
+            "text": "I create modern, responsive websites that look great on any device. Every site is designed to be fast, secure and optimised for search engines so your business stands out online. Whether you need a simple portfolio or a fully featured business site, I'll tailor it to your preferences."
         },
         {
             "title": "Web Applications",

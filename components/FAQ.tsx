@@ -19,6 +19,10 @@ const FAQ = () => {
       answer: "Yes. I can revamp your existing site to improve design, performance and functionality using modern tools and techniques."
     },
     {
+      question: "How many revisions do you allow?",
+      answer: "I don't set a fixed limit on revisions and am happy to make adjustments as needed. From the start, I ensure we're aligned on the project's direction and check in at agreed milestones. You'll have access to the site during development, so you can see progress in real time and request changes along the way. Minor adjustments are always welcome but major revisions - such as a complete home page redesign - are requested after prior approval, these may incur and additional cost."
+    },
+    {
       question: "How do I get started?",
       answer: "Simply reach out via the contact form and we will arrange a free consultation. We'll discuss your goals, review options and create a plan tailored to your needs.",
     }
@@ -37,7 +41,7 @@ const FAQ = () => {
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-250'>
+      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-300'>
         <div className='flex items-center'>
           <div className='flex flex-col gap-12 text-background'>
             {questions.map((question, i) => (
