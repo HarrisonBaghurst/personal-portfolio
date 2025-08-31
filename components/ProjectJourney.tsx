@@ -50,10 +50,22 @@ const ProjectJourney = () => {
                         key={i}
                         onMouseEnter={() => setActiveStep(i)}
                         className={cn(
-                            "bg-foreground h-fit p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden flex-1",
+                            "bg-foreground h-fit p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden flex-1 relative",
                             activeStep === i ? "flex-[3]" : "flex-[1]"
                         )}
                     >
+                        <div className={cn(
+                            'absolute top-[10px] right-[10px] transition-opacity duration-300',
+                            activeStep === i ? 'opacity-0' : 'opacity-100'
+                        )}>
+                            <Image 
+                            src={'/icons/click.svg'}
+                            alt='hover me'
+                            width={24}
+                            height={24}
+                            />
+                        </div>
+
                         <h3 className="font-enorm text-4xl text-center">{step.title}</h3>
 
                         <div
