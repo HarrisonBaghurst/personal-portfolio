@@ -119,5 +119,6 @@ body {
     -webkit-background-clip: text;      
     color: transparent;                 
     -webkit-text-fill-color: transparent;
+    height: calc(35*var(--spacing));
   }
 }

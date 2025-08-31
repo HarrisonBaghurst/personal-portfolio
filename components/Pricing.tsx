@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import Transition from './Transition'
+import ScrolledInText from './ScrolledInText'
 
 const Pricing = () => {
   const pricingOptions = [
@@ -40,9 +41,11 @@ const Pricing = () => {
         <div className='flex items-center'>
           <div className='flex flex-col gap-12'>  
             <div>
-              <h2 className='text-8xl h-30 flex items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                Pricing Estimates
-              </h2>
+                <ScrolledInText 
+                text='Pricing Estimates'
+                size='regular'
+                center={false}
+                />
               <p className='font-bold'>
                 Affordable options to get you started online
               </p>

@@ -5,15 +5,18 @@ import Services from './Services'
 import Pricing from './Pricing'
 import Portfolio from './Portfolio'
 import FAQ from './FAQ'
+import ScrolledInText from './ScrolledInText'
 
 const WebDev = () => {
 
     return (
         <section className='w-full relative bg-background pt-32 flex flex-col gap-24'>
             <div className='flex flex-col gap-8'>
-                <h2 className='h-40 text-9xl font-enorm text-center bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                    Web Development
-                </h2>
+                <ScrolledInText 
+                text={'Web Development'} 
+                size={'large'} 
+                center={true}                
+                />
                 <p className='text-center text-4xl font-bold'>
                     Your one-stop partner for web development and online services
                 </p>

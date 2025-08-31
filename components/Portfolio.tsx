@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import ScrolledInText from './ScrolledInText'
 
 const Portfolio = () => {
     const projectInfo = [
@@ -29,9 +30,11 @@ const Portfolio = () => {
     return (
         <div className='flex flex-col gap-24 px-16'>
             <div className='bg-background w-full'>
-                <h2 className='text-8xl h-30 flex justify-center items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                    My Recent Projects
-                </h2>
+                <ScrolledInText 
+                text='Recent Projects'
+                size='regular'
+                center={true}
+                />
                 <p className='font-bold text-center'>
                     A selection of websites I've designed and developed for clients
                 </p>

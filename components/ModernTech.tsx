@@ -1,6 +1,7 @@
 import React from 'react'
 import Transition from './Transition'
 import Image from 'next/image'
+import ScrolledInText from './ScrolledInText'
 
 const ModernTech = () => {
     return (
@@ -12,9 +13,11 @@ const ModernTech = () => {
                 <div className='flex items-center'>
                     <div className='flex flex-col gap-12'>  
                         <div>
-                            <h2 className='text-8xl h-30 flex items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                                Modern Technologies
-                            </h2>
+                            <ScrolledInText 
+                            text={'Modern Technologies'} 
+                            size={'regular'} 
+                            center={false} 
+                            />
                             <p className='font-bold'>
                                 Future-proof solutions for your business
                             </p>

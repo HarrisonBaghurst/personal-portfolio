@@ -31,16 +31,16 @@ const Hero = () => {
                 {
                     y: -125,
                     x: (i, el, targets) => {
-                    const total = targets.length - 1;
-                    const progress = i / total; 
-                    return 100 + (progress * -200);
+                        const total = targets.length - 1;
+                        const progress = i / total; 
+                        return 100 + (progress * -200);
                     },
                     scale: 0.6,
                     opacity: 0,
                     rotate: (i, el, targets) => {
-                    const total = targets.length - 1;
-                    const progress = i / total; 
-                    return 75 + (progress * -150);
+                        const total = targets.length - 1;
+                        const progress = i / total; 
+                        return 75 + (progress * -150);
                     },
                 },
                 {

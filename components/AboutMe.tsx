@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ScrolledInText from './ScrolledInText'
 
 const AboutMe = () => {
     return (
@@ -7,9 +8,11 @@ const AboutMe = () => {
             <div className='flex items-center flex-[3]'>
                 <div className='flex flex-col gap-12'>  
                     <div>
-                        <h2 className='text-8xl h-30 flex items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                            About Me
-                        </h2>
+                        <ScrolledInText 
+                        text='About Me'
+                        size='regular'
+                        center={false}
+                        />
                         <p className='font-bold text-3xl'>
                             Dedicated to helping students achieve their best
                         </p>

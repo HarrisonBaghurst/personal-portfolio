@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import Transition from './Transition'
+import ScrolledInText from './ScrolledInText'
 
 const FAQ = () => {
   const questions = [
@@ -71,9 +72,11 @@ const FAQ = () => {
         <div className='flex items-center'>
           <div className='flex flex-col gap-12'>  
             <div>
-              <h2 className='text-8xl h-30 flex items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                Common Questions
-              </h2>
+                <ScrolledInText 
+                text='Common Questions'
+                size='regular'
+                center={false}
+                />
               <p className='font-bold'>
                 Everything you need to know before starting your project
               </p>

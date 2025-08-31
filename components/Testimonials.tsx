@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrolledInText from './ScrolledInText'
 
 const Testimonials = () => {
 
@@ -20,9 +21,11 @@ const Testimonials = () => {
     return (
         <div className='flex flex-col gap-24 px-16'>
             <div className='bg-background w-full'>
-                <h2 className='text-8xl h-30 flex justify-center items-center font-enorm bg-gradient-to-t from-button-blue to-button-blue-dark bg-clip-text text-transparent'>
-                    Testimonials
-                </h2>
+                <ScrolledInText 
+                text='Testimonials'
+                size='regular'
+                center={true}
+                />
                 <p className='font-bold text-center'>
                     Trusted by students and families
                 </p>
