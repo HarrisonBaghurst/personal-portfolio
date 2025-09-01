@@ -6,7 +6,10 @@ import React from 'react'
 
 const Page = () => {
     return (
-        <div className='flex flex-col bg-[radial-gradient(circle_at_50%_50dvh,transparent_20dvw,var(--color-button-blue)_80dvw)] text-3xl'>
+        <div className='flex flex-col w-full overflow-hidden
+        bg-[radial-gradient(circle_at_50%_50dvh,transparent_20dvh,var(--color-button-blue)_80dvh)]
+        2xl:bg-[radial-gradient(circle_at_50%_50dvh,transparent_20dvw,var(--color-button-blue)_80dvw)]
+        '>
             <Hero />
             <WebDev />
             <Tutoring />

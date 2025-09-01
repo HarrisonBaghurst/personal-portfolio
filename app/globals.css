@@ -119,6 +119,32 @@ body {
     -webkit-background-clip: text;      
     color: transparent;                 
     -webkit-text-fill-color: transparent;
-    height: calc(35*var(--spacing));
+    height: calc(16*var(--spacing));
+  }
+  @media (width >= 96rem) {
+    .text-gradient {
+      height: calc(35*var(--spacing));
+    }
+  }
+
+  .main-heading {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  @media (width >= 96rem) {
+    .main-heading {
+      font-size: var(--text-9xl);
+      line-height: var(--tw-leading, var(--text-9xl--line-height));
+    }
+  }
+  .paragraph-large {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  @media (width >= 96rem) {
+    .paragraph-large {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
   }
 }
