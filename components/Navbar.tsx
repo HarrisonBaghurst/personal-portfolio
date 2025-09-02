@@ -14,8 +14,8 @@ const Navbar = () => {
     ]
 
     return (
-        <div className='fixed w-full h-fit flex justify-between items-center z-100 paragraph-large'>
-            <div className='bg-foreground text-background cursor-pointer border-background 
+        <div className='fixed w-full flex justify-between z-100 paragraph-large'>
+            <div className='bg-foreground text-background cursor-pointer border-background  h-full
             py-2 px-3 border-b-[2px] border-r-[2px] rounded-br-lg 
             2xl:py-4 2xl:px-8 2xl:border-b-[5px] 2xl:border-r-[5px] 2xl:rounded-br-3xl
             '>

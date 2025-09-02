@@ -24,17 +24,25 @@ const Services = () => {
     ]
 
     return (
-        <div className='grid grid-cols-3 gap-16 text-2xl text-background px-16'>
+        <div className='
+        grid text-background 
+        grid-cols-1 px-4 gap-4
+        2xl:grid-cols-3 2xl:px-16 2xl:gap-16
+        '>
             {servicesInfo.map((service, i) => (
                 <div 
                 key={i}
                 className='bg-foreground rounded-2xl h-fit flex flex-col gap-12'
                 >
-                    <div className='flex flex-col gap-2 px-8 pt-8'>
-                        <h3 className='font-enorm text-center text-4xl'>
+                    <div className='
+                    flex flex-col gap-2
+                    px-4 pt-4
+                    2xl:px-8 2xl:pt-8
+                    '>
+                        <h3 className='font-enorm text-center sub-heading'>
                             {service.title}
                         </h3>
-                        <p className='text-center font-bold'>
+                        <p className='text-center font-bold paragraph-large'>
                             {service.subtitle}
                         </p>
                     </div>
@@ -49,7 +57,10 @@ const Services = () => {
                         <div className='absolute bottom-0 left-0 z-50 bg-gradient-to-t from-foreground to-transparent h-[20px] w-full'>
                         </div>
                     </div>
-                    <p className='px-8 pb-8'>
+                    <p className='paragraph-small
+                    px-4 pb-4
+                    2xl:px-8 2xl:pb-8
+                    '>
                         {service.text}
                     </p>
                 </div>

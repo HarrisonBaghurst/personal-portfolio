@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Transition from './Transition'
 import gsap from 'gsap'
 import SplitType from 'split-type'
+import Button from './Button'
 
 const Hero = () => {
     const headingRef = useRef<HTMLHeadingElement | null>(null);
@@ -132,15 +133,11 @@ const Hero = () => {
                             2xl:pt-12 2xl:gap-12
                             '>
                                 {['Web Development', 'Tutoring Services'].map((text, i) => (
-                                    <div
+                                    <Button
                                     key={i}
-                                    className='
-                                    rounded-full font-bold  border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105
-                                    py-2 px-4 border-[3px]
-                                    2xl:py-4 2xl:px-8 2xl:border-[5px]
-                                    '>
-                                        {text}
-                                    </div>
+                                    text={text}
+                                    link={''}
+                                    />
                                 ))}
                             </div>
                         </div>

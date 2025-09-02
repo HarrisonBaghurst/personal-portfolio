@@ -10,14 +10,22 @@ import ScrolledInText from './ScrolledInText'
 const WebDev = () => {
 
     return (
-        <section className='w-full relative bg-background pt-32 flex flex-col gap-24'>
-            <div className='flex flex-col gap-8'>
+        <section className='
+        w-full relative bg-background flex flex-col
+        pt-16 gap-16
+        2xl:pt-32 2xl:gap-24
+        '>
+            <div className='
+            flex flex-col 
+            gap-0
+            2xl:gap-8
+            '>
                 <ScrolledInText 
                 text={'Web Development'} 
                 size={'large'} 
                 center={true}                
                 />
-                <p className='text-center text-4xl font-bold'>
+                <p className='text-center paragraph-large font-bold px-12'>
                     Your one-stop partner for web development and online services
                 </p>
             </div>

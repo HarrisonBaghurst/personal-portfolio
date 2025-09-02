@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import Transition from './Transition'
 import ScrolledInText from './ScrolledInText'
+import Button from './Button'
 
 const Pricing = () => {
   const pricingOptions = [
@@ -37,42 +38,55 @@ const Pricing = () => {
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-225'>
+      <div className=' 
+      flex flex-col px-6 py-12 gap-16 h-205
+      2xl:grid 2xl:p-32 2xl:grid-cols-2 2xl:gap-32 2xl:h-225
+      '>
         <div className='flex items-center'>
-          <div className='flex flex-col gap-12'>  
+          <div className='
+          flex flex-col 
+          gap-6
+          2xl:gap-12
+          '>  
             <div>
                 <ScrolledInText 
                 text='Pricing Estimates'
                 size='regular'
                 center={false}
                 />
-              <p className='font-bold'>
+              <p className='font-bold paragraph-large'>
                 Affordable options to get you started online
               </p>
             </div>
-            <p className='text-2xl'>
+            <p className='paragraph-small'>
               Please note that the prices listed here are rough estimates to give you an idea of what to expect.
               Every project is unique, so I provide a full, detailed pricing outline after a free consultation.
               This ensures your website or service package is tailored to your needs and budget, with no surprises along the way.
             </p>
-            <div className='w-fit py-4 px-8 rounded-full font-bold border-[5px] border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105'>
-              Contact Me
-            </div>
+            <Button 
+            text='Contact Me'
+            link=''
+            />
           </div>
         </div>
         <div className='flex items-center'>
-          <div className='flex flex-col gap-12 text-background'>
+          <div className='
+          flex flex-col text-background
+          gap-6
+          2xl:gap-12
+          '>
             {pricingOptions.map((option, i) => (
               <div
                 key={i}
                 onMouseEnter={() => setActiveCard(i)}
-                className={cn(
-                  "bg-foreground p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden"
-                )}
-              >
+                className="
+                bg-foreground rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden
+                p-6
+                2xl:p-8
+                ">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-4xl font-enorm">{option.title}</h3>
-                  <h3 className="text-3xl">{option.price}</h3>
+                  <h3 className="paragraph-large font-enorm">{option.title}</h3>
+                  <h3 className="paragraph-large text-end">{option.price}</h3>
                 </div>
                 <div
                   ref={(el) => { contentRefs.current[i] = el! }}
@@ -83,7 +97,7 @@ const Pricing = () => {
                     transition: 'height 0.5s ease, opacity 0.5s ease, margin 0.5s ease'
                   }}
                 >
-                  <p className="text-2xl">{option.text}</p>
+                  <p className="paragraph-small">{option.text}</p>
                 </div>
               </div>
             ))}
