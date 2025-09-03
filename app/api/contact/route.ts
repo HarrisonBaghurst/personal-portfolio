@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     const { email, message } = body; 
 
     if(email === '' || message === '') {
-        return NextResponse.json({ error: 'Missing fields' }, { status: 400});
+        return NextResponse.json({ error: 'Missing fields - Please try again' }, { status: 400 });
     }
 
     try {

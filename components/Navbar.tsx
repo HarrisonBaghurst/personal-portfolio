@@ -49,10 +49,10 @@ const Navbar = () => {
             setMessage('');
             setEmail('');
             setContactFormOpen(false);
+            return;
         }
-        else {
-            toast.error('Message failed to send - Please try again');
-        }
+        const errorMessage = await res.json();
+        toast.error(errorMessage.error || 'Something went wrong');
 
     }
 
