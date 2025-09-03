@@ -1,45 +1,34 @@
-'use client'
-
-import React, { useState, useRef, useEffect } from 'react'
-import { cn } from '@/lib/utils'
+import React from 'react'
 import Transition from './Transition'
 import ScrolledInText from './ScrolledInText'
 import Button from './Button'
+import ExpandingSelector from './ExpandingSelector'
 
 const Pricing = () => {
   const pricingOptions = [
     {
       title: "Simple Portfolio Sites",
-      price: "Starting at £500",
+      subtitle: "Starting at £500",
       text: "These are clean, professional websites designed to showcase your work, services or personal brand. Typically 3-7 pages, they include features like contact forms, social media integration and responsive design for mobile and desktop. Portfolio sites are ideal for freelancers, creatives or small business who want a polished online presence without extra complexity."
     },
     {
       title: "E-Commerce & Sales Sites",
-      price: "Starting at £750",
+      subtitle: "Starting at £750",
       text: "These websites are built to help you sell products or services online. They include product catalogs, shopping carts, secure checkout and payment integration. E-commerce sites may also feature customer accounts, promotional tools and basic analytics. These are perfect for businesses looking to reach customers online and grow sales efficiently."
     },
     {
       title: "Complex Web Applications",
-      price: "Starting at £1250",
+      subtitle: "Starting at £1250",
       text: "These are fully custom websites with advanced functionality tailored to your business processes. Examples include booking systems, dashboards, interactive platforms and other software-style web applications. They are built using modern technologies for scalability, performance and security. Complex web applications are ideal for businesses with unique requirements that go beyond a standard website."
     }
   ]
-
-  const [activeCard, setActiveCard] = useState<number>(0)
-  const [heights, setHeights] = useState<number[]>([])
-  const contentRefs = useRef<HTMLDivElement[]>([])
-
-  useEffect(() => {
-    const newHeights = contentRefs.current.map((el) => el?.scrollHeight || 0)
-    setHeights(newHeights)
-  }, [])
 
   return (
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
       <div className=' 
-      flex flex-col px-6 py-12 gap-16 h-205
+      flex flex-col px-6 py-12 gap-12 h-fit
       2xl:grid 2xl:p-32 2xl:grid-cols-2 2xl:gap-32 2xl:h-225
       '>
         <div className='flex items-center'>
@@ -69,40 +58,9 @@ const Pricing = () => {
             />
           </div>
         </div>
-        <div className='flex items-center'>
-          <div className='
-          flex flex-col text-background
-          gap-6
-          2xl:gap-12
-          '>
-            {pricingOptions.map((option, i) => (
-              <div
-                key={i}
-                onMouseEnter={() => setActiveCard(i)}
-                className="
-                bg-foreground rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden
-                p-6
-                2xl:p-8
-                ">
-                <div className="flex justify-between items-center">
-                  <h3 className="paragraph-large font-enorm">{option.title}</h3>
-                  <h3 className="paragraph-large text-end">{option.price}</h3>
-                </div>
-                <div
-                  ref={(el) => { contentRefs.current[i] = el! }}
-                  style={{
-                    height: activeCard === i ? heights[i] || 0 : 0,
-                    opacity: activeCard === i ? 1 : 0,
-                    marginTop: activeCard === i ? '1rem' : '0',
-                    transition: 'height 0.5s ease, opacity 0.5s ease, margin 0.5s ease'
-                  }}
-                >
-                  <p className="paragraph-small">{option.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ExpandingSelector 
+        options={pricingOptions}
+        />
       </div>
 
       <Transition />

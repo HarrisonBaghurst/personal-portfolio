@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import ScrolledInText from './ScrolledInText'
+import Button from './Button'
 
 const Portfolio = () => {
     const projectInfo = [
@@ -28,18 +29,30 @@ const Portfolio = () => {
     const [hoveredCard, setHoveredCard] = useState<null|number>(null);
 
     return (
-        <div className='flex flex-col gap-24 px-16'>
+        <div className='
+        flex flex-col 
+        px-6 gap-8
+        2xl:px-16 2xl:gap-24
+        '>
             <div className='bg-background w-full'>
                 <ScrolledInText 
                 text='Recent Projects'
                 size='regular'
                 center={true}
                 />
-                <p className='font-bold text-center'>
+                <p className='
+                font-bold paragraph-large
+                text-left
+                2xl:text-center
+                '>
                     A selection of websites I've designed and developed for clients
                 </p>
             </div>
-            <div className='gap-16 grid grid-cols-2'>
+            <div className='
+            grid 
+            grid-cols-1 gap-6
+            2xl:grid-cols-2 2xl:gap-16
+            '>
                 {projectInfo.map((project, i) => (
                     <div 
                     key={i}
@@ -57,19 +70,28 @@ const Portfolio = () => {
                             fill
                             />
                         </div>
-                        <div className='absolute top-8 left-8'>
+                        <div className='
+                        absolute 
+                        top-4 left-4
+                        2xl:top-8 2xl:left-8
+                        '>
                             <div className={cn(
                                 'flex flex-col gap-2 duration-500 transition-transform origin-top-left',
                                 hoveredCard === i && 'scale-115'
                             )}>
-                                <h3 className="font-enorm text-4xl">{project.title}</h3>
-                                <p className='font-bold'>{project.subtitle}</p>
+                                <h3 className="font-enorm sub-heading">{project.title}</h3>
+                                <p className='font-bold paragraph-large'>{project.subtitle}</p>
                             </div>
                         </div>
-                        <div className='absolute bottom-8 left-8'>
-                            <div className='bg-light-blue text-foreground w-fit py-4 px-8 rounded-full font-bold border-[5px] border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105'>
-                                View Details
-                            </div>
+                        <div className='
+                        absolute 
+                        bottom-4 left-4
+                        2xl:bottom-8 2xl:left-8
+                        '>
+                            <Button
+                            text='View Details'
+                            link=''
+                            />
                         </div>
                     </div>
                 ))}

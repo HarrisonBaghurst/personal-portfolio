@@ -17,7 +17,7 @@ const WebDev = () => {
         '>
             <div className='
             flex flex-col 
-            gap-0
+            gap-0 px-6
             2xl:gap-8
             '>
                 <ScrolledInText 
@@ -25,7 +25,11 @@ const WebDev = () => {
                 size={'large'} 
                 center={true}                
                 />
-                <p className='text-center paragraph-large font-bold px-12'>
+                <p className='
+                paragraph-large font-bold
+                text-left
+                2xl:text-center
+                '>
                     Your one-stop partner for web development and online services
                 </p>
             </div>

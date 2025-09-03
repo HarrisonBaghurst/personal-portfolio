@@ -1,9 +1,8 @@
-'use client'
-
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Transition from './Transition'
-import { cn } from '@/lib/utils'
 import ScrolledInText from './ScrolledInText'
+import ExpandingSelector from './ExpandingSelector'
+import Button from './Button'
 
 const HowItWorks = () => {
 const pricingOptions = [
@@ -25,72 +24,49 @@ const pricingOptions = [
     },
   ]
 
-  const [activeCard, setActiveCard] = useState<number>(0)
-  const [heights, setHeights] = useState<number[]>([])
-  const contentRefs = useRef<HTMLDivElement[]>([])
-
-  useEffect(() => {
-    const newHeights = contentRefs.current.map((el) => el?.scrollHeight || 0)
-    setHeights(newHeights)
-  }, [])
-
   return (
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='p-32 grid grid-cols-2 gap-32 text-3xl h-250'>
+      <div className='
+      px-6 py-12 flex flex-col gap-12
+      2xl:p-32 2xl:grid 2xl:grid-cols-2 2xl:gap-32 2xl:h-300
+      '>
         <div className='flex items-center'>
-        <div className='flex flex-col gap-12'>  
+          <div className='
+          flex flex-col 
+          gap-6
+          2xl:gap-12
+          '>  
             <div>
-              <ScrolledInText 
-              text='How It Works'
-              size='regular'
-              center={false}
-              />
-            <p className='font-bold'>
+                <ScrolledInText 
+                text='How It Works'
+                size='regular'
+                center={false}
+                />
+              <p className='font-bold paragraph-large'>
                 Simple, flexible and tailored to you
-            </p>
+              </p>
             </div>
-            <p className='text-2xl'>
-                All lesson take place online, making them convenient and accessible wherever you are. 
-                Sessions are typically one hour long, with the option to extend if needed. 
-                Before starting, we'll discuss your goals and current level to create a personalised learning plan. 
-                Each lesson combines clear explanations, worked examples and practice questions, ensuring you fully understand the material. 
-                Whether you're preparing for exams or learning programming as a new skill, the pace and focus of lessons are always tailored to you.
+            <p className='paragraph-small'>
+              All lessons take place online, making them convenient and accessible wherever you are.
+              Sessions are typically one hour long, with the option to extend if needed.
+              Before starting, we'll discuss your goals and current level to create a personalised learning plan.
+              Each lesson combines clear explanations, worked examples and practice questions, ensuring you fully understand the material.
+              Whether you're preparing for exams or learning programming as a new skill, the pace and focus of lessons are always tailored to you.
             </p>
-            <div className='w-fit py-4 px-8 rounded-full font-bold border-[5px] border-button-blue hover:bg-button-blue-dark hover:text-background duration-500 cursor-pointer hover:scale-105'>
-            Contact Me
-            </div>
-        </div>
-        </div>
-        <div className='flex items-center'>
-          <div className='flex flex-col gap-12 text-background'>
-            {pricingOptions.map((option, i) => (
-              <div
-                key={i}
-                onMouseEnter={() => setActiveCard(i)}
-                className={cn(
-                  "bg-foreground p-8 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden"
-                )}
-              >
-                <h3 className="text-4xl font-enorm">{option.title}</h3>
-                <div
-                  ref={(el) => { contentRefs.current[i] = el! }}
-                  style={{
-                    height: activeCard === i ? heights[i] || 0 : 0,
-                    opacity: activeCard === i ? 1 : 0,
-                    marginTop: activeCard === i ? '1rem' : '0',
-                    transition: 'height 0.5s ease, opacity 0.5s ease, margin 0.5s ease'
-                  }}
-                >
-                  <p className="text-2xl">{option.text}</p>
-                </div>
-              </div>
-            ))}
+            <Button
+            text='Contact Me'
+            link=''
+            />
           </div>
         </div>
+        <div className='flex items-center'>
+          <ExpandingSelector 
+          options={pricingOptions}
+          />
+        </div>
       </div>
-
       <Transition />
     </div>
   )

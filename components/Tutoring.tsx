@@ -8,14 +8,26 @@ import ScrolledInText from './ScrolledInText'
 
 const Tutoring = () => {
     return (
-        <section className='w-full relative bg-background py-32 flex flex-col gap-24'>
-            <div className='flex flex-col gap-8'>
+        <section className='
+        w-full relative bg-background flex flex-col
+        pt-16 gap-16
+        2xl:pt-32 2xl:gap-24
+        '>
+            <div className='
+            flex flex-col 
+            gap-0 px-6
+            2xl:gap-8
+            '>
                 <ScrolledInText 
-                text='Tutoring Services'
-                size='large'
-                center={true}
+                text={'Tutoring Services'} 
+                size={'large'} 
+                center={true}                
                 />
-                <p className='text-center text-4xl font-bold'>
+                <p className='
+                paragraph-large font-bold
+                text-left
+                2xl:text-center
+                '>
                     From exam preparation to skill-building, tutoring that fits your goals
                 </p>
             </div>

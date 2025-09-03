@@ -71,10 +71,10 @@ const ScrolledInText = ({ text, size, center }: ScrolledInTextProps) => {
             <h2 
             ref={titleRef}
             className={cn(
-                'font-enorm text-gradient',
+                'font-enorm text-gradient text-left',
                 size === 'large' && 'text-4xl 2xl:text-9xl',
                 size === 'regular' && 'text-3xl 2xl:text-8xl',
-                center && 'text-center',
+                center && '2xl:text-center',
             )}
             >
                 {text}

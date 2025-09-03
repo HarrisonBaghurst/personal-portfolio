@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React, { useState } from 'react'
 import ScrolledInText from './ScrolledInText';
+import ExpandingSelector from './ExpandingSelector';
 
 const ProjectJourney = () => {
     const projectJourneyInfo = [
@@ -32,9 +33,9 @@ const ProjectJourney = () => {
     const [activeStep, setActiveStep] = useState<number>(0);
 
     return (
-        <div className='flex flex-col h-265
-        px-6 gap-12
-        2xl:px-16 2xl:gap-24
+        <div className='flex flex-col
+        px-6 gap-12 h-fit
+        2xl:px-16 2xl:gap-24 2xl:h-265
         '>
             <div className='bg-background w-full'>
                 <ScrolledInText 
@@ -42,14 +43,21 @@ const ProjectJourney = () => {
                 size='regular'
                 center={true}
                 />
-                <p className='font-bold text-center paragraph-large'>
+                <p className='
+                font-bold paragraph-large
+                text-left
+                2xl:text-center'>
                     From consultation to launch, here's what you can expect
                 </p>
             </div>
 
-            <div className="bg-background flex text-background 
-            flex-col gap-6
-            2xl:flex-row 2xl:gap-8">
+            <div className='block 2xl:hidden'>
+                <ExpandingSelector 
+                options={projectJourneyInfo}
+                />
+            </div>
+
+            <div className="bg-background 2xl:flex text-background gap-8 hidden">
                 {projectJourneyInfo.map((step, i) => (
                     <div
                         key={i}
