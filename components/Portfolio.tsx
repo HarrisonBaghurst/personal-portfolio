@@ -72,7 +72,7 @@ const Portfolio = () => {
                         </div>
                         <div className='
                         absolute 
-                        top-4 left-4
+                        top-3 left-4
                         2xl:top-8 2xl:left-8
                         '>
                             <div className={cn(
@@ -80,7 +80,11 @@ const Portfolio = () => {
                                 hoveredCard === i && 'scale-115'
                             )}>
                                 <h3 className="font-enorm sub-heading">{project.title}</h3>
-                                <p className='font-bold paragraph-large'>{project.subtitle}</p>
+                                <p 
+                                className='font-bold paragraph-large hidden 2xl:block'
+                                >
+                                    {project.subtitle}
+                                </p>
                             </div>
                         </div>
                         <div className='
