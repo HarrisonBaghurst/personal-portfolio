@@ -10,6 +10,18 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import Button from './Button'
@@ -26,8 +38,78 @@ const Navbar = () => {
         {
             "text": "Menu",
             "icon": "menu-2",
-            "link": "/",
+            "link": false,
         }
+    ]
+
+    const menuInfo = [
+        {
+            "heading": "Web Development",
+            "links": [
+                {
+                    "text": "Services",
+                    "link": "/",
+                },
+                {
+                    "text": "Technologies",
+                    "link": "/",
+                },
+                {
+                    "text": "Project Journey",
+                    "link": "/",
+                },
+                {
+                    "text": "Pricing Estimates",
+                    "link": "/",
+                },
+                {
+                    "text": "Recent Projects",
+                    "link": "/",
+                },
+                {
+                    "text": "Common Questions",
+                    "link": "/",
+                },
+            ]
+        },
+        {
+            "heading": "Tutoring Services",
+            "links": [
+                {
+                    "text": "Subjects",
+                    "link": "/",
+                },
+                {
+                    "text": "How It Works",
+                    "link": "/",
+                },
+                {
+                    "text": "Testimonials",
+                    "link": "/",
+                },
+                {
+                    "text": "Lesson Pricing",
+                    "link": "/",
+                },
+                {
+                    "text": "About Me",
+                    "link": "/",
+                },
+            ]
+        },
+        {
+            "heading": "Social Links",
+            "links": [
+                {
+                    "text": "Contact Form",
+                    "link": "/",
+                },
+                {
+                    "text": "Instagram",
+                    "link": "/",
+                },
+            ]
+        },
     ]
 
     const sendMessage = async () => {
@@ -60,6 +142,8 @@ const Navbar = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <>  
             <Toaster richColors/>
@@ -83,8 +167,11 @@ const Navbar = () => {
                             key={i} 
                             className='flex gap-4 items-center cursor-pointer'
                             onClick={() => {
-                                if (!link.link) {
+                                if (link.text === 'Contact Form') {
                                     setContactFormOpen(!contactFormOpen);
+                                }
+                                else if (link.text === 'Menu') {
+                                    setMenuOpen(!menuOpen);
                                 }
                             }}
                             >
@@ -166,6 +253,47 @@ const Navbar = () => {
                         </DialogHeader>
                     </DialogContent>
                 </Dialog>
+                <Sheet 
+                open={menuOpen}
+                onOpenChange={() => setMenuOpen(!menuOpen)}
+                >
+                    <SheetContent>
+                        <SheetHeader className='pl-6 2xl:pl-12 pt-6 2xl:pt-12'>
+                            <SheetTitle className='
+                            font-enorm text-gradient text-left
+                            text-4xl
+                            2xl:text-7xl
+                            '>
+                                Menu
+                            </SheetTitle>
+                        </SheetHeader>
+                        <div className='px-6 2xl:px-12'>
+                            <Accordion type="single" collapsible>
+                                {menuInfo.map((section, i) => (
+                                    <AccordionItem 
+                                    key={i}
+                                    value={section.heading}
+                                    >
+                                        <AccordionTrigger 
+                                        className='paragraph-large font-bold text-foreground'>
+                                            {section.heading}
+                                        </AccordionTrigger>
+                                        <AccordionContent className='flex flex-col gap-2 2xl:gap-6 2xl:pt-4 2xl:pb-8 px-4'>
+                                            {section.links.map((link, j) => (
+                                                <div
+                                                key={j}
+                                                className='paragraph-large'
+                                                >
+                                                    {link.text}
+                                                </div>
+                                            ))}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
+                    </SheetContent>
+                </Sheet>
             </div>
         </>
     )
