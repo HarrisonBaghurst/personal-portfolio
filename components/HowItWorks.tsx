@@ -59,7 +59,7 @@ const pricingOptions = [
             </p>
             <Button
             text='Contact Me'
-            link=''
+            link='contact form'
             />
           </div>
         </div>

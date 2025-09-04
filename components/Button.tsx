@@ -2,12 +2,16 @@
 
 import React from 'react'
 
+import { useModal } from "@/context/ModalContext"
+
 type ButtonProps = {
     text: string;
     link: string | (() => void);
 }
 
 const Button = ({ text, link }: ButtonProps) => {
+    const { openModal } = useModal();
+    
     return (
         <button
         className='
@@ -21,6 +25,9 @@ const Button = ({ text, link }: ButtonProps) => {
                 link();
                 return;
             }
+            if (link === 'contact form') {
+                openModal();
+            }
             if (link[0] !== '/') {
                 const sectionElement = document.getElementById(link)
                 const yOffset = -100
@@ -28,6 +35,7 @@ const Button = ({ text, link }: ButtonProps) => {
                     const y = sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: 'smooth' });
                 }
+                return
             }
         }}
         >
