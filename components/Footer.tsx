@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Transition from './Transition'
 
@@ -8,27 +10,27 @@ const Footer = () => {
             "links": [
                 {
                     "text": "Services",
-                    "link": "/",
+                    "link": "web-dev-services",
                 },
                 {
                     "text": "Technologies",
-                    "link": "/",
+                    "link": "modern-tech",
                 },
                 {
                     "text": "Project Journey",
-                    "link": "/",
+                    "link": "project-journey",
                 },
                 {
                     "text": "Pricing Estimates",
-                    "link": "/",
+                    "link": "web-dev-pricing",
                 },
                 {
                     "text": "Recent Projects",
-                    "link": "/",
+                    "link": "recent-projects",
                 },
                 {
                     "text": "Common Questions",
-                    "link": "/",
+                    "link": "faq",
                 },
             ]
         },
@@ -37,23 +39,23 @@ const Footer = () => {
             "links": [
                 {
                     "text": "Subjects",
-                    "link": "/",
+                    "link": "topics",
                 },
                 {
                     "text": "How It Works",
-                    "link": "/",
+                    "link": "how-it-works",
                 },
                 {
                     "text": "Testimonials",
-                    "link": "/",
+                    "link": "testimonials",
                 },
                 {
                     "text": "Lesson Pricing",
-                    "link": "/",
+                    "link": "lesson-pricing",
                 },
                 {
                     "text": "About Me",
-                    "link": "/",
+                    "link": "about-me",
                 },
             ]
         },
@@ -71,6 +73,15 @@ const Footer = () => {
             ]
         },
     ]
+
+    const handleScroll = (section: string) => {
+        const sectionElement = document.getElementById(section)
+        const yOffset = -100
+        if (sectionElement) {
+            const y = sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    }
 
     return (
         <section className='w-full bg-light-blue'>
@@ -97,12 +108,13 @@ const Footer = () => {
                             <div className='flex justify-center'>
                                 <div className='flex flex-col gap-2'>
                                     {column.links.map((link, j) => (
-                                        <p 
+                                        <button
                                         key={j}
-                                        className=''
+                                        className='cursor-pointer'
+                                        onClick={() => handleScroll(link.link)}
                                         >
                                             {link.text}
-                                        </p>
+                                        </button>
                                     ))}
                                 </div>
                             </div>
