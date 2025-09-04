@@ -28,7 +28,7 @@ const ExpandingSelector = ({ options }: ExpandingSelectorProps) => {
                     key={i}
                     onMouseEnter={() => setActiveCard(i)}
                     className="
-                    bg-foreground rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden
+                    bg-foreground rounded-2xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden select-none
                     p-6
                     2xl:p-8
                     ">
