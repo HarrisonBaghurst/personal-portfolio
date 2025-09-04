@@ -132,11 +132,11 @@ const Hero = () => {
                             pt-0 gap-4
                             2xl:pt-12 2xl:gap-12
                             '>
-                                {['Web Development', 'Tutoring Services'].map((text, i) => (
+                                {[['Web Development', 'web-dev-services'], ['Tutoring Services', 'topics']].map((text, i) => (
                                     <Button
                                     key={i}
-                                    text={text}
-                                    link={''}
+                                    text={text[0]}
+                                    link={text[1]}
                                     />
                                 ))}
                             </div>

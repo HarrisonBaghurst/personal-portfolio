@@ -28,7 +28,9 @@ const pricingOptions = [
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className='
+      <div 
+      id='how-it-works'
+      className='
       px-6 py-12 flex flex-col gap-12
       2xl:p-32 2xl:grid 2xl:grid-cols-2 2xl:gap-32 2xl:h-300
       '>

@@ -9,7 +9,9 @@ const ModernTech = () => {
             <Transition 
             flipped={true}
             />
-            <div className='
+            <div 
+            id='modern-tech'
+            className='
             grid
             px-6 py-12 grid-cols-1 gap-8
             2xl:p-32 2xl:grid-cols-2 2xl:gap-32

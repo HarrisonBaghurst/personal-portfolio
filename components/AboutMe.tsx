@@ -4,7 +4,9 @@ import ScrolledInText from './ScrolledInText'
 
 const AboutMe = () => {
     return (
-        <div className='
+        <div 
+        id='about-me'
+        className='
         flex
         px-6 gap-12 flex-col
         2xl:px-32 2xl:gap-32 2xl:flex-row

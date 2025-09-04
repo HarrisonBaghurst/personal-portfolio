@@ -8,7 +8,9 @@ import ScrolledInText from './ScrolledInText'
 
 const Tutoring = () => {
     return (
-        <section className='
+        <section 
+        id='topics'
+        className='
         w-full relative bg-background flex flex-col
         pt-16 gap-16
         2xl:pt-32 2xl:gap-24

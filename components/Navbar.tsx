@@ -48,27 +48,27 @@ const Navbar = () => {
             "links": [
                 {
                     "text": "Services",
-                    "link": "/",
+                    "link": "web-dev-services",
                 },
                 {
                     "text": "Technologies",
-                    "link": "/",
+                    "link": "modern-tech",
                 },
                 {
                     "text": "Project Journey",
-                    "link": "/",
+                    "link": "project-journey",
                 },
                 {
                     "text": "Pricing Estimates",
-                    "link": "/",
+                    "link": "web-dev-pricing",
                 },
                 {
                     "text": "Recent Projects",
-                    "link": "/",
+                    "link": "recent-projects",
                 },
                 {
                     "text": "Common Questions",
-                    "link": "/",
+                    "link": "faq",
                 },
             ]
         },
@@ -77,23 +77,23 @@ const Navbar = () => {
             "links": [
                 {
                     "text": "Subjects",
-                    "link": "/",
+                    "link": "topics",
                 },
                 {
                     "text": "How It Works",
-                    "link": "/",
+                    "link": "how-it-works",
                 },
                 {
                     "text": "Testimonials",
-                    "link": "/",
+                    "link": "testimonials",
                 },
                 {
                     "text": "Lesson Pricing",
-                    "link": "/",
+                    "link": "lesson-pricing",
                 },
                 {
                     "text": "About Me",
-                    "link": "/",
+                    "link": "about-me",
                 },
             ]
         },
@@ -135,7 +135,16 @@ const Navbar = () => {
         }
         const errorMessage = await res.json();
         toast.error(errorMessage.error || 'Something went wrong');
+    }
 
+    const handleScroll = (section: string) => {
+        setMenuOpen(false);
+        const sectionElement = document.getElementById(section)
+        const yOffset = -100
+        if (sectionElement) {
+            const y = sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
     }
 
     const [contactFormOpen, setContactFormOpen] = useState(false);
@@ -282,7 +291,8 @@ const Navbar = () => {
                                             {section.links.map((link, j) => (
                                                 <div
                                                 key={j}
-                                                className='paragraph-large'
+                                                className='paragraph-large cursor-pointer'
+                                                onClick={() => handleScroll(link.link)}
                                                 >
                                                     {link.text}
                                                 </div>

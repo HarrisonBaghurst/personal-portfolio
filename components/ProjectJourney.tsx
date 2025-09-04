@@ -33,7 +33,9 @@ const ProjectJourney = () => {
     const [activeStep, setActiveStep] = useState<number>(0);
 
     return (
-        <div className='flex flex-col
+        <div 
+        id='project-journey'
+        className='flex flex-col
         px-6 gap-12 h-fit
         2xl:px-16 2xl:gap-24 2xl:h-265
         '>

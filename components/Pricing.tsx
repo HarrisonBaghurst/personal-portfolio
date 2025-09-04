@@ -27,7 +27,9 @@ const Pricing = () => {
     <div className='bg-light-blue'>
       <Transition flipped={true} />
 
-      <div className=' 
+      <div 
+      id='web-dev-pricing'
+      className=' 
       flex flex-col px-6 py-12 gap-12 h-fit
       2xl:grid 2xl:p-32 2xl:grid-cols-2 2xl:gap-32 2xl:h-225
       '>

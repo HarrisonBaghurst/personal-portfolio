@@ -15,7 +15,9 @@ const Testimonials = () => {
     ]
 
     return (
-        <div className='
+        <div 
+        id='testimonials'
+        className='
         flex flex-col 
         gap-12 px-6
         2xl:gap-24 2xl:px-16

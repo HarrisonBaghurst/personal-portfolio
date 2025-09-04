@@ -29,7 +29,9 @@ const Portfolio = () => {
     const [hoveredCard, setHoveredCard] = useState<null|number>(null);
 
     return (
-        <div className='
+        <div 
+        id='recent-projects'
+        className='
         flex flex-col 
         px-6 gap-8
         2xl:px-16 2xl:gap-24

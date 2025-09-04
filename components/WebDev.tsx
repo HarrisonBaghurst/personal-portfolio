@@ -10,7 +10,9 @@ import ScrolledInText from './ScrolledInText'
 const WebDev = () => {
 
     return (
-        <section className='
+        <section 
+        id='web-dev-services'
+        className='
         w-full relative bg-background flex flex-col
         pt-16 gap-16
         2xl:pt-32 2xl:gap-24
