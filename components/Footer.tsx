@@ -2,6 +2,9 @@
 
 import React from 'react'
 import Transition from './Transition'
+import { useModal } from '@/context/ModalContext'
+import { useDynamicRouteParams } from 'next/dist/server/app-render/dynamic-rendering'
+import { useRouter } from 'next/navigation'
 
 const Footer = () => {
     const linkInfo = [
@@ -68,11 +71,14 @@ const Footer = () => {
                 },
                 {
                     "text": "Instagram",
-                    "link": "/",
+                    "link": "https://www.instagram.com/harrisonbaghurstdigital/",
                 },
             ]
         },
     ]
+
+    const router = useRouter();
+    const { openModal } = useModal();
 
     const handleScroll = (section: string) => {
         const sectionElement = document.getElementById(section)
@@ -81,6 +87,10 @@ const Footer = () => {
             const y = sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
+    }
+
+    const handleSend = (link: string) => {  
+        router.push(link);
     }
 
     return (
@@ -111,7 +121,17 @@ const Footer = () => {
                                         <button
                                         key={j}
                                         className='cursor-pointer'
-                                        onClick={() => handleScroll(link.link)}
+                                        onClick={() => {
+                                            if (column.heading === 'Social Links') {
+                                                if (link.link === '/') {
+                                                    openModal();
+                                                    return
+                                                }
+                                                handleSend(link.link);
+                                                return;
+                                            }
+                                            handleScroll(link.link);
+                                        }}
                                         >
                                             {link.text}
                                         </button>

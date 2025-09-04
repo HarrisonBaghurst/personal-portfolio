@@ -16,6 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
     const linkInfo = [
@@ -95,13 +96,14 @@ const Navbar = () => {
                 },
                 {
                     "text": "Instagram",
-                    "link": "/",
+                    "link": "https://www.instagram.com/harrisonbaghurstdigital/",
                 },
             ]
         },
     ]
 
     const { openModal } = useModal();
+    const router = useRouter();
 
     const handleScroll = (section: string) => {
         setMenuOpen(false);
@@ -111,6 +113,11 @@ const Navbar = () => {
             const y = sectionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
+    }
+
+    const handleSend = (link: string) => {  
+        setMenuOpen(false);
+        router.push(link);
     }
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -184,7 +191,7 @@ const Navbar = () => {
                                     value={section.heading}
                                     >
                                         <AccordionTrigger 
-                                        className='paragraph-large font-bold text-foreground'>
+                                        className='paragraph-large font-bold text-foreground cursor-pointer'>
                                             {section.heading}
                                         </AccordionTrigger>
                                         <AccordionContent className='flex flex-col gap-2 2xl:gap-6 2xl:pt-4 2xl:pb-8 px-4'>
@@ -192,8 +199,18 @@ const Navbar = () => {
                                                 <div
                                                 key={j}
                                                 className='paragraph-large cursor-pointer'
-                                                onClick={() => handleScroll(link.link)}
-                                                >
+                                                onClick={() => {
+                                                    if (section.heading === 'Social Links') {
+                                                        if (link.link === '/') {
+                                                            setMenuOpen(false);
+                                                            openModal();
+                                                            return
+                                                        }
+                                                        handleSend(link.link);
+                                                        return;
+                                                    }
+                                                    handleScroll(link.link);
+                                                }}>
                                                     {link.text}
                                                 </div>
                                             ))}
