@@ -88,6 +88,19 @@ const Navbar = () => {
             ]
         },
         {
+            "heading": "Projects",
+            "links": [
+                {
+                    "text": "Nurture Connect",
+                    "link": "/nurture-connect",
+                },
+                {
+                    "text": "Car Cuts",
+                    "link": "/car-cuts",
+                }
+            ]
+        },
+        {
             "heading": "Social Links",
             "links": [
                 {
@@ -131,9 +144,11 @@ const Navbar = () => {
                     py-2 px-3 border-b-[2px] border-r-[2px] rounded-br-lg 
                     2xl:py-4 2xl:px-8 2xl:border-b-[5px] 2xl:border-r-[5px] 2xl:rounded-br-3xl
                     '>
-                        <p>
+                        <button
+                        onClick={() => router.push('/')}
+                        >
                             HarrisonBaghurst.com
-                        </p>
+                        </button>
                     </div>
                     <div className='bg-foreground text-background cursor-pointer border-background flex 
                     py-2 px-3 border-b-[2px] border-l-[2px] rounded-bl-lg gap-4 
@@ -200,7 +215,7 @@ const Navbar = () => {
                                                 key={j}
                                                 className='paragraph-large cursor-pointer'
                                                 onClick={() => {
-                                                    if (section.heading === 'Social Links') {
+                                                    if (['Social Links', 'Projects'].includes(section.heading)) {
                                                         if (link.link === '/') {
                                                             setMenuOpen(false);
                                                             openModal();
