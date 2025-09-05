@@ -49,12 +49,17 @@ const ModernTech = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full aspect-16/10 rounded-2xl overflow-hidden relative'>
-                    <Image 
-                    src={'/img/imac-mockup.png'}
-                    alt='macbook mockup'
-                    fill
-                    />
+                <div className='w-full aspect-16/9 rounded-xs 2xl:rounded-2xl overflow-hidden relative shadow-xs 2xl:shadow'>
+                    <video
+                    className='w-full h-full object-cover'
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload='auto'
+                    >
+                        <source src='https://vvz9axceq1op6mal.public.blob.vercel-storage.com/ScrollCapture%202025-09-05%20at%2015.51.25%20%283%29.webm'/>
+                    </video>
                 </div>
             </div>
             <Transition />

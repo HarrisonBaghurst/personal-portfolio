@@ -37,7 +37,7 @@ const ProjectJourney = () => {
         id='project-journey'
         className='flex flex-col
         px-6 gap-12 h-fit
-        2xl:px-16 2xl:gap-24 2xl:h-265
+        2xl:px-16 2xl:gap-24 2xl:h-120
         '>
             <div className='bg-background w-full'>
                 <ScrolledInText 
@@ -99,13 +99,6 @@ const ProjectJourney = () => {
                                 '>
                                     {step.text}
                                 </p>
-                                <div className='w-full aspect-16/10 relative rounded-sm overflow-hidden'>
-                                    <Image 
-                                    src={'/img/macbook-mockup.png'}
-                                    alt=''
-                                    fill
-                                    />
-                                </div>
                             </div>
                         </div>
                     </div>
