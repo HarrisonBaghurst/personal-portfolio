@@ -6,13 +6,13 @@ const TutoringTopics = () => {
         {
             "title": "Mathematics",
             "subtitle": "Clear explanations and exam focused support",
-            "image": "/img/macbook-mockup.png",
+            "image": "https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-09-14%20131053.webp",
             "text": "I offer tailored GCSE and A-Level tutoring across all major exam boards. Whether you're aiming to strengthen core skills, tackle challenging topics or maximise exam performance, I provide clear explanations and structured guidance. My approach builds both confidence and problem-solving ability, ensuring you're fully prepared for assessments and future studies."
         },
         {
             "title": "Programming",
             "subtitle": "Learn to code with confidence",
-            "image": "/img/macbook-mockup.png",
+            "image": "https://vvz9axceq1op6mal.public.blob.vercel-storage.com/Screenshot%202025-09-05%20184957.webp",
             "text": "I provide programming tuition with a focus on Python, one of the most widely used and beginner-friendly languages. Whether you're studying computer science at GCSE or A-Level and need some extra support with coursework or want to learn coding as a new skill, lessons are tailored to your goals. Using practical examples and hands-on exercises, I help students develop problem-solving skills and progress from beginner to confident coder."
         },
     ]
