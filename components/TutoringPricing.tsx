@@ -8,13 +8,13 @@ const TutoringPricing = () => {
 const pricingOptions = [
     {
       title: "Book individual lessons",
-      subtitle: "£20 / hr",
-      text: "Perfect if you'd like felxibility without commitment. Individulal lessons are priced at £20 per hour, allowing you to book sessions as and when you need them. This option is idea if you want to try out tutoring before committing to a block or if you're looking for occasional support to target specific topics."
+      subtitle: "£30 / hr",
+      text: "Perfect if you'd like felxibility without commitment. Individulal lessons are priced at £30 per hour, allowing you to book sessions as and when you need them. This option is idea if you want to try out tutoring before committing to a block or if you're looking for occasional support to target specific topics."
     },
     {
       title: "Save with block payments",
-      subtitle: "£18 / hr",
-      text: "If you are looking for regular support, block bookings are a more cost-effective option. You can purchase a block of 5 lessons at £19 per hour or a block of 10 lessons at £18 per hour. Blocks give you consistency in your learning while saving on the hourly rate, making them a great choice for long-term exam preparation or steady progress in maths and programming."
+      subtitle: "£270 / 10hrs",
+      text: "If you are looking for regular support, block bookings are a more cost-effective option. You can purchase a block of 10 lessons at £27 per hour. Blocks give you consistency in your learning while saving on the hourly rate, making them a great choice for long-term exam preparation or steady progress in maths and programming."
     },
   ]
 
