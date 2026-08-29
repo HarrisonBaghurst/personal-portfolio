@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
+import UserIcon from "@/components/UserIcon";
 
 export const metadata: Metadata = {
     title: "Temp title",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <body className="min-h-full flex flex-col">
                 <Navbar />
                 {children}
+                <UserIcon />
             </body>
         </html>
     );

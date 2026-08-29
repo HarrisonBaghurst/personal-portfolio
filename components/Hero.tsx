@@ -28,32 +28,17 @@ const Hero = () => {
 
     return (
         <div className="w-dvw h-dvh flex flex-col items-center justify-center relative">
-            <div className="flex flex-col gap-24">
+            <div className="flex flex-col gap-16">
                 <div className="flex flex-col gap-4">
                     <p className="text-5xl">I'm</p>
                     <h1 className="text-8xl font-poppins-bold">
                         Harrison Baghurst.
                     </h1>
                 </div>
-                <div className="grid grid-cols-4 gap-8">
-                    {cards.map(({ title, style, image }) => (
-                        <div
-                            key={title}
-                            className={cn(
-                                "relative bg-foreground aspect-square overflow-hidden rounded-sm",
-                                `${style}`,
-                            )}
-                        >
-                            {image && (
-                                <Image src={image} alt={title} fill priority />
-                            )}
-                        </div>
-                    ))}
-                </div>
-                <div className="flex text-4xl justify-evenly">
-                    <Button>Web Developer</Button>
-                    <Button variant={"outline"}>Maths Tutor</Button>
-                    <Button variant={"outline"}>Photographer</Button>
+                <div className="flex flex-col gap-4 text-4xl">
+                    <p>Web developer</p>
+                    <p>Maths tutor</p>
+                    <p>Photographer</p>
                 </div>
             </div>
             <div className="absolute top-20 left-1/2 -translate-x-1/2 text-center flex flex-col gap-1">
