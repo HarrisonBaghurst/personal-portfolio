@@ -4,10 +4,12 @@ import gallery from "@/data/photography-gallery.json";
 const page = () => {
     return (
         <div className="flex flex-col gap-16">
-            <div className="flex flex-col gap-8">
-                <h2 className="text-6xl font-poppins-bold">Photography</h2>
+            <div className="flex flex-col gap-8 text-lg text-foreground/75">
+                <h2 className="text-6xl font-poppins-bold text-foreground">
+                    Photography
+                </h2>
                 <div className="flex flex-col gap-4">
-                    <p className="text-lg text-foreground/75">
+                    <p>
                         I recently took up photography as a creative outlet and
                         am still learning everything to do with the medium. I am
                         an amateur, and would happily receive constructive
@@ -17,7 +19,7 @@ const page = () => {
                         will most likely be happy to share a full quality copy
                         for a small charge.
                     </p>
-                    <p className="text-lg text-foreground/75">
+                    <p>
                         All photographs showcased in my gallery are taken on a
                         Sony ZV-E10.
                     </p>

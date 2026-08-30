@@ -6,7 +6,7 @@ const page = () => {
                     About me
                 </h2>
                 <div className="flex flex-col gap-4">
-                    <p className="">
+                    <p>
                         I'm a final year student studying Computer Science at
                         Durham university. I am pursuing a career in software
                         engineering once I have completed my bachelor's degree.
