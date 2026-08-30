@@ -6,19 +6,22 @@ const page = () => {
         <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-8">
                 <h2 className="text-6xl font-poppins-bold">Photography</h2>
-                <p className="text-lg text-foreground/75">
-                    I recently took up photography as a creative outlet and am
-                    still learning everything to do with the medium. I am an
-                    amateur, and would happily receive constructive feedback if
-                    you believe you have something useful to add. If you do like
-                    some of my photographs and would like a better quality copy,
-                    feel free to contact me, I will most likely be happy to
-                    share a full quality copy for a small charge.
-                </p>
-                <p className="text-lg text-foreground/75">
-                    All photographs showcased in my gallery are taken on a Sony
-                    ZV-E10.
-                </p>
+                <div className="flex flex-col gap-4">
+                    <p className="text-lg text-foreground/75">
+                        I recently took up photography as a creative outlet and
+                        am still learning everything to do with the medium. I am
+                        an amateur, and would happily receive constructive
+                        feedback if you believe you have something useful to
+                        add. If you do like some of my photographs and would
+                        like a better quality copy, feel free to contact me, I
+                        will most likely be happy to share a full quality copy
+                        for a small charge.
+                    </p>
+                    <p className="text-lg text-foreground/75">
+                        All photographs showcased in my gallery are taken on a
+                        Sony ZV-E10.
+                    </p>
+                </div>
             </div>
             <div className="flex flex-col gap-4">
                 {gallery.map((row, index) => {

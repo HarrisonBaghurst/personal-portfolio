@@ -1,5 +1,44 @@
 const page = () => {
-    return null;
+    return (
+        <div className="flex flex-col gap-16 text-lg text-foreground/75">
+            <div className="flex flex-col gap-8">
+                <h2 className="text-6xl font-poppins-bold text-foreground">
+                    About me
+                </h2>
+                <div className="flex flex-col gap-4">
+                    <p className="">
+                        I'm a final year student studying Computer Science at
+                        Durham university. I am pursuing a career in software
+                        engineering once I have completed my bachelor's degree.
+                        Alongside university, I work part-time, build personal
+                        web-development projects, take on freelance software
+                        engineering work and tutor GCSE & A-Level maths.
+                    </p>
+                    <p>
+                        Outside of my working life I have also taken up
+                        photography, some of my favourite photographs can be
+                        viewed in the{" "}
+                        <a className="cursor-pointer underline text-[#4285F4]">
+                            gallery page
+                        </a>{" "}
+                        on this site.
+                    </p>
+                    <p>
+                        If you would like to contact me regarding any of the
+                        above, you can{" "}
+                        <a className="cursor-pointer underline text-[#4285F4]">
+                            email me
+                        </a>{" "}
+                        or use my{" "}
+                        <a className="cursor-pointer underline text-[#4285F4]">
+                            contact form
+                        </a>
+                        .
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default page;

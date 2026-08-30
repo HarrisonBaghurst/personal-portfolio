@@ -14,7 +14,53 @@ const transition = {
     mass: 0.9,
 };
 
+const scrollKeys = new Set([
+    " ",
+    "PageUp",
+    "PageDown",
+    "Home",
+    "End",
+    "ArrowUp",
+    "ArrowDown",
+]);
+
+const lockScroll = () => {
+    const options = { passive: false } as const;
+
+    const blockEvent = (event: Event) => {
+        if (!event.cancelable) {
+            return;
+        }
+
+        event.preventDefault();
+    };
+
+    const blockKey = (event: KeyboardEvent) => {
+        if (!scrollKeys.has(event.key)) {
+            return;
+        }
+
+        event.preventDefault();
+    };
+
+    window.addEventListener("wheel", blockEvent, options);
+    window.addEventListener("touchmove", blockEvent, options);
+    window.addEventListener("keydown", blockKey, options);
+
+    return () => {
+        window.removeEventListener("wheel", blockEvent);
+        window.removeEventListener("touchmove", blockEvent);
+        window.removeEventListener("keydown", blockKey);
+    };
+};
+
+let isScrolling = false;
+
 const scrollToTop = (onComplete: () => void) => {
+    if (isScrolling) {
+        return;
+    }
+
     const from = window.scrollY;
 
     const prefersReducedMotion = window.matchMedia(
@@ -27,6 +73,9 @@ const scrollToTop = (onComplete: () => void) => {
         return;
     }
 
+    isScrolling = true;
+
+    const unlockScroll = lockScroll();
     const duration = Math.min(900, Math.max(350, from * 0.6));
     const startTime = performance.now();
 
@@ -41,6 +90,8 @@ const scrollToTop = (onComplete: () => void) => {
             return;
         }
 
+        isScrolling = false;
+        unlockScroll();
         onComplete();
     };
 
