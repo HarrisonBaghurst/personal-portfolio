@@ -4,7 +4,7 @@ export default function HomeLayout({ children }: LayoutProps<"/">) {
     return (
         <>
             <Hero />
-            {children}
+            <div className="mx-[25%]">{children}</div>
         </>
     );
 }

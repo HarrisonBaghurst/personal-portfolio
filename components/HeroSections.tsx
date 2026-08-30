@@ -4,7 +4,8 @@ import { sections } from "@/constants/sections";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import type { MouseEvent } from "react";
 
 const transition = {
     type: "spring" as const,
@@ -13,8 +14,62 @@ const transition = {
     mass: 0.9,
 };
 
+const scrollToTop = (onComplete: () => void) => {
+    const from = window.scrollY;
+
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReducedMotion) {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        onComplete();
+        return;
+    }
+
+    const duration = Math.min(900, Math.max(350, from * 0.6));
+    const startTime = performance.now();
+
+    const step = (now: number) => {
+        const progress = Math.min(1, (now - startTime) / duration);
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo({ top: from * (1 - eased), behavior: "instant" });
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+            return;
+        }
+
+        onComplete();
+    };
+
+    requestAnimationFrame(step);
+};
+
 const HeroSections = () => {
     const pathname = usePathname();
+    const router = useRouter();
+
+    const handleClick = (
+        event: MouseEvent<HTMLAnchorElement>,
+        href: string,
+    ) => {
+        if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey ||
+            window.scrollY <= 0
+        ) {
+            return;
+        }
+
+        event.preventDefault();
+        scrollToTop(() => router.push(href));
+    };
 
     return (
         <div className="h-44 flex items-center">
@@ -29,7 +84,7 @@ const HeroSections = () => {
                             transition={transition}
                             className={cn(
                                 "relative",
-                                isActive ? "z-0 py-2.5" : "z-10"
+                                isActive ? "z-0 py-2.5" : "z-10",
                             )}
                         >
                             {isActive && (
@@ -39,11 +94,18 @@ const HeroSections = () => {
                                     className="absolute inset-y-0 -inset-x-6 rounded-full bg-[#9bbbdc]"
                                 />
                             )}
-                            <Link href={href} className="relative block">
+                            <Link
+                                href={href}
+                                onClick={(event) => handleClick(event, href)}
+                                className="relative block"
+                            >
                                 <motion.span
                                     layout="position"
                                     transition={transition}
-                                    className="block whitespace-nowrap"
+                                    className={cn(
+                                        "block whitespace-nowrap",
+                                        !isActive && "underline",
+                                    )}
                                 >
                                     {label}
                                 </motion.span>
