@@ -8,7 +8,7 @@ const page = () => {
                 <h2 className="text-6xl font-poppins-bold text-foreground">
                     Photography
                 </h2>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I recently took up photography as a creative outlet and
                         am still learning everything to do with the medium. I am

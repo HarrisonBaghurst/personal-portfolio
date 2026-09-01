@@ -5,20 +5,21 @@ const page = () => {
                 <h2 className="text-6xl font-poppins-bold text-foreground">
                     Maths tuition
                 </h2>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
-                        I tutor both GCSE and A-Level maths. I have worked with
-                        a wide range of students, some of which with learning
-                        difficulties and others trying to push forward relative
-                        to their class. I guided students to outcomes such as
-                        improving confidence in their maths abilities and others
-                        to higher grades in their GCSE and A-Level results.
+                        I tutor both GCSE and A-Level maths, achieving a 9 and
+                        A* respectively myself. I have worked with a wide range
+                        of students, some of which with learning difficulties
+                        and others trying to push forward relative to their
+                        class. I guided students to outcomes such as improving
+                        confidence in their maths abilities and others to higher
+                        grades in their GCSE and A-Level results.
                     </p>
                 </div>
                 <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
                     Lesson structure
                 </h3>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Typically, lessons last one hour. Lessons are conducted
                         online, using Whatsapp for video calls and
@@ -33,7 +34,7 @@ const page = () => {
                 <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
                     Pricing & payment
                 </h3>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I conduct our first lesson prior to any payment being
                         made, you only pay for this lesson if you decide to
@@ -69,7 +70,7 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Both payment packages get the same effort and quality of
                         tutoring, no preferential treatment is made between
@@ -84,7 +85,7 @@ const page = () => {
                 <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
                     Additonal information
                 </h3>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Through my experience I find that having direct contact
                         with the student, through Whatsapp is the most
@@ -102,7 +103,7 @@ const page = () => {
                 <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
                     Testimonials
                 </h3>
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8 text-justify">
                     <div className="flex flex-col gap-2">
                         <p className="font-poppins-bold text-foreground">
                             Simon, GCSE Maths

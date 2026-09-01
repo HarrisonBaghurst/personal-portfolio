@@ -1,5 +1,51 @@
+import Projects from "@/components/web-development/Projects";
+import TechStack from "@/components/web-development/TechStack";
+
 const page = () => {
-    return null;
+    return (
+        <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8 text-lg text-foreground/75">
+                <h2 className="text-6xl font-poppins-bold text-foreground">
+                    Web development
+                </h2>
+                <div className="flex flex-col gap-4 text-justify">
+                    <p>
+                        I am a final year Computer Science student and will be
+                        progressing into software engineering once my degree is
+                        completed. While I do have more projects and further
+                        experience, the vast majority of my expertise is within
+                        web-development.
+                    </p>
+                    <p>
+                        I have experience working throughout the full stack, as
+                        well as integrations with supporting services for
+                        authentication, database management, file storage,
+                        content management and much more.
+                    </p>
+                    <p>
+                        I am drawn to minimalism with clean, cohesive styling
+                        and strong user experience. Additionally, I focus on
+                        maintainability and responsive design throughout my
+                        projects.
+                    </p>
+                </div>
+                <div className="flex flex-col gap-4 pt-8">
+                    <h3 className="text-3xl font-poppins-bold text-foreground">
+                        Tech stack
+                    </h3>
+                    <hr className="border-foreground/15" />
+                </div>
+                <TechStack />
+                <div className="flex flex-col gap-4 pt-8">
+                    <h3 className="text-3xl font-poppins-bold text-foreground">
+                        Featured projects
+                    </h3>
+                    <hr className="border-foreground/15" />
+                </div>
+                <Projects />
+            </div>
+        </div>
+    );
 };
 
 export default page;

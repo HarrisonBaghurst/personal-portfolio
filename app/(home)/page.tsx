@@ -5,7 +5,7 @@ const page = () => {
                 <h2 className="text-6xl font-poppins-bold text-foreground">
                     About me
                 </h2>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I'm a final year student studying Computer Science at
                         Durham university. I am pursuing a career in software
@@ -13,6 +13,12 @@ const page = () => {
                         Alongside university, I work part-time, build personal
                         web-development projects, take on freelance software
                         engineering work and tutor GCSE & A-Level maths.
+                    </p>
+                    <p>
+                        I have recently completed a summer internship at
+                        BlackRock in London, joining the Aladdin wealth tech
+                        team. I spent my time building upon next-gen reporting
+                        capabilities with front-end technologies.
                     </p>
                     <p>
                         Outside of my working life I have also taken up

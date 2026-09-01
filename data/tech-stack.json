@@ -1,0 +1,142 @@
+[
+    {
+        "name": "Next.js",
+        "icon": "/icons/nextjs.svg",
+        "description": "Full-stack React framework.",
+        "href": "https://nextjs.org",
+        "linkText": "nextjs.org"
+    },
+    {
+        "name": "React",
+        "icon": "/icons/react.svg",
+        "description": "Component-based UI library.",
+        "href": "https://react.dev",
+        "linkText": "react.dev"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "/icons/typescript.svg",
+        "description": "Statically typed JavaScript.",
+        "href": "https://www.typescriptlang.org",
+        "linkText": "typescriptlang.org"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "/icons/javascript.svg",
+        "description": "Core language of the web.",
+        "href": "https://developer.mozilla.org/docs/Web/JavaScript",
+        "linkText": "developer.mozilla.org"
+    },
+    {
+        "name": "Tailwind CSS",
+        "icon": "/icons/tailwind.svg",
+        "description": "Utility-first CSS framework.",
+        "href": "https://tailwindcss.com",
+        "linkText": "tailwindcss.com"
+    },
+    {
+        "name": "shadcn/ui",
+        "icon": "/icons/shadcn.svg",
+        "description": "Pre-built performant component library.",
+        "href": "https://ui.shadcn.com",
+        "linkText": "ui.shadcn.com"
+    },
+    {
+        "name": "Supabase",
+        "icon": "/icons/supabase.svg",
+        "description": "Postgres database, auth and file storage.",
+        "href": "https://supabase.com",
+        "linkText": "supabase.com"
+    },
+    {
+        "name": "Clerk",
+        "icon": "/icons/clerk.svg",
+        "description": "Managed authentication provider.",
+        "href": "https://clerk.com",
+        "linkText": "clerk.com"
+    },
+    {
+        "name": "Redis",
+        "icon": "/icons/redis.svg",
+        "description": "In-memory data store for caching.",
+        "href": "https://redis.io",
+        "linkText": "redis.io"
+    },
+    {
+        "name": "Liveblocks",
+        "icon": "/icons/liveblocks.svg",
+        "description": "Real-time collaboration infrastructure.",
+        "href": "https://liveblocks.io",
+        "linkText": "liveblocks.io"
+    },
+    {
+        "name": "Stream",
+        "icon": "/icons/stream.svg",
+        "description": "Chat and video calling APIs.",
+        "href": "https://getstream.io",
+        "linkText": "getstream.io"
+    },
+    {
+        "name": "Resend",
+        "icon": "/icons/resend.svg",
+        "description": "Transactional email API.",
+        "href": "https://resend.com",
+        "linkText": "resend.com"
+    },
+    {
+        "name": "Motion",
+        "icon": "/icons/motion.svg",
+        "description": "Animation library for React.",
+        "href": "https://motion.dev",
+        "linkText": "motion.dev"
+    },
+    {
+        "name": "GSAP",
+        "icon": "/icons/gsap.svg",
+        "description": "High-performance animation toolkit.",
+        "href": "https://gsap.com",
+        "linkText": "gsap.com"
+    },
+    {
+        "name": "Vercel",
+        "icon": "/icons/vercel.svg",
+        "description": "Deployment and hosting platform.",
+        "href": "https://vercel.com",
+        "linkText": "vercel.com"
+    },
+    {
+        "name": "Git",
+        "icon": "/icons/git.svg",
+        "description": "Distributed version control.",
+        "href": "https://git-scm.com",
+        "linkText": "git-scm.com"
+    },
+    {
+        "name": "GitHub",
+        "icon": "/icons/github.svg",
+        "description": "Repository hosting and CI/CD.",
+        "href": "https://github.com",
+        "linkText": "github.com"
+    },
+    {
+        "name": "Linux",
+        "icon": "/icons/linux.svg",
+        "description": "Daily development environment.",
+        "href": "https://archlinux.org",
+        "linkText": "archlinux.org"
+    },
+    {
+        "name": "VS Code",
+        "icon": "/icons/vscode.svg",
+        "description": "Primary code editor.",
+        "href": "https://code.visualstudio.com",
+        "linkText": "code.visualstudio.com"
+    },
+    {
+        "name": "Claude Code",
+        "icon": "/icons/claudecode.svg",
+        "description": "Agentic coding assistant in the terminal.",
+        "href": "https://claude.com/claude-code",
+        "linkText": "claude.com/claude-code"
+    }
+]
