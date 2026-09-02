@@ -5,7 +5,9 @@ export default function HomeLayout({ children }: LayoutProps<"/">) {
     return (
         <>
             <Hero />
-            <div className="mx-[25%]">{children}</div>
+            <div id="content" className="mx-[25%]">
+                {children}
+            </div>
             <Footer />
         </>
     );

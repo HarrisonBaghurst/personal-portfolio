@@ -1,11 +1,12 @@
 "use client";
 
 import { sections } from "@/constants/sections";
+import { animateScrollTo, lockScroll } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import type { MouseEvent } from "react";
+import { useEffect, type MouseEvent } from "react";
 
 const transition = {
     type: "spring" as const,
@@ -14,93 +15,101 @@ const transition = {
     mass: 0.9,
 };
 
-const scrollKeys = new Set([
-    " ",
-    "PageUp",
-    "PageDown",
-    "Home",
-    "End",
-    "ArrowUp",
-    "ArrowDown",
-]);
+const contentScrollOffset = 96;
+const navigationTimeout = 3000;
 
-const lockScroll = () => {
-    const options = { passive: false } as const;
+let isNavigating = false;
+let pendingHref: string | null = null;
+let isAwaitingHighlight = false;
+let unlockScroll: (() => void) | null = null;
+let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-    const blockEvent = (event: Event) => {
-        if (!event.cancelable) {
-            return;
-        }
+const endNavigation = () => {
+    isNavigating = false;
+    pendingHref = null;
+    isAwaitingHighlight = false;
 
-        event.preventDefault();
-    };
+    if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+    }
 
-    const blockKey = (event: KeyboardEvent) => {
-        if (!scrollKeys.has(event.key)) {
-            return;
-        }
-
-        event.preventDefault();
-    };
-
-    window.addEventListener("wheel", blockEvent, options);
-    window.addEventListener("touchmove", blockEvent, options);
-    window.addEventListener("keydown", blockKey, options);
-
-    return () => {
-        window.removeEventListener("wheel", blockEvent);
-        window.removeEventListener("touchmove", blockEvent);
-        window.removeEventListener("keydown", blockKey);
-    };
+    unlockScroll?.();
+    unlockScroll = null;
 };
 
-let isScrolling = false;
+const contentTop = () => {
+    const content = document.getElementById("content");
 
-const scrollToTop = (onComplete: () => void) => {
-    if (isScrolling) {
+    const top = content
+        ? content.getBoundingClientRect().top + window.scrollY
+        : window.innerHeight;
+
+    return top - contentScrollOffset;
+};
+
+const awaitHighlight = (pathname: string) => {
+    if (pendingHref !== pathname) {
         return;
     }
 
-    const from = window.scrollY;
+    pendingHref = null;
+    isAwaitingHighlight = true;
+};
 
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (prefersReducedMotion) {
-        window.scrollTo({ top: 0, behavior: "instant" });
-        onComplete();
+const scrollToContent = () => {
+    if (!isAwaitingHighlight) {
         return;
     }
 
-    isScrolling = true;
+    isAwaitingHighlight = false;
+    animateScrollTo(contentTop()).then(endNavigation);
+};
 
-    const unlockScroll = lockScroll();
-    const duration = Math.min(900, Math.max(350, from * 0.6));
-    const startTime = performance.now();
+const abandonNavigation = () => {
+    if (isAwaitingHighlight) {
+        scrollToContent();
+        return;
+    }
 
-    const step = (now: number) => {
-        const progress = Math.min(1, (now - startTime) / duration);
-        const eased = 1 - Math.pow(1 - progress, 3);
+    endNavigation();
+};
 
-        window.scrollTo({ top: from * (1 - eased), behavior: "instant" });
+const navigate = (href: string, pathname: string, push: () => void) => {
+    if (isNavigating) {
+        return;
+    }
 
-        if (progress < 1) {
-            requestAnimationFrame(step);
+    isNavigating = true;
+    unlockScroll = lockScroll();
+
+    const scrollsToContent = href !== "/";
+
+    if (href === pathname) {
+        animateScrollTo(scrollsToContent ? contentTop() : 0).then(
+            endNavigation,
+        );
+        return;
+    }
+
+    animateScrollTo(0).then(() => {
+        if (!scrollsToContent) {
+            push();
+            endNavigation();
             return;
         }
 
-        isScrolling = false;
-        unlockScroll();
-        onComplete();
-    };
-
-    requestAnimationFrame(step);
+        pendingHref = href;
+        timeoutId = setTimeout(abandonNavigation, navigationTimeout);
+        push();
+    });
 };
 
 const HeroSections = () => {
     const pathname = usePathname();
     const router = useRouter();
+
+    useEffect(() => awaitHighlight(pathname), [pathname]);
 
     const handleClick = (
         event: MouseEvent<HTMLAnchorElement>,
@@ -112,14 +121,13 @@ const HeroSections = () => {
             event.metaKey ||
             event.ctrlKey ||
             event.shiftKey ||
-            event.altKey ||
-            window.scrollY <= 0
+            event.altKey
         ) {
             return;
         }
 
         event.preventDefault();
-        scrollToTop(() => router.push(href));
+        navigate(href, pathname, () => router.push(href));
     };
 
     return (
@@ -142,6 +150,7 @@ const HeroSections = () => {
                                 <motion.span
                                     layoutId="section-highlight"
                                     transition={transition}
+                                    onLayoutAnimationComplete={scrollToContent}
                                     className="absolute inset-y-0 -inset-x-6 rounded-full bg-[#9bbbdc]"
                                 />
                             )}
