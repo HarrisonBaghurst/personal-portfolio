@@ -38,6 +38,30 @@ export const lockScroll = () => {
     };
 };
 
+const scrollUnlockTimeout = 1000;
+
+export const awaitScrollUnlocked = () =>
+    new Promise<void>((resolve) => {
+        const startTime = performance.now();
+
+        const check = () => {
+            const isLocked =
+                getComputedStyle(document.body).overflow === "hidden";
+
+            if (
+                !isLocked ||
+                performance.now() - startTime > scrollUnlockTimeout
+            ) {
+                resolve();
+                return;
+            }
+
+            requestAnimationFrame(check);
+        };
+
+        check();
+    });
+
 export const animateScrollTo = (top: number) =>
     new Promise<void>((resolve) => {
         const maxScroll =
