@@ -28,7 +28,7 @@ const GalleryImage = ({
             alt={alt}
             sizes={sizes}
             style={{ flexGrow: grow, flexBasis: 0 }}
-            className="h-auto w-full min-w-0 border-20 border-white shadow-sm"
+            className="h-auto w-full min-w-0 rounded-sm"
         />
     );
 };
