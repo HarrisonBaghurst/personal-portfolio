@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <div className="flex flex-col gap-8 text-lg text-foreground/75">
+        <div className="flex flex-col gap-8 text-body">
             <div className="flex flex-col gap-4">
-                <h2 className="text-6xl font-poppins-bold text-foreground">
-                    Privacy policy
-                </h2>
+                <h2 className="text-title">Privacy policy</h2>
                 <p className="text-foreground/50">
                     Last updated 2 September 2026
                 </p>
@@ -281,7 +279,7 @@ const page = () => {
                         tuition terms are in section 6 of my{" "}
                         <Link
                             href="/legal/terms-of-service"
-                            className="underline text-[#4285F4]"
+                            className="text-link"
                         >
                             terms of service
                         </Link>
@@ -312,9 +310,9 @@ const page = () => {
                             <span className="text-foreground">
                                 Rate-limiting records
                             </span>{" "}
-                            expire automatically, after one hour for
-                            per-visitor counters and 24 hours for the site-wide
-                            counter. No action is needed to remove them.
+                            expire automatically, after one hour for per-visitor
+                            counters and 24 hours for the site-wide counter. No
+                            action is needed to remove them.
                         </li>
                         <li>
                             <span className="text-foreground">Server logs</span>{" "}
@@ -327,12 +325,14 @@ const page = () => {
 
             <Section title="10. Your rights">
                 <div className="flex flex-col gap-4 text-justify">
-                    <p>
-                        Under UK data protection law you have the right to:
-                    </p>
+                    <p>Under UK data protection law you have the right to:</p>
                     <ul className="flex flex-col gap-2 list-disc pl-6">
-                        <li>be told how your data is used, as in this policy</li>
-                        <li>ask for a copy of the personal data I hold about you</li>
+                        <li>
+                            be told how your data is used, as in this policy
+                        </li>
+                        <li>
+                            ask for a copy of the personal data I hold about you
+                        </li>
                         <li>have inaccurate data corrected</li>
                         <li>ask me to delete your data</li>
                         <li>ask me to restrict how I use it</li>
@@ -367,7 +367,7 @@ const page = () => {
                         protection. You can reach them at{" "}
                         <a
                             href="https://ico.org.uk"
-                            className="underline text-[#4285F4]"
+                            className="text-link"
                             target="_blank"
                             rel="noreferrer"
                         >

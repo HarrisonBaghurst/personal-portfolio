@@ -81,7 +81,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                 </nav>
-                <div className="mt-auto flex flex-col items-start gap-1 px-6 text-sm text-foreground/75">
+                <div className="mt-auto flex flex-col items-start gap-1 px-6 text-meta">
                     {legal.map(({ label, href }) => (
                         <SheetClose key={href} asChild>
                             <Link

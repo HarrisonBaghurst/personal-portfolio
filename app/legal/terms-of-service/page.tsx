@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <div className="flex flex-col gap-8 text-lg text-foreground/75">
+        <div className="flex flex-col gap-8 text-body">
             <div className="flex flex-col gap-4">
-                <h2 className="text-6xl font-poppins-bold text-foreground">
-                    Terms of service
-                </h2>
+                <h2 className="text-title">Terms of service</h2>
                 <p className="text-foreground/50">
                     Last updated 2 September 2026
                 </p>
@@ -39,10 +37,10 @@ const page = () => {
                     <p>
                         This website is operated by Harrison Baghurst, trading
                         as Harrison Baghurst Digital, based in Durham, England.
-                        Throughout these terms, &quot;I&quot;,
-                        &quot;me&quot; and &quot;my&quot; refer to Harrison
-                        Baghurst, and &quot;you&quot; and &quot;your&quot; refer
-                        to the person using this site or booking a service.
+                        Throughout these terms, &quot;I&quot;, &quot;me&quot;
+                        and &quot;my&quot; refer to Harrison Baghurst, and
+                        &quot;you&quot; and &quot;your&quot; refer to the person
+                        using this site or booking a service.
                     </p>
                     <p>
                         You can reach me by email at <ContactEmail />. My full
@@ -147,7 +145,7 @@ const page = () => {
                         send is set out in my{" "}
                         <Link
                             href="/legal/privacy-policy"
-                            className="underline text-[#4285F4]"
+                            className="text-link"
                         >
                             privacy policy
                         </Link>
@@ -279,9 +277,7 @@ const page = () => {
                     </p>
                 </div>
 
-                <Subheading>
-                    6.7 Block purchases: expiry and refunds
-                </Subheading>
+                <Subheading>6.7 Block purchases: expiry and refunds</Subheading>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Block purchase hours do not expire. There is no deadline
@@ -517,7 +513,10 @@ const page = () => {
 
             <Section title="11. My liability to you">
                 <div className="flex flex-col gap-4 text-justify">
-                    <p>Nothing in these terms limits or excludes my liability for:</p>
+                    <p>
+                        Nothing in these terms limits or excludes my liability
+                        for:
+                    </p>
                     <ul className="flex flex-col gap-2 list-disc pl-6">
                         <li>
                             death or personal injury caused by my negligence
@@ -561,7 +560,7 @@ const page = () => {
                         set out in my{" "}
                         <Link
                             href="/legal/privacy-policy"
-                            className="underline text-[#4285F4]"
+                            className="text-link"
                         >
                             privacy policy
                         </Link>
@@ -577,10 +576,10 @@ const page = () => {
                         that applies to your use of the site is the one
                         published at the time you use it, and the version that
                         applies to a service is the one in force when your
-                        contract was formed. Changes do not apply retrospectively
-                        to an existing tuition contract unless we both agree.
-                        The date at the top of this page shows when it was last
-                        revised.
+                        contract was formed. Changes do not apply
+                        retrospectively to an existing tuition contract unless
+                        we both agree. The date at the top of this page shows
+                        when it was last revised.
                     </p>
                 </div>
             </Section>

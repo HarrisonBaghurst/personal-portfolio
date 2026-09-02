@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <div className="mx-[25%] relative h-[25dvh]">
-            <div className="absolute left-0 bottom-5 text-sm text-foreground/75 w-full flex justify-between">
+            <div className="absolute left-0 bottom-5 text-meta w-full flex justify-between">
                 <p>© Harrison Baghurst Digital | 2026</p>
                 <div className="flex gap-10">
                     <Link

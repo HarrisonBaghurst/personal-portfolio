@@ -25,13 +25,13 @@ const TechCard = ({
                 className="size-16"
             />
             <div>
-                <p className="font-poppins-bold text-foreground">{name}</p>
-                <p className="text-sm">{description}</p>
+                <p className="text-emphasis">{name}</p>
+                <p className="text-meta">{description}</p>
                 <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer underline text-[#4285F4] text-sm"
+                    className="text-link text-sm"
                 >
                     {linkText}
                 </a>

@@ -6,7 +6,7 @@ const ContactEmail = () => {
     }
 
     return (
-        <a href={`mailto:${email}`} className="underline text-[#4285F4]">
+        <a href={`mailto:${email}`} className="text-link">
             {email}
         </a>
     );

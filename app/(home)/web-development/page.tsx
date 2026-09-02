@@ -4,10 +4,8 @@ import TechStack from "@/components/web-development/TechStack";
 const page = () => {
     return (
         <div className="flex flex-col gap-16">
-            <div className="flex flex-col gap-8 text-lg text-foreground/75">
-                <h2 className="text-6xl font-poppins-bold text-foreground">
-                    Web development
-                </h2>
+            <div className="flex flex-col gap-8 text-body">
+                <h2 className="text-title">Web development</h2>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I am a final year Computer Science student and will be
@@ -30,16 +28,12 @@ const page = () => {
                     </p>
                 </div>
                 <div className="flex flex-col gap-4 pt-8">
-                    <h3 className="text-3xl font-poppins-bold text-foreground">
-                        Tech stack
-                    </h3>
+                    <h3 className="text-heading">Tech stack</h3>
                     <hr className="border-foreground/15" />
                 </div>
                 <TechStack />
                 <div className="flex flex-col gap-4 pt-8">
-                    <h3 className="text-3xl font-poppins-bold text-foreground">
-                        Featured projects
-                    </h3>
+                    <h3 className="text-heading">Featured projects</h3>
                     <hr className="border-foreground/15" />
                 </div>
                 <Projects />

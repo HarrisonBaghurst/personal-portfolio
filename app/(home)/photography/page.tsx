@@ -4,10 +4,8 @@ import gallery from "@/data/photography-gallery.json";
 const page = () => {
     return (
         <div className="flex flex-col gap-16">
-            <div className="flex flex-col gap-8 text-lg text-foreground/75">
-                <h2 className="text-6xl font-poppins-bold text-foreground">
-                    Photography
-                </h2>
+            <div className="flex flex-col gap-8 text-body">
+                <h2 className="text-title">Photography</h2>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I recently took up photography as a creative outlet and

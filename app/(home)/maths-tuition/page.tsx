@@ -1,10 +1,8 @@
 const page = () => {
     return (
-        <div className="flex flex-col gap-16 text-lg text-foreground/75">
+        <div className="flex flex-col gap-16 text-body">
             <div className="flex flex-col gap-8">
-                <h2 className="text-6xl font-poppins-bold text-foreground">
-                    Maths tuition
-                </h2>
+                <h2 className="text-title">Maths tuition</h2>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I tutor both GCSE and A-Level maths, achieving a 9 and
@@ -16,9 +14,7 @@ const page = () => {
                         grades in their GCSE and A-Level results.
                     </p>
                 </div>
-                <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
-                    Lesson structure
-                </h3>
+                <h3 className="text-heading pt-8">Lesson structure</h3>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Typically, lessons last one hour. Lessons are conducted
@@ -31,9 +27,7 @@ const page = () => {
                         wish.
                     </p>
                 </div>
-                <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
-                    Pricing & payment
-                </h3>
+                <h3 className="text-heading pt-8">Pricing & payment</h3>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         I conduct our first lesson prior to any payment being
@@ -51,18 +45,14 @@ const page = () => {
                     <div className="border-2 border-foreground/30 p-4 rounded-sm flex flex-col gap-4 bg-foreground/5">
                         <p className="">Pay as you go</p>
                         <div className="flex items-baseline gap-2">
-                            <p className="text-5xl font-poppins-bold text-foreground">
-                                £30
-                            </p>
+                            <p className="text-emphasis text-5xl">£30</p>
                             <p className="-translate-y-0.5">per hour</p>
                         </div>
                     </div>
                     <div className="border-2 border-foreground/30 p-4 rounded-sm flex flex-col gap-4 bg-foreground/5 relative">
                         <p className="">Block purchase</p>
                         <div className="flex items-baseline gap-2">
-                            <p className="text-5xl font-poppins-bold text-foreground">
-                                £270
-                            </p>
+                            <p className="text-emphasis text-5xl">£270</p>
                             <p className="-translate-y-0.5">for 10 hours</p>
                         </div>
                         <div className="absolute -top-4 right-2 border py-1 px-3 text-foreground rounded-full bg-[#9bbbdc]">
@@ -82,9 +72,7 @@ const page = () => {
                         discretion.
                     </p>
                 </div>
-                <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
-                    Additonal information
-                </h3>
+                <h3 className="text-heading pt-8">Additonal information</h3>
                 <div className="flex flex-col gap-4 text-justify">
                     <p>
                         Through my experience I find that having direct contact
@@ -100,14 +88,10 @@ const page = () => {
                         can be requested by you at any point.
                     </p>
                 </div>
-                <h3 className="text-3xl font-poppins-bold text-foreground pt-8">
-                    Testimonials
-                </h3>
+                <h3 className="text-heading pt-8">Testimonials</h3>
                 <div className="flex flex-col gap-8 text-justify">
                     <div className="flex flex-col gap-2">
-                        <p className="font-poppins-bold text-foreground">
-                            Simon, GCSE Maths
-                        </p>
+                        <p className="text-emphasis">Simon, GCSE Maths</p>
                         <p>
                             We started the maths tutoring lessons with Harry in
                             the Summer term earlier this year for our son who is
@@ -120,9 +104,7 @@ const page = () => {
                         </p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <p className="font-poppins-bold text-foreground">
-                            Heather, A-Level Maths
-                        </p>
+                        <p className="text-emphasis">Heather, A-Level Maths</p>
 
                         <p>
                             My son was struggling after receiving poor mock

@@ -34,13 +34,13 @@ const ProjectCard = ({
                 />
             </div>
             <div className="flex flex-col gap-2">
-                <h4 className="font-poppins-bold text-foreground">{name}</h4>
-                <p className="text-sm">{description}</p>
+                <h4 className="text-emphasis">{name}</h4>
+                <p className="text-meta">{description}</p>
                 <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer underline text-[#4285F4] text-sm"
+                    className="text-link text-sm"
                 >
                     {linkText}
                 </a>

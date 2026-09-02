@@ -6,7 +6,7 @@ const Hero = () => {
             <div className="flex flex-col gap-16">
                 <div className="flex flex-col gap-4">
                     <p className="text-5xl">I&apos;m</p>
-                    <h1 className="text-8xl font-poppins-bold">
+                    <h1 className="text-emphasis text-8xl">
                         Harrison Baghurst.
                     </h1>
                 </div>
