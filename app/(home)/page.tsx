@@ -3,7 +3,7 @@ const page = () => {
         <div className="flex flex-col gap-16 text-body">
             <div className="flex flex-col gap-8">
                 <h2 className="text-title">About me</h2>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I'm a final year student studying Computer Science at
                         Durham university. I am pursuing a career in software

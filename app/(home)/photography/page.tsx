@@ -6,7 +6,7 @@ const page = () => {
         <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-8 text-body">
                 <h2 className="text-title">Photography</h2>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I recently took up photography as a creative outlet and
                         am still learning everything to do with the medium. I am
@@ -31,7 +31,7 @@ const page = () => {
                     );
 
                     return (
-                        <div key={index} className="flex gap-4">
+                        <div key={index} className="flex flex-col gap-4 sm:flex-row">
                             {row.map((photo) => {
                                 const grow =
                                     photo.width / photo.height / totalRatio;
@@ -41,7 +41,7 @@ const page = () => {
                                         key={photo.src}
                                         {...photo}
                                         grow={grow}
-                                        sizes={`${Math.round(50 * grow)}vw`}
+                                        sizes={`(width < 40rem) 100vw, (width < 64rem) ${Math.round(90 * grow)}vw, ${Math.round(896 * grow)}px`}
                                     />
                                 );
                             })}

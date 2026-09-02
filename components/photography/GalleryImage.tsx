@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 export type GalleryPhoto = {
     src: string;
@@ -27,8 +28,8 @@ const GalleryImage = ({
             height={height}
             alt={alt}
             sizes={sizes}
-            style={{ flexGrow: grow, flexBasis: 0 }}
-            className="h-auto w-full min-w-0 rounded-sm"
+            style={{ "--grow": grow } as CSSProperties}
+            className="h-auto w-full min-w-0 rounded-sm sm:basis-0 sm:grow-(--grow)"
         />
     );
 };

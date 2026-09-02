@@ -29,7 +29,7 @@ const ProjectCard = ({
                     alt={alt}
                     width={width}
                     height={height}
-                    sizes="50vw"
+                    sizes="(width < 40rem) 100vw, (width < 64rem) 45vw, 424px"
                     className="h-auto w-full"
                 />
             </div>

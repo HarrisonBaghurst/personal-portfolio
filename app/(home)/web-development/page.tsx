@@ -6,7 +6,7 @@ const page = () => {
         <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-8 text-body">
                 <h2 className="text-title">Web development</h2>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I am a final year Computer Science student and will be
                         progressing into software engineering once my degree is

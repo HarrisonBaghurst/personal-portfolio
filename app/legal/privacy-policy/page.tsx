@@ -21,7 +21,7 @@ const page = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-4 text-justify">
+            <div className="flex flex-col gap-4 text-flow">
                 <p>
                     This policy explains what personal data I collect through
                     this website, why I collect it, who it is shared with, how
@@ -39,7 +39,7 @@ const page = () => {
             </div>
 
             <Section title="1. Who I am and how to contact me">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This website is operated by Harrison Baghurst, trading
                         as Harrison Baghurst Digital, based in Durham, England.
@@ -57,7 +57,7 @@ const page = () => {
             </Section>
 
             <Section title="2. What this policy covers">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This policy covers personal data collected through this
                         website. If you go on to book maths tuition or freelance
@@ -70,7 +70,7 @@ const page = () => {
 
             <Section title="3. What I collect">
                 <Subheading>Information you send me</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         When you use the contact form, I collect your first
                         name, last name, email address and the content of your
@@ -85,7 +85,7 @@ const page = () => {
                 </div>
 
                 <Subheading>Anti-spam checks</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         The form includes a hidden field that people cannot see
                         but automated bots tend to fill in, and it measures how
@@ -96,7 +96,7 @@ const page = () => {
                 </div>
 
                 <Subheading>Your IP address</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         When you submit the form, your IP address is used to
                         apply a rate limit, currently 3 submissions per hour per
@@ -113,7 +113,7 @@ const page = () => {
                 </div>
 
                 <Subheading>Server logs</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Like any website, this site is served by a hosting
                         provider that keeps standard technical logs of requests.
@@ -125,7 +125,7 @@ const page = () => {
                 </div>
 
                 <Subheading>What I do not collect</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         There are no user accounts on this site. I do not
                         collect payment or card details through it, I do not
@@ -138,7 +138,7 @@ const page = () => {
             </Section>
 
             <Section title="4. Cookies and tracking">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This website sets no cookies of its own. It uses no
                         analytics, no tracking pixels, no advertising, and no
@@ -155,7 +155,7 @@ const page = () => {
             </Section>
 
             <Section title="5. Why I use your data, and my lawful basis">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Data protection law requires me to have a lawful basis
                         for using your personal data. My bases are:
@@ -198,7 +198,7 @@ const page = () => {
             </Section>
 
             <Section title="6. Who your data is shared with">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I use a small number of service providers to run this
                         site. They process data on my instructions and are not
@@ -237,7 +237,7 @@ const page = () => {
             </Section>
 
             <Section title="7. Transfers outside the UK">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Some of the providers listed above are based in, or
                         store data in, the United States or other countries
@@ -254,7 +254,7 @@ const page = () => {
             </Section>
 
             <Section title="8. Tuition, students and under-18s">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This website is intended for adults. I do not knowingly
                         collect personal data from anyone under 18 through it,
@@ -289,7 +289,7 @@ const page = () => {
             </Section>
 
             <Section title="9. How long I keep your data">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <ul className="flex flex-col gap-2 list-disc pl-6">
                         <li>
                             <span className="text-foreground">
@@ -324,7 +324,7 @@ const page = () => {
             </Section>
 
             <Section title="10. Your rights">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>Under UK data protection law you have the right to:</p>
                     <ul className="flex flex-col gap-2 list-disc pl-6">
                         <li>
@@ -355,7 +355,7 @@ const page = () => {
             </Section>
 
             <Section title="11. Complaints">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         If you are unhappy with how I have handled your personal
                         data, please tell me first so that I have the chance to
@@ -380,7 +380,7 @@ const page = () => {
             </Section>
 
             <Section title="12. How your data is kept secure">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This site is served over an encrypted HTTPS connection.
                         Contact form submissions are validated and
@@ -398,7 +398,7 @@ const page = () => {
             </Section>
 
             <Section title="13. Links to other websites">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This site links to other websites. This policy applies
                         only to this site, and I am not responsible for the
@@ -409,7 +409,7 @@ const page = () => {
             </Section>
 
             <Section title="14. Changes to this policy">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I may update this policy from time to time. The date at
                         the top of this page shows when it was last revised. If

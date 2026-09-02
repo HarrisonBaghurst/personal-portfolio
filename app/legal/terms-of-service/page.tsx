@@ -21,7 +21,7 @@ const page = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-4 text-justify">
+            <div className="flex flex-col gap-4 text-flow">
                 <p>
                     These terms explain the basis on which you may use this
                     website, and the terms on which I provide maths tuition,
@@ -33,7 +33,7 @@ const page = () => {
             </div>
 
             <Section title="1. Who I am">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This website is operated by Harrison Baghurst, trading
                         as Harrison Baghurst Digital, based in Durham, England.
@@ -51,7 +51,7 @@ const page = () => {
             </Section>
 
             <Section title="2. Accepting these terms">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         By using this website you accept these terms. If you do
                         not accept them, please do not use the site.
@@ -65,7 +65,7 @@ const page = () => {
             </Section>
 
             <Section title="3. Using this website">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         You may use this site for your own personal,
                         non-commercial purposes. You must not:
@@ -100,7 +100,7 @@ const page = () => {
             </Section>
 
             <Section title="4. Intellectual property">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         All content on this site, including the text,
                         photographs, design, layout and underlying code, is
@@ -124,7 +124,7 @@ const page = () => {
             </Section>
 
             <Section title="5. Contacting me">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         The contact form on this site is provided for genuine
                         enquiries. You must not use it to send unlawful,
@@ -155,7 +155,7 @@ const page = () => {
             </Section>
 
             <Section title="6. Maths tuition">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This section sets out the full terms on which I provide
                         maths tuition. It applies alongside the rest of these
@@ -164,7 +164,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.1 Who the contract is with</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         The tuition contract is between me and the person who
                         books and pays for the lessons. Where the student is
@@ -180,7 +180,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.2 Booking and forming a contract</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Nothing on this website is an offer to provide tuition.
                         The descriptions, pricing and other information on the
@@ -196,7 +196,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.3 The first lesson</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I deliver the first lesson before any payment is made,
                         so that you can get a feel for my tutoring before
@@ -221,7 +221,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.4 How lessons are delivered</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Lessons last one hour unless we agree otherwise, and are
                         delivered online. Video calls take place over WhatsApp,
@@ -244,7 +244,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.5 Pricing</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Tuition is offered on a pay as you go basis at £30 per
                         hour, or as a block purchase of 10 hours for £270, which
@@ -261,7 +261,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.6 Payment</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Payment is made by bank transfer. I will provide my bank
                         details when payment is due. No payment details are ever
@@ -278,7 +278,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.7 Block purchases: expiry and refunds</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Block purchase hours do not expire. There is no deadline
                         by which you must use them.
@@ -309,7 +309,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.8 Cancelling and rescheduling lessons</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         If you need to cancel or move a lesson, please give me
                         at least 2 clear days&apos; notice. Lessons cancelled
@@ -330,7 +330,7 @@ const page = () => {
                 <Subheading>
                     6.9 Your legal right to cancel within 14 days
                 </Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Because we agree tuition at a distance rather than face
                         to face, you have a legal right under the Consumer
@@ -363,7 +363,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.10 Ending tuition</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Either of us may stop tuition at any time by telling the
                         other. There is no notice period and no cancellation
@@ -375,7 +375,7 @@ const page = () => {
                 <Subheading>
                     6.11 Safeguarding and contact with students
                 </Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Your child&apos;s safety is of the utmost importance to
                         me. I hold a current DBS check, which you may request to
@@ -401,7 +401,7 @@ const page = () => {
                 </div>
 
                 <Subheading>6.12 What I do and do not promise</Subheading>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I will provide tuition with reasonable care and skill,
                         as required by the Consumer Rights Act 2015.
@@ -418,7 +418,7 @@ const page = () => {
             </Section>
 
             <Section title="7. Web development services">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         The web development page on this site describes my
                         experience and previous work. It is background
@@ -446,7 +446,7 @@ const page = () => {
             </Section>
 
             <Section title="8. Photography and image licensing">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         All photographs on this site are my own work and I own
                         the copyright in them. You may not copy, download,
@@ -480,7 +480,7 @@ const page = () => {
             </Section>
 
             <Section title="9. Links to other websites">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This site links to other websites, including
                         ChalkieChalkie.com and pages relating to my projects.
@@ -493,7 +493,7 @@ const page = () => {
             </Section>
 
             <Section title="10. Availability of this website">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         This website is made available free of charge and on an
                         &quot;as is&quot; basis. I do not guarantee that it will
@@ -512,7 +512,7 @@ const page = () => {
             </Section>
 
             <Section title="11. My liability to you">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Nothing in these terms limits or excludes my liability
                         for:
@@ -554,7 +554,7 @@ const page = () => {
             </Section>
 
             <Section title="12. Your privacy">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         How I collect and use personal data through this site is
                         set out in my{" "}
@@ -570,7 +570,7 @@ const page = () => {
             </Section>
 
             <Section title="13. Changes to these terms">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I may update these terms from time to time. The version
                         that applies to your use of the site is the one
@@ -585,7 +585,7 @@ const page = () => {
             </Section>
 
             <Section title="14. Governing law">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         These terms are governed by the law of England and
                         Wales, and the courts of England and Wales have
@@ -598,7 +598,7 @@ const page = () => {
             </Section>
 
             <Section title="15. How to contact me">
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         If you have any questions about these terms, email me at{" "}
                         <ContactEmail />. I am based in Durham, England, and my

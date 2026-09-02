@@ -71,12 +71,46 @@ body {
         0 20px 40px rgb(23 23 23 / 0.32);
 }
 
+@utility page-gutter {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 68rem;
+    padding-inline: 1.5rem;
+
+    @media (width >= 40rem) {
+        padding-inline: 2.5rem;
+    }
+
+    @media (width >= 48rem) {
+        padding-inline: 4rem;
+    }
+}
+
+@utility text-hero {
+    font-size: clamp(2.25rem, 1.26rem + 4.93vw, 6rem);
+    line-height: 1.05;
+}
+
+@utility text-lead {
+    font-size: clamp(1.5rem, 1.11rem + 1.97vw, 3rem);
+    line-height: 1.1;
+}
+
+@utility text-nav {
+    font-size: clamp(1.25rem, 0.99rem + 1.32vw, 2.25rem);
+    line-height: 1.15;
+}
+
 @utility text-title {
-    @apply text-6xl font-poppins-bold text-foreground;
+    font-size: clamp(2.25rem, 1.86rem + 1.97vw, 3.75rem);
+    line-height: 1.05;
+    @apply font-poppins-bold text-foreground;
 }
 
 @utility text-heading {
-    @apply text-3xl font-poppins-bold text-foreground;
+    font-size: clamp(1.5rem, 1.4rem + 0.49vw, 1.875rem);
+    line-height: 1.2;
+    @apply font-poppins-bold text-foreground;
 }
 
 @utility text-emphasis {
@@ -84,11 +118,23 @@ body {
 }
 
 @utility text-body {
-    @apply text-lg text-foreground/75;
+    font-size: clamp(1rem, 0.97rem + 0.16vw, 1.125rem);
+    line-height: 1.55;
+    @apply text-foreground/75;
 }
 
 @utility text-meta {
-    @apply text-sm text-foreground/75;
+    font-size: clamp(0.8125rem, 0.8rem + 0.08vw, 0.875rem);
+    line-height: 1.43;
+    @apply text-foreground/75;
+}
+
+@utility text-flow {
+    text-align: left;
+
+    @media (width >= 40rem) {
+        text-align: justify;
+    }
 }
 
 @utility text-link {

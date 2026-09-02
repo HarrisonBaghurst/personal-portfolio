@@ -3,7 +3,7 @@ const page = () => {
         <div className="flex flex-col gap-16 text-body">
             <div className="flex flex-col gap-8">
                 <h2 className="text-title">Maths tuition</h2>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I tutor both GCSE and A-Level maths, achieving a 9 and
                         A* respectively myself. I have worked with a wide range
@@ -15,7 +15,7 @@ const page = () => {
                     </p>
                 </div>
                 <h3 className="text-heading pt-8">Lesson structure</h3>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Typically, lessons last one hour. Lessons are conducted
                         online, using Whatsapp for video calls and
@@ -28,7 +28,7 @@ const page = () => {
                     </p>
                 </div>
                 <h3 className="text-heading pt-8">Pricing & payment</h3>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         I conduct our first lesson prior to any payment being
                         made, you only pay for this lesson if you decide to
@@ -41,18 +41,18 @@ const page = () => {
                         must be made prior to commencement.
                     </p>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4">
                     <div className="border-2 border-foreground/30 p-4 rounded-sm flex flex-col gap-4 bg-foreground/5">
                         <p className="">Pay as you go</p>
                         <div className="flex items-baseline gap-2">
-                            <p className="text-emphasis text-5xl">£30</p>
+                            <p className="text-emphasis text-lead">£30</p>
                             <p className="-translate-y-0.5">per hour</p>
                         </div>
                     </div>
                     <div className="border-2 border-foreground/30 p-4 rounded-sm flex flex-col gap-4 bg-foreground/5 relative">
                         <p className="">Block purchase</p>
                         <div className="flex items-baseline gap-2">
-                            <p className="text-emphasis text-5xl">£270</p>
+                            <p className="text-emphasis text-lead">£270</p>
                             <p className="-translate-y-0.5">for 10 hours</p>
                         </div>
                         <div className="absolute -top-4 right-2 border py-1 px-3 text-foreground rounded-full bg-[#9bbbdc]">
@@ -60,7 +60,7 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Both payment packages get the same effort and quality of
                         tutoring, no preferential treatment is made between
@@ -73,7 +73,7 @@ const page = () => {
                     </p>
                 </div>
                 <h3 className="text-heading pt-8">Additonal information</h3>
-                <div className="flex flex-col gap-4 text-justify">
+                <div className="flex flex-col gap-4 text-flow">
                     <p>
                         Through my experience I find that having direct contact
                         with the student, through Whatsapp is the most
@@ -89,7 +89,7 @@ const page = () => {
                     </p>
                 </div>
                 <h3 className="text-heading pt-8">Testimonials</h3>
-                <div className="flex flex-col gap-8 text-justify">
+                <div className="flex flex-col gap-8 text-flow">
                     <div className="flex flex-col gap-2">
                         <p className="text-emphasis">Simon, GCSE Maths</p>
                         <p>

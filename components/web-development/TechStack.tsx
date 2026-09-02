@@ -17,21 +17,21 @@ const peek = remaining.slice(0, FEATURED_COUNT);
 const TechStack = () => {
     return (
         <Collapsible className="group flex flex-col">
-            <div className="grid grid-cols-4 gap-12">
+            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
                 {featured.map((tech) => (
                     <TechCard key={tech.name} {...tech} />
                 ))}
             </div>
             <div
                 inert
-                className="pointer-events-none mt-12 grid h-16 grid-cols-4 gap-12 overflow-hidden mask-b-from-30% group-data-[state=open]:hidden"
+                className="pointer-events-none mt-8 grid h-16 grid-cols-2 gap-8 overflow-hidden mask-b-from-30% lg:mt-12 lg:grid-cols-4 lg:gap-12 group-data-[state=open]:hidden"
             >
                 {peek.map((tech) => (
                     <TechCard key={tech.name} {...tech} />
                 ))}
             </div>
             <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-                <div className="grid grid-cols-4 gap-12 pt-12">
+                <div className="grid grid-cols-2 gap-8 pt-8 lg:grid-cols-4 lg:gap-12 lg:pt-12">
                     {remaining.map((tech) => (
                         <TechCard key={tech.name} {...tech} />
                     ))}

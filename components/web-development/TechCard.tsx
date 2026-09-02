@@ -16,7 +16,7 @@ const TechCard = ({
     linkText,
 }: TechCardProps) => {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex min-w-0 flex-col gap-4">
             <Image
                 src={icon}
                 alt={`${name} icon`}
@@ -31,7 +31,7 @@ const TechCard = ({
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-link text-sm"
+                    className="text-link text-sm wrap-break-word"
                 >
                     {linkText}
                 </a>

@@ -35,12 +35,12 @@ const HeroSections = () => {
         }
 
         event.preventDefault();
-        navigate(href, pathname, () => router.push(href));
+        navigate(href, pathname, () => router.push(href, { scroll: false }));
     };
 
     return (
-        <div className="h-44 flex items-center">
-            <ul className="flex flex-col items-start gap-4 text-4xl">
+        <div className="h-40 sm:h-44 flex items-center">
+            <ul className="flex flex-col items-start gap-3 sm:gap-4 text-nav">
                 {sections.map(({ label, href }) => {
                     const isActive = pathname === href;
 
@@ -59,7 +59,7 @@ const HeroSections = () => {
                                     layoutId="section-highlight"
                                     transition={transition}
                                     onLayoutAnimationComplete={scrollToContent}
-                                    className="absolute inset-y-0 -inset-x-6 rounded-full bg-[#9bbbdc]"
+                                    className="absolute inset-y-0 -inset-x-4 sm:-inset-x-6 rounded-full bg-[#9bbbdc]"
                                 />
                             )}
                             <Link
