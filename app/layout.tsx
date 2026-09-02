@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import UserIcon from "@/components/UserIcon";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
     title: "Temp title",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <Navbar />
                 {children}
                 <UserIcon />
+                <Toaster position="bottom-center" />
             </body>
         </html>
     );

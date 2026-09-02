@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
@@ -7,6 +8,7 @@ export default function HomeLayout({ children }: LayoutProps<"/">) {
             <Hero />
             <div id="content" className="mx-[25%]">
                 {children}
+                <Contact />
             </div>
             <Footer />
         </>
