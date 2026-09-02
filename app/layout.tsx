@@ -6,8 +6,9 @@ import UserIcon from "@/components/UserIcon";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-    title: "Temp title",
-    description: "Temp description",
+    title: "Harrison Baghurst | Portfolio",
+    description:
+        "View my projects and freelance offerings throughout my portfolio.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
