@@ -162,7 +162,7 @@ const ContactForm = () => {
                 <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-fit self-end text-lg"
+                    className="w-fit self-end text-lg rounded-full"
                 >
                     {isSubmitting ? "Sending..." : "Send message"}
                 </Button>
