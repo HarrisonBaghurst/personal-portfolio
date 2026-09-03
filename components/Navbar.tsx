@@ -55,7 +55,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent
                 showCloseButton={false}
-                className="bg-background p-6 sm:p-16 gap-0 data-[side=right]:w-4/5 data-[side=right]:border-l-0 data-[side=right]:sm:max-w-md"
+                className="bg-background p-6 sm:p-16 gap-0 data-[side=right]:w-4/5 data-[side=right]:border-l-0 data-[side=right]:sm:max-w-md data-[side=right]:lg:max-w-lg data-[side=right]:xl:max-w-xl data-[side=right]:2xl:max-w-2xl"
             >
                 <SheetTitle className="sr-only">Navigation</SheetTitle>
                 <SheetClose className="absolute top-6 right-6 size-14 sm:top-16 sm:right-16 sm:size-20 rounded-full bg-foreground flex items-center justify-center cursor-pointer">

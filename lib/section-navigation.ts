@@ -78,22 +78,12 @@ export const navigate = (href: string, pathname: string, push: () => void) => {
     unlockScroll = lockScroll();
 
     awaitScrollUnlocked().then(() => {
-        const scrollsToContent = href !== "/";
-
         if (href === pathname) {
-            animateScrollTo(scrollsToContent ? contentTop() : 0).then(
-                endNavigation,
-            );
+            animateScrollTo(contentTop()).then(endNavigation);
             return;
         }
 
         animateScrollTo(0).then(() => {
-            if (!scrollsToContent) {
-                push();
-                endNavigation();
-                return;
-            }
-
             pendingHref = href;
             timeoutId = setTimeout(abandonNavigation, navigationTimeout);
             push();

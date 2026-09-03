@@ -21,13 +21,18 @@ const page = () => {
                     <p>
                         Outside of my working life I have also taken up
                         photography, some of my favourite photographs can be
-                        viewed in the <a className="text-link">gallery page</a>{" "}
-                        on this site.
+                        viewed in the on this site.
                     </p>
                     <p>
                         If you would like to contact me regarding any of the
-                        above, you can <a className="text-link">email me</a> or
-                        use my <a className="text-link">contact form</a>.
+                        above, you can{" "}
+                        <a
+                            href={`mailto:${process.env.CONTACT_EMAIL}`}
+                            className="text-link"
+                        >
+                            email me
+                        </a>{" "}
+                        or use my contact form below.
                     </p>
                 </div>
             </div>
