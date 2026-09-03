@@ -101,7 +101,7 @@ const ContactForm = () => {
                             autoComplete="given-name"
                             maxLength={contactLimits.name}
                             aria-invalid={!!errors.firstName}
-                            className="h-12 text-base md:text-base"
+                            className="h-12 text-base md:text-base bg-foreground/5 dark:bg-foreground/5"
                             {...register("firstName")}
                         />
                         <FieldError errors={[errors.firstName]} />
@@ -118,7 +118,7 @@ const ContactForm = () => {
                             autoComplete="family-name"
                             maxLength={contactLimits.name}
                             aria-invalid={!!errors.lastName}
-                            className="h-12 text-base md:text-base"
+                            className="h-12 text-base md:text-base bg-foreground/5 dark:bg-foreground/5"
                             {...register("lastName")}
                         />
                         <FieldError errors={[errors.lastName]} />
@@ -137,7 +137,7 @@ const ContactForm = () => {
                         autoComplete="email"
                         maxLength={contactLimits.email}
                         aria-invalid={!!errors.email}
-                        className="h-12 text-base md:text-base"
+                        className="h-12 text-base md:text-base bg-foreground/5 dark:bg-foreground/5"
                         {...register("email")}
                     />
                     <FieldError errors={[errors.email]} />
@@ -154,7 +154,7 @@ const ContactForm = () => {
                         rows={8}
                         maxLength={contactLimits.message}
                         aria-invalid={!!errors.message}
-                        className="min-h-48 resize-y text-base md:text-base"
+                        className="min-h-48 resize-y text-base md:text-base bg-foreground/5 dark:bg-foreground/5"
                         {...register("message")}
                     />
                     <FieldError errors={[errors.message]} />
