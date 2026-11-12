@@ -125,6 +125,31 @@ const page = () => {
                             provided.
                         </p>
                     </div>
+                    <div className="flex flex-col gap-2">
+                        <p className="text-emphasis">Avril, GCSE Maths</p>
+
+                        <p>
+                            We are so pleased we found Harrison to tutor our
+                            son. He made such a difference, not only to his
+                            maths but also to his confidence. When he started
+                            with Harrison, his predicted grade was lower and he
+                            wasn’t confident about sitting the Higher paper.
+                            Harrison’s friendly and patient approach, and his
+                            ability to explain things in a way that was easy to
+                            understand, really helped build his confidence. He
+                            went on to sit the Higher paper and achieved two
+                            grades higher than his original predicted grade in
+                            his actual GCSE result, which was fantastic.
+                            Harrison was always friendly, helpful and
+                            encouraging, and made the lessons enjoyable and easy
+                            to understand. It was brilliant to see his
+                            confidence grow and watch him realise what he was
+                            capable of. We would highly recommend Harrison to
+                            anyone looking for a maths tutor. He made a real
+                            difference and we are very grateful for all his help
+                            and support.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
